@@ -27,10 +27,10 @@ python3 light_pollution.py
 
 
 
-Hacen falta introducir: 
+Hacen falta introducir, ignorando los paréntesis: 
 
-* Latitud de punto de referencia: **xxº xx' xx'' N**
-* Longitud de punto de referencia: **xxº xx' xx'' W/E**
+* Latitud de punto de referencia: **xx(º) xx(') xx()'') N**
+* Longitud de punto de referencia: **xx(º) xx(') xx('') W/E**
 
 * Radio de búsqueda en kilómetro
 * Ángulo central de búsqueda
