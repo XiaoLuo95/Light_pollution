@@ -1,5 +1,16 @@
 # README
 
+Para el correcto funcionamiento del script, hacen falta tener instalados los paquetes siguientes:
+
+* requests
+* time
+* math
+* pandas
+* collections
+* Geopy.distance
+
+
+
 Situado en el fichero, para ejecutar el script:
 
 ### Desde Python3 Shell:
