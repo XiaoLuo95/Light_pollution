@@ -1,5 +1,8 @@
 import requests
 import time
+import numpy as np
+import re
+import sys
 import math
 import pandas as pd
 from collections import OrderedDict
@@ -7,8 +10,88 @@ import geopy.distance as dist
 
 # global dataframe for full list of light pollution sources
 df = pd.DataFrame()
-# global dataframe storing the search parameters
-iv = pd.DataFrame()
+
+# global latitud and longitud
+lat = 0
+lon = 0
+
+# global maximum and minimum angle in search
+angle_min = 0
+angle_max = 0
+
+# global distance
+distance = 200
+
+def read_file():
+    # Encoding: Western Europe
+    myFile = open(sys.argv[1], "r", encoding='iso8859_15')
+    contents = myFile.read()
+
+    # Load latitude and longitude
+    global lat, lon
+    lat = float(str(re.findall(r'# LATITUD: (.*)', contents)[0]).replace('\t', ""))
+    lon = float(str(re.findall(r'# LONGITUD: (.*)', contents)[0]).replace('\t', ""))
+
+    # Load and process the lowest cenit readings
+    # Regex: get contents of m20
+    m20 = str(re.findall(r'm20 = \[(.*)\]', contents)[0]).split(", ")
+    for item in m20:
+        item.replace(",", ".")
+    m20 = np.array(m20, dtype=np.float32)
+
+    # Get the difference between maximum and minimum values recorded as range
+    # Regex: Get all contents between "[" and "]"
+    magnitudes = re.findall(r'\[(.*)\]', contents)
+    total = []
+    for item in magnitudes:
+        for x in item.split(", "):
+            total.append(str(x).replace(",", "."))
+    total = np.asfarray(total, float)
+    total_range = (total.max() - total.min()).round(2)
+
+    # Threshold, set as 30% of the range from minimum
+    th = m20.min() + 0.3 * total_range
+
+    # Angles at left and right position of the minimum value
+    global angle_max, angle_min
+    angle_left = m20[int(np.where(m20 == m20.min())[0] - 1) % 12]
+    angle_right = m20[int(np.where(m20 == m20.min())[0] + 1) % 12]
+
+    # Set default minimum angle opening
+    # If both values at left and right are equal, the opening will be 60º, otherwise 30º
+    if angle_left < angle_right:
+        angle_min = angle_left
+        angle_max = m20.min()
+    elif angle_right < angle_left:
+        angle_min = m20.min()
+        angle_max = angle_right
+    else:
+        angle_min = angle_left
+        angle_max = angle_right
+
+    # If value at right of min is within threshold and less than the angle_right, update
+    # break loop if value surpass threshold
+    idx = int(np.where(m20 == m20.min())[0])
+    for aux in range(int(idx + 1), int(idx + 12)):
+        if m20[aux % 12] <= th:
+            if m20[aux % 12] < angle_right:
+                angle_right = m20[aux % 12]
+        else:
+            break
+
+    # If value at left of min is within threshold and less than the angle_left, update
+    # break loop if value surpass threshold
+    for aux in range(idx - 1, idx - 12, -1):
+        if m20[aux % 12] <= th:
+            if m20[aux % 12] > angle_left:
+                angle_left = m20[aux % 12]
+        else:
+            break
+
+    # Convert angle_left and angle_right to real angles:
+    angle_min = int(np.where(m20 == angle_left)[0]) * 30
+    angle_max = int(np.where(m20 == angle_right)[0]) * 30
+
 
 # Query full list of light pollution sources, including quarry, factory, greenhouse and shopping malls within Spain
 def query_function():
@@ -224,12 +307,7 @@ def input_values():
 # Filter all conditions, including distance, angle, angle opening
 def filter():
     global df
-    global iv
-    lat = float(iv['lat'])
-    lon = float(iv['lon'])
-    distance = float(iv['distance'])
-    angle_max = float(iv['angle_max'])
-    angle_min = float(iv['angle_min'])
+    global latitude, longitude, distance, angle_max, angle_min
     list = []
     for index, row in df.iterrows():
         # if the place is within the radius
@@ -280,7 +358,8 @@ def angle_range(lon1, lat1, lon2, lat2, angle_max, angle_min):
 
 
 def auto():
-    input_values()
+    read_file()
+    # input_values()
     data = filter()
 
     if not data.empty:
@@ -297,7 +376,6 @@ if __name__ == '__main__':
     query_function()
     end = time.time()
     '''
-
     df = pd.read_csv("light_pollution_sources.csv")
     df = df.astype({'lon': float, 'lat': float})
     df = df.round({'lon': 4, 'lat': 4})

@@ -4,35 +4,34 @@ Para el correcto funcionamiento del script, hacen falta tener instalados los paq
 
 * requests
 * time
+* numpy
+* re
+* sys
 * math
 * pandas
 * collections
 * Geopy.distance
 
-
-
 Situado en el fichero, para ejecutar el script:
+
+*data file example: __UPM.txt__* 
 
 ### Desde Python3 Shell:
 
 ```python
->>> exec(open("light_pollution.py").read())
+>>> import subprocess
+>>> subprocess.run('python3 light_pollution.py {data file}', shell=True)
 ```
 
 ### Desde Terminal
 
 ```
-python3 light_pollution.py
+python3 light_pollution.py {data file}
 ```
 
-
-
-Hacen falta introducir, ignorando los paréntesis: 
-
-* Latitud de punto de referencia: **xx(º) xx(') xx()'') N**
-* Longitud de punto de referencia: **xx(º) xx(') xx('') W/E**
-
-* Radio de búsqueda en kilómetro
-* Ángulo central de búsqueda
-* Apertura de ángulo, igualmente distribuido en ambos lados del ángulo central
-
+#### Como fuentes de contaminación lumínica se tienen en cuenta:
+* municipios
+* minas
+* fábricas
+* invernaderos
+* centros comerciales
