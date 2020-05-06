@@ -14,6 +14,7 @@ parser.add_argument("data", help = "file containing measurement data")
 parser.add_argument("threshold", type=float, help = "percentage of magnitude from minimum under consideration [0.00-1.00]")
 parser.add_argument("-o", "--opening", type=float, nargs=2, action="store", help="angle opening's lower and upper bound, separated by whitespace [0-360]")
 parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200")
+parser.add_argument('-s', '--source', type=str, help = "data source type: sqm/tas", required=True)
 args = parser.parse_args()
 
 # global distance
@@ -34,7 +35,8 @@ angle_min = 0
 angle_max = 0
 
 
-def read_file():
+# sqm file data reading
+def read_file_sqm():
     # Encoding: Western Europe
     myFile = open(args.data, "r", encoding='iso8859_15')
     contents = myFile.read()
@@ -108,6 +110,87 @@ def read_file():
         # Convert angle_left and angle_right to real angles:
         angle_min = int(np.where(m20 == angle_left)[0]) * 30
         angle_max = int(np.where(m20 == angle_right)[0]) * 30
+
+
+# tas file data reading
+def read_file_tas():
+    myFile = open(args.data, "r", encoding='iso8859_15')
+
+    # twice readline to skip first heading line
+    line = myFile.readline()
+    line = myFile.readline()
+
+    # get latitude and longitude from first data line
+    global lat, lon
+    lat_a = line.split()[9].split(":")
+    lon_a = line.split()[10].split(":")
+    lat = float(lat_a[0]) + float(lat_a[1])/60 + float(lat_a[2])/3600
+    lon = float(lon_a[0]) + float(lon_a[1])/60 + float(lat_a[2])/3600
+
+    # get useful information: T_IR, T_Sens, Mag, Azi of m10, and max & min value in Mag
+    m10 = pd.DataFrame(columns=['T_IR', 'T_Sens', 'Mag', 'Azi'])
+    mag_max = float(line.split()[5])
+    mag_min = float(line.split()[5])
+    while line:
+        sp = line.split()
+        if sp[7] == '10.0':
+            m10 = m10.append({'T_IR': sp[3], 'T_Sens': sp[4], 'Mag': sp[5], 'Azi': sp[8]}, ignore_index=True)
+        if float(sp[5]) > mag_max:
+            mag_max = float(sp[5])
+        elif float(sp[5]) < mag_min:
+            mag_min = float(sp[5])
+        line = myFile.readline()
+    myFile.close()
+    m10 = m10.astype({'T_IR': float, 'T_Sens': float, 'Mag': float, 'Azi': float})
+    mag_range = mag_max - mag_min
+
+    # Threshold, set as 30% of the range from minimum
+    th = mag_min + float(args.threshold) * mag_range
+
+    global angle_max, angle_min
+    # If optional opening is set with values, just set the global, otherwise proceed to calculate them
+    if args.opening is not None:
+        angle_min = args.opening[0]
+        angle_max = args.opening[1]
+    else:
+        # Angles at left and right position of the minimum value
+        angle_left = m10.loc[[(m10['Mag'].argmin() - 1) % len(m10)]]['Mag'].item()
+        angle_right = m10.loc[[(m10['Mag'].argmin() + 1) % len(m10)]]['Mag'].item()
+
+        # Set default minimum angle opening
+        # If both values at left and right are equal, the opening will be 60º, otherwise 30º
+        if angle_left < angle_right:
+            angle_min = angle_left
+            angle_max = m10['Mag'].min()
+        elif angle_right < angle_left:
+            angle_min = m10['Mag'].min()
+            angle_max = angle_right
+        else:
+            angle_min = angle_left
+            angle_max = angle_right
+
+        # If value at right of min is within threshold and less than the angle_right, update
+        # break loop if value surpass threshold
+        idx = m10['Mag'].argmin()
+        for aux in range(idx + 1, idx + len(m10)):
+            if m10.loc[[aux % len(m10)]]['Mag'].item() <= th:
+                if m10.loc[[aux % len(m10)]]['Mag'].item() < angle_right:
+                    angle_right = m10.loc[[aux % len(m10)]]['Mag'].item()
+            else:
+                break
+
+        # If value at left of min is within threshold and less than the angle_left, update
+        # break loop if value surpass threshold
+        for aux in range(idx - 1, idx - len(m10), -1):
+            if m10.loc[[aux % len(m10)]]['Mag'].item() <= th:
+                if m10.loc[[aux % len(m10)]]['Mag'].item() > angle_left:
+                    angle_left = m10.loc[[aux % len(m10)]]['Mag'].item
+            else:
+                break
+
+        # Store angle opening's lower and upper bounds
+        angle_min = m10.loc[m10['Mag'] == angle_left]['Azi'].item()
+        angle_max = m10.loc[m10['Mag'] == angle_right]['Azi'].item()
 
 
 # Query full list of light pollution sources, including quarry, factory, greenhouse and shopping malls within Spain
@@ -334,15 +417,30 @@ def angle_range(lon1, lat1, lon2, lat2, angle_max, angle_min):
     return True
 
 
-# Automatic execution
-def auto():
-    read_file()
+# Automatic execution for sqm data
+def auto_sqm():
+    read_file_sqm()
     data = filter()
 
     if not data.empty:
-        print(data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia"]])
+        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia"]]
+        data.to_csv('result.csv')
+        print('Result saved in: result.csv')
     else:
         print('No matching records found')
+
+
+# Automatic execution for tas data
+def auto_tas():
+    read_file_tas()
+    data = filter()
+
+    if not data.empty:
+        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia"]]
+        data.to_csv("result.csv")
+        print("Result saved in: result.csv")
+    else:
+        print("No matching records found")
 
 
 if __name__ == '__main__':
@@ -360,4 +458,9 @@ if __name__ == '__main__':
     pd.set_option('display.max_rows', None, 'display.max_columns', None)
     #print("Time spent: " + str(round((end - start), 2)) + "s")
 
-    auto()
+    if args.source.lower() == 'sqm':
+        auto_sqm()
+    elif args.source.lower() == 'tas':
+        auto_tas()
+    else:
+        parser.error('Please specify the input data type: sqm/tas')

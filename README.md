@@ -21,18 +21,18 @@ Situado en el fichero, para ejecutar el script:
 
 ```python
 >>> import subprocess
->>> subprocess.run('python3 light_pollution.py {data} {threshold} {OPTIONAL opening {angle_lower angle_upper}} {OPTIONAL distance}', shell=True)
+>>> subprocess.run('python3 light_pollution.py {data} {threshold} {-s source: sqm/tas} {OPTIONAL opening {angle_lower angle_upper}} {OPTIONAL distance}', shell=True)
 ```
 
 ### Desde Terminal
 
 ```
-python3 light_pollution.py {data} {threshold} {OPTIONAL opening {angle_lower angle_upper}} {OPTIONAL distance}
+python3 light_pollution.py {data} {threshold} {-s source: sqm/tas} {OPTIONAL opening {angle_lower angle_upper}} {OPTIONAL distance}
 ```
 
 ### Help
 ```
-usage: light_pollution.py [-h] [-o OPENING OPENING] [-d DISTANCE]
+usage: light_pollution.py [-h] [-o OPENING OPENING] [-d DISTANCE] -s SOURCE
                           data threshold
 positional arguments:
   data                  file containing measurement data
@@ -45,6 +45,8 @@ optional arguments:
                         whitespace [0-360]
   -d DISTANCE, --distance DISTANCE
                         radius in km within to search, default 200
+  -s SOURCE, --source SOURCE
+                        data source type: sqm/tas
 ```
 
 #### Como fuentes de contaminación lumínica se tienen en cuenta:
