@@ -7,8 +7,8 @@
 # HORA FINAL (UT): hh:mm	
 # LOCALIZACION: Facultad de Informática de la Universidad Politécnica de Madrid. 
 # PARAJE: Aparcamiento trasero
-# LATITUD: 42.5291667				
-# LONGITUD: -01.3036111				
+# LATITUD: 40.406525				
+# LONGITUD: -3.839194				
 # ALTITUD (m):
 
 # OBSERVACIONES: Sin luna sobre el horizonte
