@@ -45,6 +45,7 @@ optional arguments:
                         whitespace [0-360]
   -d DISTANCE, --distance DISTANCE
                         radius in km within to search, default 200
+required arguments:
   -s SOURCE, --source SOURCE
                         data source type: sqm/tas
 ```

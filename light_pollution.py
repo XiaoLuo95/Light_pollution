@@ -14,7 +14,8 @@ parser.add_argument("data", help = "file containing measurement data")
 parser.add_argument("threshold", type=float, help = "percentage of magnitude from minimum under consideration [0.00-1.00]")
 parser.add_argument("-o", "--opening", type=float, nargs=2, action="store", help="angle opening's lower and upper bound, separated by whitespace [0-360]")
 parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200")
-parser.add_argument('-s', '--source', type=str, help = "data source type: sqm/tas", required=True)
+required = parser.add_argument_group('required arguments')
+required.add_argument('-s', '--source', type=str, help = "data source type: sqm/tas", required=True)
 args = parser.parse_args()
 
 # global distance
