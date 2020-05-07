@@ -32,18 +32,19 @@ python3 light_pollution.py {arguments (see Help)}
 
 ### Help
 ```
-usage: light_pollution.py [-h] [-o OPENING OPENING] [-d DISTANCE]
-                          [-n CLOUDINESS_ANGLE] -s SOURCE
-                          data threshold
+usage: light_pollution.py [-h] [-t THRESHOLD] [-o OPENING OPENING]
+                          [-d DISTANCE] [-n CLOUDINESS_ANGLE] -s SOURCE
+                          data
 positional arguments:
   data                  file containing measurement data
-  threshold             percentage of magnitude from minimum under
-                        consideration [0.00-1.00]
 optional arguments:
   -h, --help            show this help message and exit
+  -t THRESHOLD, --threshold THRESHOLD
+                        percentage of magnitude from minimum under
+                        consideration [0.00-1.00]
   -o OPENING OPENING, --opening OPENING OPENING
                         angle opening's lower and upper bound, separated by
-                        whitespace [0-360]
+                        whitespace. [0-359.99] [0-359.99]
   -d DISTANCE, --distance DISTANCE
                         radius in km within to search, default 200
   -n CLOUDINESS_ANGLE, --cloudiness_angle CLOUDINESS_ANGLE

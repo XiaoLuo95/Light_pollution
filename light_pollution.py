@@ -11,10 +11,10 @@ import geopy.distance as dist
 # command line arguments parser
 parser = argparse.ArgumentParser()
 parser.add_argument("data", help = "file containing measurement data")
-parser.add_argument("threshold", type=float, help = "percentage of magnitude from minimum under consideration [0.00-1.00]")
-parser.add_argument("-o", "--opening", type=float, nargs=2, action="store", help="angle opening's lower and upper bound, separated by whitespace [0-360]")
+parser.add_argument("-t", "--threshold", type=float, action="store", help = "percentage of magnitude from minimum under consideration [0.00-1.00]")
+parser.add_argument("-o", "--opening", type=float, nargs=2, action="store", help="angle opening's lower and upper bound, separated by whitespace. [0-359.99] [0-359.99]")
 parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200")
-parser.add_argument("-n", "--cloudiness_angle", type=float, action="store", help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. [0-12]")
+parser.add_argument("-n", "--cloudiness_angle", type=float, action="store", help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. Default 1º. [0-12]")
 required = parser.add_argument_group('required arguments')
 required.add_argument('-s', '--source', type=str, help = "data source type: sqm/tas", required=True)
 args = parser.parse_args()
@@ -37,7 +37,10 @@ angle_min = None
 angle_max = None
 
 # global adjacent angles from original angles in tas
-adj = None
+adj = 0.5
+
+# global threshold, default 30%
+threshold = 0.3
 
 
 # Query full list of light pollution sources, including quarry, factory, greenhouse and shopping malls within Spain
@@ -241,10 +244,17 @@ def read_file_sqm():
     total = np.asfarray(total, float)
     total_range = (total.max() - total.min()).round(2)
 
-    # Threshold, set as 30% of the range from minimum
-    th = m20.min() + float(args.threshold) * total_range
+    # Calculate the threshold
+    global threshold
+    if args.threshold is not None:
+        threshold = float(args.threshold)
+    th = m20.min() + threshold * total_range
 
     global angle_max, angle_min
+    if float(args.threshold) == 1:
+        angle_min = 0
+        angle_max = 359.99
+        return
     # If optional opening is set with values, just set the global, otherwise proceed to calculate them
     if args.opening is not None:
         angle_min = args.opening[0]
@@ -323,10 +333,17 @@ def read_file_tas():
     m10 = m10.round({'Mag': 2, 'Azi': 2, 'Cloudiness': 2})
     mag_range = mag_max - mag_min
 
-    # Threshold, set as 30% of the range from minimum
-    th = mag_min + float(args.threshold) * mag_range
+    # Calculate threshold
+    global threshold
+    if args.threshold is not None:
+        threshold = float(args.threshold)
+    th = mag_min + threshold * mag_range
 
     global angle_max, angle_min
+    if float(args.threshold) == 1:
+        angle_min = 0
+        angle_max = 359.99
+        return
     # If optional opening is set with values, just set the global, otherwise proceed to calculate them
     if args.opening is not None:
         angle_min = args.opening[0]
@@ -352,18 +369,18 @@ def read_file_tas():
         # break loop if value surpass threshold
         idx = m10['Mag'].argmin()
         for aux in range(idx + 1, idx + len(m10)):
-            if m10.loc[[aux % len(m10)]]['Mag'].item() <= th:
-                if m10.loc[[aux % len(m10)]]['Mag'].item() < angle_right:
-                    angle_right = m10.loc[[aux % len(m10)]]['Mag'].item()
+            value = m10.loc[[aux % len(m10)]]['Mag'].item()
+            if value <= th:
+                angle_right = value
             else:
                 break
 
         # If value at left of min is within threshold and less than the angle_left, update
         # break loop if value surpass threshold
         for aux in range(idx - 1, idx - len(m10), -1):
-            if m10.loc[[aux % len(m10)]]['Mag'].item() <= th:
-                if m10.loc[[aux % len(m10)]]['Mag'].item() > angle_left:
-                    angle_left = m10.loc[[aux % len(m10)]]['Mag'].item
+            value = m10.loc[[aux % len(m10)]]['Mag'].item()
+            if value <= th:
+                angle_left = value
             else:
                 break
 
@@ -392,11 +409,10 @@ def filter():
         min_a = angle_min
 
     # get sublist of original angles from tas within the global angle opening for tas with -n
-    if adj is not None:
-        if (angle_max + adj) % 360 > (angle_min - adj) % 360:
-            m10 = m10[(m10['Azi'] >= angle_min - adj) & (m10['Azi'] <= angle_max + adj)].reset_index(drop=True)
-        else:
-            m10 = m10[(m10['Azi'] >= angle_max - adj) | (m10['Azi'] <= angle_min + adj)].reset_index(drop=True)
+    if angle_max > angle_min:
+        m10 = m10[(m10['Azi'] >= angle_min) & (m10['Azi'] <= angle_max)].reset_index(drop=True)
+    else:
+        m10 = m10[(m10['Azi'] >= angle_max) | (m10['Azi'] <= angle_min)].reset_index(drop=True)
     list = []
     for index, row in df.iterrows():
         # if the place is within the radius
@@ -531,6 +547,9 @@ if __name__ == '__main__':
 
     if args.distance is not None:
         distance = args.distance
+
+    if not 0 <= float(args.threshold) <= 1:
+        parser.error('Threshold out bound: only accept [0.00-1.00]')
 
     df = pd.read_csv("light_pollution_sources.csv")
     df = df.astype({'lon': float, 'lat': float})
