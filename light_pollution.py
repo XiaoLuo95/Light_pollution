@@ -14,26 +14,30 @@ parser.add_argument("data", help = "file containing measurement data")
 parser.add_argument("threshold", type=float, help = "percentage of magnitude from minimum under consideration [0.00-1.00]")
 parser.add_argument("-o", "--opening", type=float, nargs=2, action="store", help="angle opening's lower and upper bound, separated by whitespace [0-360]")
 parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200")
+parser.add_argument("-n", "--cloudiness_angle", type=float, action="store", help="angle opening w.r.t. each original angle from data to be considered as same, in order to calculate the cloudiness to each place. Original angles spacing are 11º-12º, opening higher than 11º may cause overlap. [0-12]")
 required = parser.add_argument_group('required arguments')
 required.add_argument('-s', '--source', type=str, help = "data source type: sqm/tas", required=True)
 args = parser.parse_args()
 
-# global distance
-if args.distance is not None:
-    distance = args.distance
-else:
-    distance = 200
+# global distance, default 200
+distance = 200
+
+# global m10 dataframe
+m10 = pd.DataFrame(columns=['Mag', 'Azi', 'Cloudiness'])
 
 # global dataframe for full list of light pollution sources
 df = pd.DataFrame()
 
 # global latitud and longitud
-lat = 0
-lon = 0
+lat = None
+lon = None
 
 # global maximum and minimum angle in search
-angle_min = 0
-angle_max = 0
+angle_min = None
+angle_max = None
+
+# global adjacent angles from original angles in tas
+adj = None
 
 
 # Query full list of light pollution sources, including quarry, factory, greenhouse and shopping malls within Spain
@@ -303,18 +307,20 @@ def read_file_tas():
     lon = float(lon_a[0]) + float(lon_a[1])/60 + float(lat_a[2])/3600
 
     # get useful information: T_IR, T_Sens, Mag, Azi of m10, and max & min value in Mag
-    m10 = pd.DataFrame(columns=['T_IR', 'T_Sens', 'Mag', 'Azi'])
+    global m10
     mag_max = float(latlon[5])
     mag_min = float(latlon[5])
     for line in lines:
         sp = line.split()
         if sp[7] == '10.0':
-            m10 = m10.append({'T_IR': sp[3], 'T_Sens': sp[4], 'Mag': sp[5], 'Azi': sp[8]}, ignore_index=True)
+            cloudiness = 100 - 3 * (float(sp[4]) - float(sp[3]))
+            m10 = m10.append({'Mag': sp[5], 'Azi': sp[8], 'Cloudiness': cloudiness}, ignore_index=True)
         if float(sp[5]) > mag_max:
             mag_max = float(sp[5])
         elif float(sp[5]) < mag_min:
             mag_min = float(sp[5])
-    m10 = m10.astype({'T_IR': float, 'T_Sens': float, 'Mag': float, 'Azi': float})
+    m10 = m10.astype({'Mag': float, 'Azi': float, 'Cloudiness': float})
+    m10 = m10.round({'Mag': 2, 'Azi': 2, 'Cloudiness': 2})
     mag_range = mag_max - mag_min
 
     # Threshold, set as 30% of the range from minimum
@@ -369,44 +375,80 @@ def read_file_tas():
 # Filter all conditions, including distance and angle opening
 def filter():
     global df
+    global m10
     global latitude, longitude, distance, angle_max, angle_min
+    global adj
+
+    # convert upper bound (0-360) into (-180, 180)
     if angle_max > 180:
         max_a = angle_max - 360
     else:
         max_a = angle_max
+
+    # convert lower bound (0-360) into (-180, 180)
     if angle_min > 180:
         min_a = angle_min - 360
     else:
         min_a = angle_min
+
+    # get sublist of original angles from tas within the global angle opening for tas with -n
+    if adj is not None:
+        if (angle_max + adj) % 360 > (angle_min - adj) % 360:
+            m10 = m10[(m10['Azi'] >= angle_min - adj) & (m10['Azi'] <= angle_max + adj)].reset_index(drop=True)
+        else:
+            m10 = m10[(m10['Azi'] >= angle_max - adj) | (m10['Azi'] <= angle_min + adj)].reset_index(drop=True)
     list = []
     for index, row in df.iterrows():
         # if the place is within the radius
         if float(dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km) <= distance:
             # if the place is within the angle range
             angle = bearing(lon, lat, float(row['lon']), float(row['lat']))
+            cloudiness = "-"
             if max_a < min_a:
                 if angle >= min_a or angle <= max_a:
                     if angle < 0:
                         angle = angle + 360
+                    for idx, r in m10.iterrows():
+                        inf = float(r['Azi'].item() - adj) % 360
+                        sup = float(r['Azi'].item() + adj) % 360
+                        # transition from 360º to 0º
+                        if inf < sup:
+                            if check(angle, inf, sup):
+                                cloudiness = r['Cloudiness'].item()
+                        else:
+                            if angle >= inf or angle <= sup:
+                                cloudiness = r['Cloudiness'].item()
                     list.append(OrderedDict({
                         'Nombre': row['Nombre'],
                         'Tipo': row['Tipo'],
                         'Provincia': row['Provincia'],
                         'Poblacion': row['Poblacion'],
                         'Distancia': dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km,
-                        'Dirección': angle
+                        'Dirección': angle,
+                        'Nubosidad': cloudiness
                     }))
             else:
                 if min_a <= angle <= max_a:
                     if angle < 0:
                         angle = angle + 360
+                    for idx, r in m10.iterrows():
+                        inf = float(r['Azi'].item() - adj) % 360
+                        sup = float(r['Azi'].item() + adj) % 360
+                        # transition from 360º to 0º
+                        if inf < sup:
+                            if check(angle, inf, sup):
+                                cloudiness = r['Cloudiness'].item()
+                        else:
+                            if angle >= inf or angle <= sup:
+                                cloudiness = r['Cloudiness'].item()
                     list.append(OrderedDict({
                         'Nombre': row['Nombre'],
                         'Tipo': row['Tipo'],
                         'Provincia': row['Provincia'],
                         'Poblacion': row['Poblacion'],
                         'Distancia': dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km,
-                        'Dirección': angle
+                        'Dirección': angle,
+                        'Nubosidad': cloudiness
                     }))
 
     result = pd.DataFrame(list)
@@ -437,6 +479,13 @@ def bearing(lon1, lat1, lon2, lat2):
     return brng
 
 
+# Check if a float number is within certain range
+def check(original, inf, sup):
+    if inf <= original <= sup:
+        return True
+    return False
+
+
 # Automatic execution for sqm data
 def auto_sqm():
     read_file_sqm()
@@ -456,7 +505,7 @@ def auto_tas():
     data = filter()
 
     if not data.empty:
-        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección"]]
+        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "Nubosidad"]]
         data.to_csv("result.csv")
         print("Result saved in: result.csv")
     else:
@@ -472,6 +521,17 @@ if __name__ == '__main__':
     query_function()
     end = time.time()
     '''
+    if args.cloudiness_angle is not None:
+        if args.source.lower() != 'tas':
+            parser.error('Sorry, the cloudiness angle opening is only supported for tas')
+        elif not check(float(args.cloudiness_angle), 0, 12):
+            parser.error('Please, the angle opening must be less or equal than 11 due to the spacing of original angles, otherwise would cause overlap')
+        else:
+            adj = float(args.cloudiness_angle) / 2
+
+    if args.distance is not None:
+        distance = args.distance
+
     df = pd.read_csv("light_pollution_sources.csv")
     df = df.astype({'lon': float, 'lat': float})
     df = df.round({'lon': 4, 'lat': 4})
