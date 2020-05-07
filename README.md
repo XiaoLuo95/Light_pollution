@@ -15,7 +15,7 @@ Para el correcto funcionamiento del script, hacen falta tener instalados los paq
 
 ### Diagrama ilustrativo:
 
-![Illustrative diagram](https://github.com/XiaoLuo95/Light_pollution/blob/master/images/threshold.png)
+<image src="https://github.com/XiaoLuo95/Light_pollution/blob/master/images/threshold.png" width="775" height="500">
 
 
 
