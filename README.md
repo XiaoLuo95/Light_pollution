@@ -13,6 +13,12 @@ Para el correcto funcionamiento del script, hacen falta tener instalados los paq
 * collections
 * Geopy.distance
 
+### Diagrama ilustrativo:
+
+![Illustrative diagram](https://github.com/XiaoLuo95/Light_pollution/images/threshold.png)
+
+
+
 Situado en el fichero, para ejecutar el script:
 
 *data file example: __UPM.txt__* 
