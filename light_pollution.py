@@ -370,32 +370,48 @@ def query_function():
 def filter():
     global df
     global latitude, longitude, distance, angle_max, angle_min
+    # angle opening's lower bound's conversion for bearing condition
+    if angle_min > 180:
+        min_a = angle_min - 360
+    else:
+        min_a = angle_min
+    # angle opening's upper bound's conversion for bearing condition
+    if angle_max > 180:
+        max_a = angle_max -360
+    else:
+        max_a = angle_max
+
     list = []
     for index, row in df.iterrows():
         # if the place is within the radius
         if float(dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km) <= distance:
             # if the place is within the angle range
-            if angle_range(lon, lat, float(row['lon']), float(row['lat']), angle_max, angle_min):
+            if min_a <= bearing(lon, lat, float(row['lon']), float(row['lat'])) <= max_a:
+                angle = bearing(lon, lat, float(row['lon']), float(row['lat']))
+                if angle < 0:
+                    angle = angle + 360
                 list.append(OrderedDict({
                     'Nombre': row['Nombre'],
                     'Tipo': row['Tipo'],
                     'Provincia': row['Provincia'],
                     'Poblacion': row['Poblacion'],
-                    'Distancia': dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km
+                    'Distancia': dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km,
+                    'Dirección': angle
                 }))
 
     result = pd.DataFrame(list)
     if not result.empty:
-        result = result.astype({'Distancia': float})
-        result = result.round({'Distancia': 2})
+        result = result.astype({'Distancia': float, 'Dirección': float})
+        result = result.round({'Distancia': 2, 'Dirección': 2})
         result = result.sort_values(by='Distancia')
         result = result.reset_index()
 
     return result
 
 
-# Checks if bearing lays within the range
-def angle_range(lon1, lat1, lon2, lat2, angle_max, angle_min):
+# Get the bearing from coordinate 1 to coordinate 2
+# Angle range (-180, 180)
+def bearing(lon1, lat1, lon2, lat2):
     # convert degrees to radians
     lat1 = math.radians(lat1)
     lon1 = math.radians(lon1)
@@ -408,14 +424,7 @@ def angle_range(lon1, lat1, lon2, lat2, angle_max, angle_min):
     brng = math.atan2(y, x)
     brng = math.degrees(brng)
 
-    if angle_min > 180:
-        angle_min = angle_min - 360
-
-    # If the bearing falls out of the angle range, return False
-    if brng < angle_min or brng > angle_max:
-        return False
-
-    return True
+    return brng
 
 
 # Automatic execution for sqm data
@@ -424,7 +433,7 @@ def auto_sqm():
     data = filter()
 
     if not data.empty:
-        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia"]]
+        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección"]]
         data.to_csv('result.csv')
         print('Result saved in: result.csv')
     else:
@@ -437,7 +446,7 @@ def auto_tas():
     data = filter()
 
     if not data.empty:
-        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia"]]
+        data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección"]]
         data.to_csv("result.csv")
         print("Result saved in: result.csv")
     else:

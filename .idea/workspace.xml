@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc1aadc6-a839-4f37-b6bc-4a7170ed7c6a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/light_pollution.py" beforeDir="false" afterPath="$PROJECT_DIR$/light_pollution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +60,7 @@
       <workItem from="1588782083908" duration="5689000" />
       <workItem from="1588791135371" duration="1233000" />
       <workItem from="1588792588799" duration="128000" />
+      <workItem from="1588837095944" duration="1943000" />
     </task>
     <servers />
   </component>
