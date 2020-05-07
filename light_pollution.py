@@ -290,21 +290,21 @@ def read_file_tas():
     myFile = open(args.data, "r", encoding='iso8859_15')
 
     # twice readline to skip first heading line
-    line = myFile.readline()
-    line = myFile.readline()
+    lines = myFile.readlines()[1:]
+    latlon = lines[0].split()
 
     # get latitude and longitude from first data line
     global lat, lon
-    lat_a = line.split()[9].split(":")
-    lon_a = line.split()[10].split(":")
+    lat_a = latlon[9].split(":")
+    lon_a = latlon[10].split(":")
     lat = float(lat_a[0]) + float(lat_a[1])/60 + float(lat_a[2])/3600
     lon = float(lon_a[0]) + float(lon_a[1])/60 + float(lat_a[2])/3600
 
     # get useful information: T_IR, T_Sens, Mag, Azi of m10, and max & min value in Mag
     m10 = pd.DataFrame(columns=['T_IR', 'T_Sens', 'Mag', 'Azi'])
-    mag_max = float(line.split()[5])
-    mag_min = float(line.split()[5])
-    while line:
+    mag_max = float(latlon[5])
+    mag_min = float(latlon[5])
+    for line in lines:
         sp = line.split()
         if sp[7] == '10.0':
             m10 = m10.append({'T_IR': sp[3], 'T_Sens': sp[4], 'Mag': sp[5], 'Azi': sp[8]}, ignore_index=True)

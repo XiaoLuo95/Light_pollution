@@ -1,87 +1,580 @@
 ,Nombre,Tipo,Provincia,Poblacion,Distancia,Dirección
-0,Bello,Municipio,provincia de Teruel,224.0,9.68,173.35
-1,Blancas,Municipio,provincia de Teruel,126.0,21.2,172.81
-2,Pozuel del Campo,Municipio,provincia de Teruel,65.0,25.73,178.55
-3,Ojos Negros,Municipio,provincia de Teruel,360.0,29.52,177.52
-4,Villar del Salz,Municipio,provincia de Teruel,55.0,35.7,178.17
-5,Ródenas,Municipio,provincia de Teruel,63.0,40.4,180.3
-6,Pozondón,Municipio,provincia de Teruel,50.0,49.25,175.73
-7,Bronchales,Municipio,provincia de Teruel,432.0,55.26,186.59
-8,Monterde de Albarracín,Municipio,provincia de Teruel,64.0,56.21,178.15
-9,Noguera de Albarracín,Municipio,provincia de Teruel,140.0,60.87,186.72
-10,Tramacastilla,Municipio,provincia de Teruel,103.0,63.78,184.62
-11,Torres de Albarracín,Municipio,provincia de Teruel,180.0,63.95,181.38
-12,Royuela,Municipio,provincia de Teruel,204.0,69.49,179.9
-13,Calomarde,Municipio,provincia de Teruel,75.0,70.16,184.28
-14,Frías de Albarracín,Municipio,provincia de Teruel,115.0,74.4,186.66
-15,Moscardón,Municipio,provincia de Teruel,54.0,74.55,181.53
-16,Saldón,Municipio,provincia de Teruel,27.0,75.67,174.54
-17,Terriente,Municipio,provincia de Teruel,183.0,78.41,179.43
-18,Valdecuenca,Municipio,provincia de Teruel,34.0,78.85,173.51
-19,Jabaloyas,Municipio,provincia de Teruel,63.0,85.2,174.1
-20,Toril y Masegoso,Municipio,provincia de Teruel,32.0,85.48,179.97
-21,"Vallecillo, El",Municipio,provincia de Teruel,47.0,85.5,183.03
-22,Tormón,Municipio,provincia de Teruel,30.0,89.95,171.33
-23,Zafrilla,Municipio,Provincia de Cuenca,58.0,90.26,185.65
-24,Laguna del Marquesado,Municipio,Provincia de Cuenca,50.0,92.65,188.33
-25,Huerta del Marquesado,Municipio,Provincia de Cuenca,194.0,94.53,189.04
-26,Veguillas de la Sierra,Municipio,provincia de Teruel,19.0,94.73,174.47
-27,"Cuervo, El",Municipio,provincia de Teruel,78.0,95.96,170.45
-28,Tejadillos,Municipio,Provincia de Cuenca,118.0,96.4,186.13
-29,Fuente Liviana,Fábricas,,,96.59,188.97
-30,Salvacañete,Municipio,Provincia de Cuenca,303.0,100.31,179.35
-31,Campillos-Sierra,Municipio,Provincia de Cuenca,38.0,101.42,188.84
-32,Salinas del Manzano,Municipio,Provincia de Cuenca,68.0,101.63,181.96
-33,Huérguina,Municipio,Provincia de Cuenca,44.0,107.21,184.35
-34,Cañete,Municipio,Provincia de Cuenca,739.0,107.39,186.16
-35,Alcalá de la Vega,Municipio,Provincia de Cuenca,93.0,109.36,179.1
-36,Algarra,Municipio,Provincia de Cuenca,26.0,111.36,176.59
-37,Casas de Garcimolina,Municipio,Provincia de Cuenca,29.0,112.05,175.81
-38,Campillos-Paravientos,Municipio,Provincia de Cuenca,105.0,114.4,181.41
-39,Boniches,Municipio,Provincia de Cuenca,146.0,117.13,184.62
-40,Moya,Municipio,Provincia de Cuenca,139.0,117.82,173.86
-41,Pajaroncillo,Municipio,Provincia de Cuenca,65.0,118.86,189.11
-42,Fuentelespino de Moya,Municipio,Provincia de Cuenca,109.0,120.29,178.27
-43,Landete,Municipio,Provincia de Cuenca,1234.0,122.3,174.04
-44,San Martín de Boniches,Municipio,Provincia de Cuenca,44.0,124.13,182.35
-45,Graja de Campalbo,Municipio,Provincia de Cuenca,91.0,124.32,170.45
-46,Villar del Humo,Municipio,Provincia de Cuenca,184.0,126.03,184.42
-47,Henarejos,Municipio,Provincia de Cuenca,139.0,126.45,178.96
-48,Talayuelas,Municipio,Provincia de Cuenca,878.0,129.61,171.31
-49,Garaballa,Municipio,Provincia de Cuenca,59.0,132.75,174.89
-50,Cardenete,Municipio,Provincia de Cuenca,496.0,138.17,186.22
-51,Yémeda,Municipio,Provincia de Cuenca,21.0,138.88,187.38
-52,Víllora,Municipio,Provincia de Cuenca,114.0,139.07,182.67
-53,Narboneta,Municipio,Provincia de Cuenca,37.0,139.12,178.64
-54,Aliaguilla,Municipio,Provincia de Cuenca,642.0,140.97,173.55
-55,Mira,Municipio,Provincia de Cuenca,905.0,142.8,177.45
-56,Paracuellos,Municipio,Provincia de Cuenca,94.0,144.67,189.34
-57,Enguídanos,Municipio,Provincia de Cuenca,317.0,147.85,183.08
-58,Campillo de Altobuey,Municipio,Provincia de Cuenca,1322.0,156.52,188.8
-59,"Pesquera, La",Municipio,Provincia de Cuenca,215.0,158.74,182.16
-60,Puebla del Salvador,Municipio,Provincia de Cuenca,181.0,160.13,184.91
-61,Caudete de las Fuentes,Municipio,provincia de Valencia,700.0,161.58,172.91
-62,Villargordo del Cabriel,Municipio,provincia de Valencia,589.0,162.45,177.82
-63,Minglanilla,Municipio,Provincia de Cuenca,2221.0,163.22,182.44
-64,Castillejo de Iniesta,Municipio,Provincia de Cuenca,159.0,165.37,187.4
-65,Graja de Iniesta,Municipio,Provincia de Cuenca,361.0,165.54,184.67
-66,Villalpardo,Municipio,Provincia de Cuenca,1018.0,170.31,183.21
-67,Villarta,Municipio,Provincia de Cuenca,793.0,173.24,183.72
-68,Iniesta,Municipio,Provincia de Cuenca,4305.0,174.23,186.65
-69,"Herrumblar, El",Municipio,Provincia de Cuenca,664.0,178.07,183.06
-70,Villamalea,Municipio,provincia de Albacete,4027.0,182.27,180.71
-71,Ledaña,Municipio,Provincia de Cuenca,1563.0,183.75,185.44
-72,Villatoya,Municipio,provincia de Albacete,109.0,185.96,175.37
-73,Casas-Ibáñez,Municipio,provincia de Albacete,4538.0,188.26,178.93
-74,Villagarcía del Llano,Municipio,Provincia de Cuenca,759.0,188.35,188.74
-75,Alborea,Municipio,provincia de Albacete,658.0,189.37,176.64
-76,Cenizate,Municipio,provincia de Albacete,1181.0,189.97,183.62
-77,Navas de Jorquera,Municipio,provincia de Albacete,517.0,191.79,185.23
-78,Fuentealbilla,Municipio,provincia de Albacete,1792.0,192.85,180.92
-79,Balsa de Ves,Municipio,provincia de Albacete,158.0,194.98,171.94
-80,Casas de Ves,Municipio,provincia de Albacete,572.0,195.8,175.14
-81,Golosalvo,Municipio,provincia de Albacete,104.0,196.07,183.1
-82,Madrigueras,Municipio,provincia de Albacete,4652.0,197.63,187.17
-83,Abengibre,Municipio,provincia de Albacete,790.0,198.81,180.62
-84,Villa de Ves,Municipio,provincia de Albacete,56.0,198.92,173.71
-85,Mahora,Municipio,provincia de Albacete,1383.0,199.63,185.24
+0,Centro Comercial Los Jardines Plaza,Centro Comercial,,,28.0,329.08
+1,Reny Picot,Fábricas,,,31.88,309.92
+2,Cerrajería,Fábricas,,,35.59,356.28
+3,Peguerinos,Municipio,provincia de Ávila,272.0,41.39,306.54
+4,"Espinar, El",Municipio,provincia de Segovia,8986.0,48.97,315.29
+5,Bezoya,Fábricas,,,54.35,329.59
+6,Bezoya,Fábricas,,,54.38,329.7
+7,Centro Comercial Madrid-París,Centro Comercial,,,55.35,356.5
+8,Otero de Herreros,Municipio,provincia de Segovia,959.0,55.55,325.91
+9,Ortigosa del Monte,Municipio,provincia de Segovia,561.0,56.25,329.73
+10,Navas de Riofrío,Municipio,provincia de Segovia,394.0,56.76,333.76
+11,"Losa, La",Municipio,provincia de Segovia,521.0,56.78,331.34
+12,Real Sitio de San Ildefonso,Municipio,provincia de Segovia,5241.0,56.78,345.66
+13,Vegas de Matute,Municipio,provincia de Segovia,273.0,56.91,319.54
+14,Navas de San Antonio,Municipio,provincia de Segovia,328.0,57.24,313.73
+15,Valdeprados,Municipio,provincia de Segovia,67.0,57.73,322.48
+16,Palazuelos de Eresma,Municipio,provincia de Segovia,5416.0,61.12,342.26
+17,Zarzuela del Monte,Municipio,provincia de Segovia,479.0,61.35,316.97
+18,Santa María del Cubillo,Municipio,provincia de Ávila,317.0,63.04,303.56
+19,Ituero y Lama,Municipio,provincia de Segovia,378.0,63.22,314.09
+20,Trescasas,Municipio,provincia de Segovia,1071.0,63.48,344.78
+21,San Cristóbal de Segovia,Municipio,provincia de Segovia,3051.0,63.78,341.88
+22,Villacastín,Municipio,provincia de Ávila,1481.0,63.95,310.8
+23,Segovia,Municipio,provincia de Segovia,51674.0,64.75,338.92
+24,Centro Almuzara,Centro Comercial,,,64.84,338.48
+25,Monterrubio,Municipio,provincia de Segovia,61.0,65.45,318.87
+26,"Lastrilla, La",Municipio,provincia de Segovia,3891.0,66.32,340.48
+27,Ojos-Albos,Municipio,provincia de Ávila,82.0,66.34,300.48
+28,Torrecaballeros,Municipio,provincia de Segovia,1347.0,66.85,346.61
+29,Abades,Municipio,provincia de Segovia,848.0,67.12,327.51
+30,Lastras del Pozo,Municipio,provincia de Segovia,64.0,67.76,321.04
+31,Espirdo,Municipio,provincia de Segovia,1344.0,68.54,343.36
+32,Basardilla,Municipio,provincia de Segovia,153.0,69.4,347.62
+33,Valverde del Majano,Municipio,provincia de Segovia,1095.0,69.65,331.53
+34,Bernuy de Porreros,Municipio,provincia de Segovia,747.0,69.92,340.56
+35,Sotosalbos,Municipio,provincia de Segovia,120.0,70.25,353.02
+36,Collado Hermoso,Municipio,provincia de Segovia,125.0,70.57,354.61
+37,Martín Miguel,Municipio,provincia de Segovia,212.0,70.73,329.0
+38,Hontanares de Eresma,Municipio,provincia de Segovia,1464.0,71.01,334.52
+39,Marugán,Municipio,provincia de Segovia,623.0,71.27,319.98
+40,Santo Domingo de Pirón,Municipio,provincia de Segovia,58.0,71.6,349.88
+41,Valseca,Municipio,provincia de Segovia,233.0,71.7,336.92
+42,Juarros de Riomoros,Municipio,provincia de Segovia,42.0,71.87,326.74
+43,Brieva,Municipio,provincia de Segovia,96.0,72.03,345.58
+44,Pelayos del Arroyo,Municipio,provincia de Segovia,45.0,72.08,353.31
+45,Maello,Municipio,provincia de Ávila,594.0,72.32,308.73
+46,Garcillán,Municipio,provincia de Segovia,463.0,73.01,330.62
+47,Encinillas,Municipio,provincia de Segovia,304.0,73.03,338.53
+48,Tolbaños,Municipio,provincia de Ávila,82.0,73.57,301.68
+49,Adrada de Pirón,Municipio,provincia de Segovia,39.0,73.86,346.12
+50,Torre Val de San Pedro,Municipio,provincia de Segovia,184.0,74.16,357.94
+51,"Huertos, Los",Municipio,provincia de Segovia,170.0,74.33,334.64
+52,Marazoleja,Municipio,provincia de Segovia,101.0,74.64,325.82
+53,Roda de Eresma,Municipio,provincia de Segovia,188.0,74.85,337.44
+54,Bercial,Municipio,provincia de Segovia,111.0,75.02,317.99
+55,Labajos,Municipio,provincia de Segovia,106.0,75.27,310.43
+56,Muñopedro,Municipio,provincia de Segovia,303.0,75.64,315.31
+57,Santiuste de Pedraza,Municipio,provincia de Segovia,92.0,76.07,357.02
+58,Anaya,Municipio,provincia de Segovia,129.0,76.11,328.83
+59,Cabañas de Polendos,Municipio,provincia de Segovia,177.0,76.82,342.83
+60,Sangarcía,Municipio,provincia de Segovia,314.0,77.25,321.3
+61,Marazuela,Municipio,provincia de Segovia,50.0,77.47,325.25
+62,Cantimpalos,Municipio,provincia de Segovia,1325.0,78.88,340.16
+63,Torreiglesias,Municipio,provincia de Segovia,245.0,78.93,348.17
+64,Cubillo,Municipio,provincia de Segovia,73.0,79.6,355.82
+65,Escobar de Polendos,Municipio,provincia de Segovia,167.0,79.86,342.2
+66,Caballar,Municipio,provincia de Segovia,83.0,80.03,352.44
+67,Añe,Municipio,provincia de Segovia,77.0,80.09,331.41
+68,Santo Domingo de las Posadas,Municipio,provincia de Ávila,86.0,80.93,304.19
+69,Arahuetes,Municipio,provincia de Segovia,30.0,81.22,358.97
+70,Yanguas de Eresma,Municipio,provincia de Segovia,128.0,81.34,335.62
+71,Valdevacas y Guijar,Municipio,provincia de Segovia,99.0,81.77,355.74
+72,Velayos,Municipio,provincia de Ávila,211.0,81.84,306.37
+73,Pozanco,Municipio,provincia de Ávila,49.0,82.67,302.4
+74,Sanchidrián,Municipio,provincia de Ávila,716.0,82.74,311.0
+75,Vega de Santa María,Municipio,provincia de Ávila,83.0,82.98,305.43
+76,Escarabajosa de Cabezas,Municipio,provincia de Segovia,298.0,83.07,339.09
+77,Tradecorp,Fábricas,,,83.22,311.29
+78,Tabanera la Luenga,Municipio,provincia de Segovia,56.0,83.78,336.42
+79,Arevalillo de Cega,Municipio,provincia de Segovia,20.0,83.93,357.18
+80,Turégano,Municipio,provincia de Segovia,979.0,84.35,350.41
+81,Armuña,Municipio,provincia de Segovia,219.0,84.8,331.69
+82,Blascosancho,Municipio,provincia de Ávila,105.0,85.32,308.2
+83,Muñoveros,Municipio,provincia de Segovia,145.0,85.56,353.69
+84,Carbonero el Mayor,Municipio,provincia de Segovia,2519.0,87.3,335.83
+85,Rebollo,Municipio,provincia de Segovia,81.0,87.33,358.98
+86,Mozoncillo,Municipio,provincia de Segovia,902.0,87.37,340.6
+87,Santa María la Real de Nieva,Municipio,provincia de Segovia,972.0,87.93,327.27
+88,Veganzones,Municipio,provincia de Segovia,219.0,88.29,351.58
+89,Adanero,Municipio,provincia de Ávila,196.0,88.3,313.06
+90,Pajares de Adaja,Municipio,provincia de Ávila,149.0,88.82,310.65
+91,Puebla de Pedraza,Municipio,provincia de Segovia,43.0,88.83,355.99
+92,Ortigosa de Pestaño,Municipio,provincia de Segovia,55.0,89.01,328.45
+93,Melque de Cercos,Municipio,provincia de Segovia,68.0,89.21,323.67
+94,Gotarrendura,Municipio,provincia de Ávila,162.0,89.31,301.89
+95,Sauquillo de Cabezas,Municipio,provincia de Segovia,150.0,89.58,347.67
+96,Escalona del Prado,Municipio,provincia de Segovia,499.0,89.73,344.69
+97,Nieva,Municipio,provincia de Segovia,264.0,89.79,326.77
+98,Juarros de Voltoya,Municipio,provincia de Segovia,200.0,90.01,320.68
+99,Hernansancho,Municipio,provincia de Ávila,159.0,90.44,304.01
+100,Aldea Real,Municipio,provincia de Segovia,282.0,90.73,342.5
+101,Migueláñez,Municipio,provincia de Segovia,131.0,90.95,331.1
+102,Domingo García,Municipio,provincia de Segovia,25.0,90.98,330.21
+103,Bernardos,Municipio,provincia de Segovia,476.0,91.01,331.91
+104,Villanueva de Gómez,Municipio,provincia de Ávila,115.0,91.11,305.97
+105,Martín Muñoz de las Posadas,Municipio,provincia de Segovia,279.0,91.52,316.03
+106,Cabezuela,Municipio,provincia de Segovia,664.0,92.37,355.15
+107,Pinarnegrillo,Municipio,provincia de Segovia,96.0,92.4,340.57
+108,"Oso, El",Municipio,provincia de Ávila,160.0,92.44,301.92
+109,Aldehuela del Codonal,Municipio,provincia de Segovia,26.0,93.1,321.0
+110,Gutierre-Muñoz,Municipio,provincia de Ávila,78.0,93.1,313.84
+111,San Pascual,Municipio,provincia de Ávila,44.0,93.84,304.66
+112,Aguilafuente,Municipio,provincia de Segovia,573.0,93.93,345.92
+113,"Bohodón, El",Municipio,provincia de Ávila,120.0,94.12,307.35
+114,Riocabado,Municipio,provincia de Ávila,140.0,94.15,300.37
+115,Orbita,Municipio,provincia de Ávila,75.0,94.81,314.28
+116,Fuentepelayo,Municipio,provincia de Segovia,836.0,94.88,342.75
+117,Cantalejo,Municipio,provincia de Segovia,3523.0,94.96,355.49
+118,Tiñosillos,Municipio,provincia de Ávila,787.0,95.26,308.36
+119,Aldeanueva del Codonal,Municipio,provincia de Segovia,117.0,95.84,321.98
+120,Sebúlcor,Municipio,provincia de Segovia,273.0,96.09,357.76
+121,Navalmanzano,Municipio,provincia de Segovia,1049.0,96.52,338.78
+122,Codorniz,Municipio,provincia de Segovia,327.0,97.46,319.14
+123,Cabizuela,Municipio,provincia de Ávila,84.0,98.1,304.46
+124,Papatrigo,Municipio,provincia de Ávila,226.0,98.33,301.77
+125,Espinosa de los Caballeros,Municipio,provincia de Ávila,114.0,98.81,314.89
+126,Zarzuela del Pinar,Municipio,provincia de Segovia,429.0,99.18,343.1
+127,Fuenterrebollo,Municipio,provincia de Segovia,341.0,99.18,355.6
+128,Pedro-Rodríguez,Municipio,provincia de Ávila,134.0,99.32,306.78
+129,San Martín y Mudrián,Municipio,provincia de Segovia,245.0,99.43,336.19
+130,Nava de la Asunción,Municipio,provincia de Segovia,2774.0,99.54,327.0
+131,Navas de Oro,Municipio,provincia de Segovia,1338.0,101.27,330.27
+132,Muñomer del Peco,Municipio,provincia de Ávila,118.0,101.38,300.12
+133,Lastras de Cuéllar,Municipio,provincia de Segovia,358.0,101.46,347.25
+134,Nava de Arévalo,Municipio,provincia de Ávila,735.0,101.48,309.14
+135,Narros de Saldueña,Municipio,provincia de Ávila,103.0,101.51,301.28
+136,Pinarejos,Municipio,provincia de Segovia,186.0,102.2,338.2
+137,San Vicente de Arévalo,Municipio,provincia de Ávila,169.0,102.38,307.92
+138,Martín Muñoz de la Dehesa,Municipio,provincia de Segovia,235.0,102.42,316.04
+139,Rapariegos,Municipio,provincia de Segovia,205.0,102.67,318.4
+140,Cabezas de Alambre,Municipio,provincia de Ávila,157.0,103.48,305.37
+141,Santiuste de San Juan Bautista,Municipio,provincia de Segovia,545.0,103.77,323.76
+142,San Cristóbal de la Vega,Municipio,provincia de Segovia,101.0,103.93,319.37
+143,Navalilla,Municipio,provincia de Segovia,103.0,104.03,355.71
+144,Arévalo,Municipio,provincia de Ávila,7986.0,104.25,315.08
+145,Donjimeno,Municipio,provincia de Ávila,78.0,104.92,306.27
+146,Constanzana,Municipio,provincia de Ávila,108.0,105.6,304.46
+147,Tolocirio,Municipio,provincia de Segovia,47.0,105.88,320.09
+148,Crespos,Municipio,provincia de Ávila,495.0,105.92,301.21
+149,Plastic Omnium,Fábricas,,,105.93,315.03
+150,Gomezserracín,Municipio,provincia de Segovia,683.0,106.22,337.48
+151,Valle de Tabladillo,Municipio,provincia de Segovia,86.0,106.23,359.98
+152,Collado de Contreras,Municipio,provincia de Ávila,168.0,106.4,300.53
+153,Samboal,Municipio,provincia de Segovia,457.0,106.41,333.01
+154,Carrascal del Río,Municipio,provincia de Segovia,147.0,106.83,357.39
+155,Hontalbilla,Municipio,provincia de Segovia,307.0,106.9,347.28
+156,Coca,Municipio,provincia de Segovia,1763.0,106.95,327.72
+157,Donhierro,Municipio,provincia de Segovia,91.0,106.98,317.83
+158,Montejo de Arévalo,Municipio,provincia de Segovia,177.0,107.2,319.83
+159,Cobos de Fuentidueña,Municipio,provincia de Segovia,34.0,108.67,356.13
+160,Torrecilla del Pinar,Municipio,provincia de Segovia,191.0,108.76,351.25
+161,Fuente el Olmo de Fuentidueña,Municipio,provincia de Segovia,176.0,108.95,352.93
+162,Langa,Municipio,provincia de Ávila,478.0,109.05,308.2
+163,Sanchonuño,Municipio,provincia de Segovia,940.0,109.12,339.13
+164,Aldeaseca,Municipio,provincia de Ávila,238.0,109.21,311.25
+165,Adrados,Municipio,provincia de Segovia,126.0,109.27,347.95
+166,Castrojimeno,Municipio,provincia de Segovia,35.0,109.98,359.71
+167,Puras,Municipio,provincia de Valladolid,46.0,110.09,321.99
+168,Fuente el Saúz,Municipio,provincia de Ávila,170.0,110.43,305.49
+169,San Miguel de Bernuy,Municipio,provincia de Segovia,140.0,110.68,355.08
+170,Villanueva del Aceral,Municipio,provincia de Ávila,118.0,110.88,309.92
+171,Canales,Municipio,provincia de Ávila,45.0,111.44,306.91
+172,Cozuelos de Fuentidueña,Municipio,provincia de Segovia,131.0,111.49,348.95
+173,Donvidas,Municipio,provincia de Ávila,34.0,111.53,313.25
+174,Fuente de Santa Cruz,Municipio,provincia de Segovia,116.0,111.57,323.39
+175,Fuentepiñel,Municipio,provincia de Segovia,96.0,111.61,351.28
+176,Fuente el Olmo de Íscar,Municipio,provincia de Segovia,56.0,111.66,330.65
+177,Cantiveros,Municipio,provincia de Ávila,103.0,112.11,303.22
+178,Sinlabajos,Municipio,provincia de Ávila,142.0,112.15,312.05
+179,Palacios de Goda,Municipio,provincia de Ávila,400.0,112.23,315.1
+180,Frumales,Municipio,provincia de Segovia,112.0,112.37,345.09
+181,Perosillo,Municipio,provincia de Segovia,16.0,112.45,347.05
+182,Castro de Fuentidueña,Municipio,provincia de Segovia,31.0,112.59,359.36
+183,Villeguillo,Municipio,provincia de Segovia,110.0,112.68,326.75
+184,Bernuy-Zapardiel,Municipio,provincia de Ávila,102.0,112.78,304.57
+185,Fuentes de Año,Municipio,provincia de Ávila,100.0,112.89,307.28
+186,Fuentesaúco de Fuentidueña,Municipio,provincia de Segovia,240.0,113.49,350.22
+187,Fontiveros,Municipio,provincia de Ávila,748.0,113.55,301.48
+188,Fresneda de Cuéllar,Municipio,provincia de Segovia,165.0,113.6,333.37
+189,Almenara de Adaja,Municipio,provincia de Valladolid,22.0,114.14,322.12
+190,Chañe,Municipio,provincia de Segovia,736.0,114.72,334.6
+191,Cabezas del Pozo,Municipio,provincia de Ávila,75.0,114.88,305.51
+192,Fuente-Olmedo,Municipio,provincia de Valladolid,34.0,115.24,324.11
+193,San Pablo de la Moraleja,Municipio,provincia de Valladolid,109.0,115.24,317.0
+194,Torreadrada,Municipio,provincia de Segovia,55.0,115.24,359.98
+195,Olombrada,Municipio,provincia de Segovia,536.0,115.36,346.68
+196,Villaverde de Íscar,Municipio,provincia de Segovia,604.0,115.53,330.2
+197,Fuentidueña,Municipio,provincia de Segovia,147.0,115.62,354.18
+198,Bocigas,Municipio,provincia de Valladolid,80.0,115.67,322.5
+199,Llano de Olmedo,Municipio,provincia de Valladolid,59.0,115.77,325.97
+200,Muriel,Municipio,provincia de Valladolid,123.0,116.16,313.61
+201,Calabazas de Fuentidueña,Municipio,provincia de Segovia,28.0,116.29,352.96
+202,Fuentesoto,Municipio,provincia de Segovia,108.0,116.78,356.77
+203,Cisla,Municipio,provincia de Ávila,102.0,116.94,302.49
+204,Remondo,Municipio,provincia de Segovia,300.0,117.19,332.7
+205,Cuéllar,Municipio,provincia de Segovia,9583.0,117.44,340.33
+206,San Esteban de Zapardiel,Municipio,provincia de Ávila,37.0,117.69,310.83
+207,Castellanos de Zapardiel,Municipio,provincia de Ávila,97.0,117.71,310.28
+208,Barromán,Municipio,provincia de Ávila,185.0,117.72,308.86
+209,Salvador de Zapardiel,Municipio,provincia de Valladolid,120.0,117.75,312.5
+210,Membibre de la Hoz,Municipio,provincia de Segovia,36.0,117.83,349.59
+211,Aguasal,Municipio,provincia de Valladolid,19.0,118.41,324.93
+212,Ataquines,Municipio,provincia de Valladolid,583.0,118.49,317.1
+213,Bercial de Zapardiel,Municipio,provincia de Ávila,200.0,119.01,307.13
+214,Valtiendas,Municipio,provincia de Segovia,88.0,119.2,356.88
+215,Aldeasoña,Municipio,provincia de Segovia,56.0,119.78,351.33
+216,Mamblas,Municipio,provincia de Ávila,204.0,120.16,304.98
+217,San Cristóbal de Cuéllar,Municipio,provincia de Segovia,151.0,120.7,337.04
+218,Olmedo,Municipio,provincia de Valladolid,3643.0,121.12,324.22
+219,Íscar,Municipio,provincia de Valladolid,6344.0,121.14,331.42
+220,Pedrajas de San Esteban,Municipio,provincia de Valladolid,3327.0,121.24,329.31
+221,Ramiro,Municipio,provincia de Valladolid,43.0,121.31,319.23
+222,Vallelado,Municipio,provincia de Segovia,694.0,121.48,336.24
+223,Sacramenia,Municipio,provincia de Segovia,365.0,121.79,355.66
+224,Laguna de Contreras,Municipio,provincia de Segovia,114.0,121.86,352.56
+225,Mata de Cuéllar,Municipio,provincia de Segovia,266.0,122.15,334.44
+226,Moraleja de Matacabras,Municipio,provincia de Ávila,52.0,122.36,309.96
+227,Lomoviejo,Municipio,provincia de Valladolid,176.0,122.79,312.63
+228,"Zarza, La",Municipio,provincia de Valladolid,111.0,123.23,320.8
+229,Madrigal de las Altas Torres,Municipio,provincia de Ávila,1415.0,123.87,308.23
+230,Viloria,Municipio,provincia de Valladolid,340.0,124.12,338.61
+231,Campaspero,Municipio,provincia de Valladolid,1079.0,124.17,346.23
+232,San Vicente del Palacio,Municipio,provincia de Valladolid,161.0,124.25,317.02
+233,Rasueros,Municipio,provincia de Ávila,182.0,124.82,303.77
+234,Bahabón,Municipio,provincia de Valladolid,108.0,125.05,342.87
+235,Blasconuño de Matacabras,Municipio,provincia de Ávila,16.0,125.62,309.8
+236,Cogeces de Íscar,Municipio,provincia de Valladolid,141.0,125.89,332.15
+237,Fuente el Sol,Municipio,provincia de Valladolid,156.0,125.9,313.18
+238,San Miguel del Arroyo,Municipio,provincia de Valladolid,668.0,126.26,335.92
+239,Torrescárcela,Municipio,provincia de Valladolid,154.0,126.31,341.6
+240,Canalejas de Peñafiel,Municipio,provincia de Valladolid,231.0,126.33,349.54
+241,Rábano,Municipio,provincia de Valladolid,177.0,126.46,351.63
+242,Cuevas de Provanco,Municipio,provincia de Segovia,136.0,126.54,355.37
+243,Megeces,Municipio,provincia de Valladolid,430.0,126.91,331.45
+244,Rágama,Municipio,provincia de Salamanca,218.0,127.11,301.56
+245,Torre de Peñafiel,Municipio,provincia de Valladolid,48.0,127.22,350.62
+246,Moraleja de las Panaderas,Municipio,provincia de Valladolid,42.0,127.43,319.72
+247,Cervillego de la Cruz,Municipio,provincia de Valladolid,90.0,127.6,313.24
+248,Fompedraza,Municipio,provincia de Valladolid,99.0,128.07,348.52
+249,Rubí de Bracamonte,Municipio,provincia de Valladolid,228.0,128.11,314.98
+250,Alcazarén,Municipio,provincia de Valladolid,635.0,128.14,326.96
+251,Paradinas de San Juan,Municipio,provincia de Salamanca,396.0,128.23,300.51
+252,Horcajo de las Torres,Municipio,provincia de Ávila,505.0,128.55,305.18
+253,Cogeces del Monte,Municipio,provincia de Valladolid,685.0,129.07,342.1
+254,Hornillos de Eresma,Municipio,provincia de Valladolid,165.0,129.86,325.63
+255,Olmos de Peñafiel,Municipio,provincia de Valladolid,52.0,130.54,352.56
+256,Castrillo de Duero,Municipio,provincia de Valladolid,111.0,130.66,353.61
+257,Camporredondo,Municipio,provincia de Valladolid,157.0,131.12,334.97
+258,Pozal de Gallinas,Municipio,provincia de Valladolid,539.0,131.59,320.74
+259,Velascálvaro,Municipio,provincia de Valladolid,163.0,132.19,314.15
+260,Langayo,Municipio,provincia de Valladolid,248.0,132.62,347.01
+261,Valdezate,Municipio,provincia de Burgos,142.0,132.92,356.73
+262,Montemayor de Pililla,Municipio,provincia de Valladolid,868.0,133.11,337.19
+263,Fuentemolinos,Municipio,provincia de Burgos,100.0,133.13,359.62
+264,Mojados,Municipio,provincia de Valladolid,3210.0,133.29,328.93
+265,Bobadilla del Campo,Municipio,provincia de Valladolid,293.0,133.42,312.11
+266,Aldea de San Miguel,Municipio,provincia de Valladolid,224.0,134.11,331.11
+267,Manzanillo,Municipio,provincia de Valladolid,52.0,134.28,347.53
+268,Zorita de la Frontera,Municipio,provincia de Salamanca,164.0,134.34,300.7
+269,Nava de Roa,Municipio,provincia de Burgos,227.0,134.47,355.54
+270,Portillo,Municipio,provincia de Valladolid,2432.0,134.77,332.41
+271,Fuentelisendo,Municipio,provincia de Burgos,96.0,135.11,357.79
+272,Medina del Campo,Municipio,provincia de Valladolid,20510.0,135.14,318.29
+273,Palaciosrubios,Municipio,provincia de Salamanca,335.0,135.16,302.59
+274,Fuentecén,Municipio,provincia de Burgos,212.0,135.71,358.94
+275,"Pedraja de Portillo, La",Municipio,provincia de Valladolid,1139.0,136.42,330.45
+276,Bocos de Duero,Municipio,provincia de Valladolid,75.0,136.61,352.02
+277,Pozaldez,Municipio,provincia de Valladolid,482.0,136.66,322.12
+278,Brahojos de Medina,Municipio,provincia de Valladolid,117.0,136.75,312.54
+279,"Campillo, El",Municipio,provincia de Valladolid,222.0,136.96,314.14
+280,Matapozuelos,Municipio,provincia de Valladolid,1058.0,137.63,324.8
+281,San Martín de Rubiales,Municipio,provincia de Burgos,143.0,137.87,354.68
+282,"Parrilla, La",Municipio,provincia de Valladolid,480.0,138.27,335.43
+283,Valdearcos de la Vega,Municipio,provincia de Valladolid,57.0,138.41,352.82
+284,Quintanilla de Arriba,Municipio,provincia de Valladolid,163.0,138.46,346.95
+285,Curiel de Duero,Municipio,provincia de Valladolid,123.0,138.64,351.02
+286,Cantalapiedra,Municipio,provincia de Salamanca,953.0,138.74,305.66
+287,Santibáñez de Valcorba,Municipio,provincia de Valladolid,164.0,139.1,338.54
+288,Hoyales de Roa,Municipio,provincia de Burgos,233.0,139.1,359.19
+289,Ventosa de la Cuesta,Municipio,provincia de Valladolid,103.0,139.51,323.63
+290,Carpio,Municipio,provincia de Valladolid,1016.0,139.63,310.4
+291,Poveda de las Cintas,Municipio,provincia de Salamanca,211.0,139.71,301.19
+292,Villaflores,Municipio,provincia de Salamanca,277.0,139.72,303.13
+293,Pesquera de Duero,Municipio,provincia de Valladolid,448.0,139.88,349.11
+294,Aldeamayor de San Martín,Municipio,provincia de Valladolid,5524.0,140.02,331.6
+295,"Cueva de Roa, La",Municipio,provincia de Burgos,122.0,140.17,356.6
+296,Nueva Villa de las Torres,Municipio,provincia de Valladolid,280.0,140.31,313.48
+297,Traspinedo,Municipio,provincia de Valladolid,1109.0,140.35,337.98
+298,Mambrilla de Castrejón,Municipio,provincia de Burgos,103.0,140.5,355.07
+299,Fresno el Viejo,Municipio,provincia de Valladolid,885.0,140.79,309.18
+300,Villaverde de Medina,Municipio,provincia de Valladolid,533.0,141.58,315.42
+301,Corrales de Duero,Municipio,provincia de Valladolid,105.0,141.65,352.98
+302,Roturas,Municipio,provincia de Valladolid,33.0,142.03,350.6
+303,Valbuena de Duero,Municipio,provincia de Valladolid,468.0,142.42,344.73
+304,Valdestillas,Municipio,provincia de Valladolid,1643.0,142.42,326.98
+305,Berlangas de Roa,Municipio,provincia de Burgos,184.0,142.48,358.83
+306,Quintanilla de Onésimo,Municipio,provincia de Valladolid,1028.0,142.56,342.21
+307,Sardón de Duero,Municipio,provincia de Valladolid,580.0,142.61,339.74
+308,Piñel de Abajo,Municipio,provincia de Valladolid,161.0,143.17,349.72
+309,San Llorente,Municipio,provincia de Valladolid,113.0,143.45,352.51
+310,"Seca, La",Municipio,provincia de Valladolid,1077.0,143.59,321.67
+311,Roa,Municipio,provincia de Burgos,2183.0,143.65,357.1
+312,Olivares de Duero,Municipio,provincia de Valladolid,296.0,143.69,342.31
+313,Cantalpino,Municipio,provincia de Salamanca,851.0,144.81,300.29
+314,Tudela de Duero,Municipio,provincia de Valladolid,8564.0,144.94,334.85
+315,Serrada,Municipio,provincia de Valladolid,1136.0,145.16,324.08
+316,Boecillo,Municipio,provincia de Valladolid,4206.0,145.3,330.48
+317,Pedrosa de Duero,Municipio,provincia de Burgos,484.0,145.48,355.17
+318,Piñel de Arriba,Municipio,provincia de Valladolid,89.0,145.62,350.54
+319,Tarazona de Guareña,Municipio,provincia de Salamanca,305.0,146.2,306.05
+320,Rueda,Municipio,provincia de Valladolid,1254.0,146.38,320.31
+321,Castrejón de Trabancos,Municipio,provincia de Valladolid,174.0,146.44,310.47
+322,Nava del Rey,Municipio,provincia de Valladolid,1986.0,146.61,314.93
+323,Viana de Cega,Municipio,provincia de Valladolid,2032.0,146.73,328.9
+324,Torrecilla de la Orden,Municipio,provincia de Valladolid,253.0,147.51,308.2
+325,Villabáñez,Municipio,provincia de Valladolid,490.0,147.53,337.44
+326,Villaescusa de Roa,Municipio,provincia de Burgos,107.0,148.1,354.3
+327,"Horra, La",Municipio,provincia de Burgos,340.0,148.21,358.85
+328,Villavaquerín,Municipio,provincia de Valladolid,159.0,149.06,339.7
+329,Vallesa de la Guareña,Municipio,provincia de Zamora,83.0,149.39,303.38
+330,Anguix,Municipio,provincia de Burgos,136.0,149.79,357.05
+331,Laguna de Duero,Municipio,provincia de Valladolid,22725.0,150.08,330.91
+332,Villanueva de Duero,Municipio,provincia de Valladolid,1184.0,150.73,325.45
+333,Castrillo-Tejeriego,Municipio,provincia de Valladolid,171.0,150.77,342.98
+334,Canillas de Esgueva,Municipio,provincia de Valladolid,75.0,151.01,351.24
+335,"Pedroso de la Armuña, El",Municipio,provincia de Salamanca,214.0,151.55,300.19
+336,Encinas de Esgueva,Municipio,provincia de Valladolid,248.0,151.61,351.69
+337,Cistérniga,Municipio,provincia de Valladolid,9034.0,151.62,332.37
+338,San Miguel del Pino,Municipio,provincia de Valladolid,350.0,152.11,324.07
+339,Villaco,Municipio,provincia de Valladolid,76.0,152.31,346.48
+340,Villafuerte,Municipio,provincia de Valladolid,80.0,152.72,344.8
+341,Olmedillo de Roa,Municipio,provincia de Burgos,179.0,153.08,357.06
+342,Alaejos,Municipio,provincia de Valladolid,1369.0,153.2,311.31
+343,Castroverde de Cerrato,Municipio,provincia de Valladolid,221.0,153.21,348.09
+344,Olmos de Esgueva,Municipio,provincia de Valladolid,201.0,153.52,338.3
+345,Renedo de Esgueva,Municipio,provincia de Valladolid,3788.0,153.58,334.77
+346,Villanueva de los Infantes,Municipio,provincia de Valladolid,102.0,153.74,339.66
+347,Villarmentero de Esgueva,Municipio,provincia de Valladolid,111.0,153.81,337.66
+348,Fombellida,Municipio,provincia de Valladolid,173.0,153.82,349.27
+349,Amusquillo,Municipio,provincia de Valladolid,103.0,154.02,345.61
+350,Torre de Esgueva,Municipio,provincia de Valladolid,65.0,154.21,348.83
+351,Entrepinares,Fábricas,,,154.29,331.24
+352,Cañizal,Municipio,provincia de Zamora,456.0,154.4,303.8
+353,Siete Iglesias de Trabancos,Municipio,provincia de Valladolid,428.0,154.51,313.34
+354,Piña de Esgueva,Municipio,provincia de Valladolid,324.0,154.95,341.66
+355,Castronuevo de Esgueva,Municipio,provincia de Valladolid,369.0,154.96,336.34
+356,Castrillo de Don Juan,Municipio,provincia de Palencia,207.0,155.06,352.94
+357,Castrillo de la Guareña,Municipio,provincia de Zamora,125.0,155.08,306.74
+358,Simancas,Municipio,provincia de Valladolid,5276.0,155.53,328.13
+359,Tordesillas,Municipio,provincia de Valladolid,8750.0,155.98,321.67
+360,Esguevillas de Esgueva,Municipio,provincia de Valladolid,271.0,156.07,343.33
+361,Arroyo de la Encomienda,Municipio,provincia de Valladolid,20179.0,156.09,329.52
+362,Villatuelda,Municipio,provincia de Burgos,41.0,156.46,358.71
+363,Geria,Municipio,provincia de Valladolid,509.0,156.71,326.6
+364,Terradillos de Esgueva,Municipio,provincia de Burgos,78.0,156.89,359.89
+365,Valladolid,Municipio,provincia de Valladolid,298412.0,157.24,331.98
+366,Tórtoles de Esgueva,Municipio,provincia de Burgos,448.0,157.32,354.52
+367,Parada de Rubiales,Municipio,provincia de Salamanca,252.0,157.78,302.04
+368,Torresandino,Municipio,provincia de Burgos,634.0,158.13,357.88
+369,Pollos,Municipio,provincia de Valladolid,597.0,158.32,317.26
+370,Matilla de los Caños,Municipio,provincia de Valladolid,102.0,158.33,323.54
+371,Hérmedes de Cerrato,Municipio,provincia de Palencia,80.0,159.4,349.96
+372,Torrecilla de la Abadesa,Municipio,provincia de Valladolid,273.0,159.44,319.21
+373,Santovenia de Pisuerga,Municipio,provincia de Valladolid,4480.0,160.05,333.88
+374,Villán de Tordesillas,Municipio,provincia de Valladolid,127.0,160.11,325.8
+375,Velliza,Municipio,provincia de Valladolid,118.0,160.14,324.89
+376,Zaratán,Municipio,provincia de Valladolid,6233.0,160.29,330.7
+377,Vadillo de la Guareña,Municipio,provincia de Zamora,248.0,160.44,307.89
+378,Fuentelapeña,Municipio,provincia de Zamora,684.0,160.64,306.35
+379,Velilla,Municipio,provincia de Valladolid,110.0,160.97,322.96
+380,Robladillo,Municipio,provincia de Valladolid,92.0,161.0,326.44
+381,San Martín de Valvení,Municipio,provincia de Valladolid,83.0,161.52,338.08
+382,Ciguñuela,Municipio,provincia de Valladolid,369.0,161.58,328.44
+383,Población de Cerrato,Municipio,provincia de Palencia,109.0,161.71,342.44
+384,Castronuño,Municipio,provincia de Valladolid,828.0,162.17,312.85
+385,Cabezón de Pisuerga,Municipio,provincia de Valladolid,3713.0,162.26,335.65
+386,Alba de Cerrato,Municipio,provincia de Palencia,87.0,162.29,344.4
+387,Villaescusa,Municipio,provincia de Zamora,249.0,163.41,303.56
+388,Cubillas de Cerrato,Municipio,provincia de Palencia,61.0,163.48,341.46
+389,Vertavillo,Municipio,provincia de Palencia,179.0,163.52,345.7
+390,Fuensaldaña,Municipio,provincia de Valladolid,1773.0,164.09,332.07
+391,Bercero,Municipio,provincia de Valladolid,207.0,164.3,321.96
+392,Aldeanueva de Figueroa,Municipio,provincia de Salamanca,254.0,164.38,300.7
+393,Berceruelo,Municipio,provincia de Valladolid,36.0,164.53,322.88
+394,Valoria la Buena,Municipio,provincia de Valladolid,629.0,165.33,339.69
+395,Castrillo de Onielo,Municipio,provincia de Palencia,98.0,165.89,346.65
+396,Villaconancio,Municipio,provincia de Palencia,61.0,165.91,348.94
+397,Cigales,Municipio,provincia de Valladolid,5235.0,166.61,334.65
+398,Fuentesaúco,Municipio,provincia de Zamora,1475.0,166.91,303.92
+399,Guarrate,Municipio,provincia de Zamora,327.0,166.93,306.66
+400,Castrodeza,Municipio,provincia de Valladolid,160.0,167.05,326.1
+401,Mucientes,Municipio,provincia de Valladolid,662.0,167.49,332.81
+402,Villalar de los Comuneros,Municipio,provincia de Valladolid,468.0,167.53,319.78
+403,Cevico de la Torre,Municipio,provincia de Palencia,491.0,167.57,343.61
+404,Wamba,Municipio,provincia de Valladolid,323.0,167.65,327.72
+405,Villafranca de Duero,Municipio,provincia de Valladolid,258.0,167.74,313.4
+406,Villanubla,Municipio,provincia de Valladolid,2713.0,167.76,330.17
+407,Villafruela,Municipio,provincia de Burgos,186.0,167.8,357.91
+408,"Bóveda de Toro, La",Municipio,provincia de Zamora,709.0,168.51,308.79
+409,Valle de Cerrato,Municipio,provincia de Palencia,90.0,169.39,345.21
+410,Vega de Valdetronco,Municipio,provincia de Valladolid,118.0,169.87,321.38
+411,Torrelobatón,Municipio,provincia de Valladolid,408.0,170.15,324.6
+412,San Román de Hornija,Municipio,provincia de Valladolid,312.0,170.39,315.07
+413,Marzales,Municipio,provincia de Valladolid,45.0,170.42,320.81
+414,Gallegos de Hornija,Municipio,provincia de Valladolid,122.0,170.5,322.11
+415,Cubillas de Santa Marta,Municipio,provincia de Valladolid,326.0,170.66,338.36
+416,Villabuena del Puente,Municipio,provincia de Zamora,675.0,170.74,309.94
+417,San Salvador,Municipio,provincia de Valladolid,26.0,170.94,322.59
+418,Villasexmir,Municipio,provincia de Valladolid,75.0,171.33,323.52
+419,Corcos,Municipio,provincia de Valladolid,201.0,171.59,335.66
+420,"Pego, El",Municipio,provincia de Zamora,296.0,171.66,307.46
+421,Pedrosa del Rey,Municipio,provincia de Valladolid,168.0,171.84,318.53
+422,Trigueros del Valle,Municipio,provincia de Valladolid,314.0,172.15,337.03
+423,Antigüedad,Municipio,provincia de Palencia,363.0,172.65,352.32
+424,Torrecilla de la Torre,Municipio,provincia de Valladolid,35.0,172.91,324.47
+425,San Pelayo,Municipio,provincia de Valladolid,49.0,173.42,325.11
+426,Baltanás,Municipio,provincia de Palencia,1191.0,173.51,348.82
+427,Espinosa de Cerrato,Municipio,provincia de Palencia,144.0,173.68,356.93
+428,Dueñas,Municipio,provincia de Palencia,2612.0,173.77,340.31
+429,Peñaflor de Hornija,Municipio,provincia de Valladolid,297.0,173.95,326.89
+430,Villamor de los Escuderos,Municipio,provincia de Zamora,384.0,173.98,303.36
+431,Iglesiarrubia,Municipio,provincia de Burgos,38.0,174.1,359.8
+432,Hontoria de Cerrato,Municipio,provincia de Palencia,105.0,174.51,343.43
+433,Cantera,Minas,,,174.62,313.5
+434,Barruelo del Valle,Municipio,provincia de Valladolid,52.0,174.68,324.2
+435,Tariego de Cerrato,Municipio,provincia de Palencia,481.0,174.83,342.36
+436,Quintanilla de Trigueros,Municipio,provincia de Valladolid,108.0,174.94,337.18
+437,Adalia,Municipio,provincia de Valladolid,53.0,174.95,322.56
+438,Cantera,Minas,,,175.12,313.56
+439,Casasola de Arión,Municipio,provincia de Valladolid,249.0,175.54,318.37
+440,Villalbarba,Municipio,provincia de Valladolid,121.0,176.11,319.54
+441,Morales de Toro,Municipio,provincia de Zamora,976.0,176.24,316.01
+442,Mota del Marqués,Municipio,provincia de Valladolid,351.0,176.46,320.98
+443,Royuela de Río Franco,Municipio,provincia de Burgos,181.0,176.88,356.86
+444,Venta de Baños,Municipio,provincia de Palencia,6360.0,177.0,342.18
+445,Villaviudas,Municipio,provincia de Palencia,357.0,177.77,346.47
+446,Argujillo,Municipio,provincia de Zamora,242.0,178.45,304.95
+447,"Mudarra, La",Municipio,provincia de Valladolid,158.0,178.49,329.13
+448,Soto de Cerrato,Municipio,provincia de Palencia,185.0,178.78,344.16
+449,Valdefinjas,Municipio,provincia de Zamora,55.0,178.86,311.08
+450,San Miguel de la Ribera,Municipio,provincia de Zamora,291.0,178.96,305.7
+451,"Maderal, El",Municipio,provincia de Zamora,187.0,178.98,303.55
+452,San Cebrián de Mazote,Municipio,provincia de Valladolid,135.0,179.18,322.65
+453,Hornillos de Cerrato,Municipio,provincia de Palencia,141.0,179.39,348.5
+454,Reinoso de Cerrato,Municipio,provincia de Palencia,53.0,180.15,345.56
+455,Venialbo,Municipio,provincia de Zamora,443.0,180.16,307.98
+456,Villalonso,Municipio,provincia de Zamora,81.0,180.39,317.72
+457,Cobos de Cerrato,Municipio,provincia de Palencia,143.0,180.54,355.71
+458,Toro,Municipio,provincia de Zamora,8713.0,180.56,314.13
+459,Villamuriel de Cerrato,Municipio,provincia de Palencia,6469.0,180.56,341.97
+460,"Piñero, El",Municipio,provincia de Zamora,227.0,181.06,306.21
+461,Tabanera de Cerrato,Municipio,provincia de Palencia,135.0,181.35,352.58
+462,Villavendimio,Municipio,provincia de Zamora,162.0,181.54,316.39
+463,Magaz de Pisuerga,Municipio,provincia de Palencia,1005.0,181.83,344.45
+464,Torrepadre,Municipio,provincia de Burgos,69.0,182.0,357.46
+465,Benafarces,Municipio,provincia de Valladolid,72.0,182.05,318.42
+466,Tordómar,Municipio,provincia de Burgos,336.0,182.07,359.34
+467,Fuentespreadas,Municipio,provincia de Zamora,286.0,182.1,304.82
+468,Castromonte,Municipio,provincia de Valladolid,320.0,182.32,326.87
+469,Peleagonzalo,Municipio,provincia de Zamora,266.0,182.76,311.46
+470,Cuelgamures,Municipio,provincia de Zamora,85.0,183.03,303.8
+471,Santa Cecilia del Alcor,Municipio,provincia de Palencia,118.0,183.04,338.27
+472,Villalba de los Alcores,Municipio,provincia de Valladolid,379.0,183.05,332.53
+473,Tiedra,Municipio,provincia de Valladolid,288.0,183.13,319.61
+474,"Cubo de Tierra del Vino, El",Municipio,provincia de Zamora,320.0,183.84,301.54
+475,Villardondiego,Municipio,provincia de Zamora,107.0,183.97,315.93
+476,Villahán,Municipio,provincia de Palencia,106.0,184.24,352.49
+477,Sanzoles,Municipio,provincia de Zamora,492.0,184.8,308.72
+478,Herrera de Valdecañas,Municipio,provincia de Palencia,161.0,185.01,350.74
+479,Ampudia,Municipio,provincia de Palencia,605.0,185.16,335.17
+480,Torquemada,Municipio,provincia de Palencia,954.0,185.18,347.66
+481,Villahoz,Municipio,provincia de Burgos,293.0,185.76,358.15
+482,cantera,Minas,,,185.83,311.45
+483,Venterpal PVC,Fábricas,,,185.91,342.71
+484,Urueña,Municipio,provincia de Valladolid,182.0,186.13,322.53
+485,Santa Clara de Avedillo,Municipio,provincia de Zamora,168.0,186.35,304.47
+486,Peral de Arlanza,Municipio,provincia de Burgos,169.0,186.46,353.95
+487,Pinilla de Toro,Municipio,provincia de Zamora,232.0,186.69,317.18
+488,Valdenebro de los Valles,Municipio,provincia de Valladolid,192.0,186.77,329.93
+489,Villavellid,Municipio,provincia de Valladolid,57.0,187.05,320.33
+490,Castromembibre,Municipio,provincia de Valladolid,54.0,187.05,319.36
+491,Autilla del Pino,Municipio,provincia de Palencia,222.0,187.33,339.51
+492,Valdeolmillos,Municipio,provincia de Palencia,57.0,187.53,345.71
+493,Villamediana,Municipio,provincia de Palencia,175.0,187.67,346.73
+494,Valverde de Campos,Municipio,provincia de Valladolid,95.0,187.81,328.11
+495,Palencia,Municipio,provincia de Palencia,78412.0,188.06,342.26
+496,Pozoantiguo,Municipio,provincia de Zamora,224.0,188.44,315.24
+497,Montealegre de Campos,Municipio,provincia de Valladolid,109.0,188.47,332.26
+498,Villardefrades,Municipio,provincia de Valladolid,170.0,188.51,321.44
+499,Villalobón,Municipio,provincia de Palencia,1690.0,188.65,343.09
+500,Quintana del Puente,Municipio,provincia de Palencia,263.0,188.78,350.77
+501,Jambrina,Municipio,provincia de Zamora,159.0,188.83,306.19
+502,cantera,Minas,,,188.92,311.51
+503,Vezdemarbán,Municipio,provincia de Zamora,449.0,188.95,317.77
+504,Cordovilla la Real,Municipio,provincia de Palencia,109.0,189.09,349.45
+505,Palenzuela,Municipio,provincia de Palencia,206.0,189.12,352.74
+506,Gema,Municipio,provincia de Zamora,217.0,189.42,307.08
+507,Torremormojón,Municipio,provincia de Palencia,44.0,189.75,335.88
+508,Mayalde,Municipio,provincia de Zamora,182.0,189.95,300.32
+509,Abezames,Municipio,provincia de Zamora,61.0,190.17,316.04
+510,Villabrágima,Municipio,provincia de Valladolid,1036.0,190.37,326.38
+511,Villagarcía de Campos,Municipio,provincia de Valladolid,307.0,190.39,323.86
+512,Peleas de Abajo,Municipio,provincia de Zamora,283.0,190.51,305.77
+513,Madridanos,Municipio,provincia de Zamora,458.0,190.54,309.43
+514,Villalazán,Municipio,provincia de Zamora,267.0,190.54,310.03
+515,Pedraza de Campos,Municipio,provincia de Palencia,82.0,190.6,337.16
+516,Villerías de Campos,Municipio,provincia de Palencia,90.0,190.9,333.88
+517,Corrales del Vino,Municipio,provincia de Zamora,961.0,191.02,304.29
+518,Matilla la Seca,Municipio,provincia de Zamora,42.0,191.03,313.63
+519,Villanueva de los Caballeros,Municipio,provincia de Valladolid,175.0,191.26,322.31
+520,Valles de Palenzuela,Municipio,provincia de Burgos,81.0,191.27,354.14
+521,Villamartín de Campos,Municipio,provincia de Palencia,176.0,191.54,339.19
+522,Fresno de la Ribera,Municipio,provincia de Zamora,377.0,191.65,311.22
+523,Tordehumos,Municipio,provincia de Valladolid,417.0,191.79,325.16
+524,Santa María del Campo,Municipio,provincia de Burgos,527.0,191.95,356.68
+525,Fuentes de Valdepero,Municipio,provincia de Palencia,451.0,192.52,343.55
+526,Casaseca de las Chanas,Municipio,provincia de Zamora,390.0,192.57,307.26
+527,Medina de Rioseco,Municipio,provincia de Valladolid,4647.0,192.61,328.85
+528,Moraleja del Vino,Municipio,provincia de Zamora,1721.0,192.87,308.23
+529,Cazurra,Municipio,provincia de Zamora,79.0,192.94,306.22
+530,Meneses de Campos,Municipio,provincia de Palencia,124.0,193.11,332.43
+531,Grijota,Municipio,provincia de Palencia,2319.0,193.12,341.49
+532,Fuentesecas,Municipio,provincia de Zamora,50.0,193.26,315.34
+533,Fuentesecas,Municipio,provincia de Zamora,50.0,193.28,315.34
+534,San Pedro de Latarce,Municipio,provincia de Valladolid,483.0,193.36,320.35
+535,Casaseca de Campeán,Municipio,provincia de Zamora,99.0,193.4,304.53
+536,Villanueva de Campeán,Municipio,provincia de Zamora,112.0,193.66,303.62
+537,Cabañas de Sayago,Municipio,provincia de Zamora,151.0,194.03,302.76
+538,Villodrigo,Municipio,provincia de Palencia,114.0,194.19,353.78
+539,Arcenillas,Municipio,provincia de Zamora,420.0,194.33,307.56
+540,Mazariegos,Municipio,provincia de Palencia,220.0,194.38,338.15
+541,Husillos,Municipio,provincia de Palencia,320.0,194.66,343.32
+542,Belmonte de Campos,Municipio,provincia de Palencia,30.0,194.82,330.95
+543,Revilla Vallejera,Municipio,provincia de Burgos,108.0,194.86,352.84
+544,Ciadoncha,Municipio,provincia de Burgos,75.0,194.97,357.69
+545,Boada de Campos,Municipio,provincia de Palencia,17.0,195.15,334.21
+546,Villaverde-Mogina,Municipio,provincia de Burgos,74.0,195.54,354.89
+547,Villanueva de San Mancio,Municipio,provincia de Valladolid,87.0,195.56,330.26
+548,Baquerín de Campos,Municipio,provincia de Palencia,30.0,195.56,336.51
+549,Malva,Municipio,provincia de Zamora,123.0,195.9,315.66
+550,Valbuena de Pisuerga,Municipio,provincia de Palencia,47.0,195.99,350.33
+551,Bustillo del Oro,Municipio,provincia de Zamora,84.0,196.03,316.55
+552,"Perdigón, El",Municipio,provincia de Zamora,671.0,196.13,305.39
+553,Villalube,Municipio,provincia de Zamora,169.0,196.17,313.64
+554,Belbimbre,Municipio,provincia de Burgos,61.0,196.23,355.84
+555,Morales de Campos,Municipio,provincia de Valladolid,138.0,196.38,325.8
+556,Coreses,Municipio,provincia de Zamora,1047.0,196.44,310.88
+557,Villamedianilla,Municipio,provincia de Burgos,12.0,196.5,352.61
+558,Algodre,Municipio,provincia de Zamora,148.0,196.58,311.63
+559,Villaralbo,Municipio,provincia de Zamora,1821.0,196.67,308.52
+560,Morales del Vino,Municipio,provincia de Zamora,2947.0,196.84,306.64
+561,Barrio de Muñó,Municipio,provincia de Burgos,33.0,196.91,355.98
+562,Peñausende,Municipio,provincia de Zamora,385.0,196.97,300.53
+563,Pozuelo de la Orden,Municipio,provincia de Valladolid,49.0,197.27,323.37
+564,Villalaco,Municipio,provincia de Palencia,56.0,197.35,349.9
+565,Entrala,Municipio,provincia de Zamora,156.0,197.44,305.92
+566,Gallegos del Pan,Municipio,provincia de Zamora,113.0,197.62,312.8
+567,Monzón de Campos,Municipio,provincia de Palencia,592.0,197.71,344.15
+568,Villaumbrales,Municipio,provincia de Palencia,648.0,197.78,341.18
+569,Presencio,Municipio,provincia de Burgos,162.0,197.83,358.54
+570,Castromocho,Municipio,provincia de Palencia,225.0,198.37,336.0
+571,Cotanes del Monte,Municipio,provincia de Zamora,103.0,198.43,322.7
+572,Castil de Vela,Municipio,provincia de Palencia,64.0,198.76,332.26
+573,Vallejera,Municipio,provincia de Burgos,43.0,198.93,352.58
+574,Capillas,Municipio,provincia de Palencia,75.0,199.05,334.13
+575,Palazuelos de Muñó,Municipio,provincia de Burgos,53.0,199.17,356.47
+576,Belver de los Montes,Municipio,provincia de Zamora,275.0,199.29,317.82
+577,Villazopeque,Municipio,provincia de Burgos,54.0,199.58,355.81
+578,Olmillos de Muñó,Municipio,provincia de Burgos,35.0,199.64,357.61
