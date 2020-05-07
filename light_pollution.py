@@ -213,6 +213,7 @@ def read_file_sqm():
     # Encoding: Western Europe
     myFile = open(args.data, "r", encoding='iso8859_15')
     contents = myFile.read()
+    myFile.close()
 
     # Load latitude and longitude
     global lat, lon
@@ -291,6 +292,7 @@ def read_file_tas():
 
     # twice readline to skip first heading line
     lines = myFile.readlines()[1:]
+    myFile.close()
     latlon = lines[0].split()
 
     # get latitude and longitude from first data line
@@ -312,8 +314,6 @@ def read_file_tas():
             mag_max = float(sp[5])
         elif float(sp[5]) < mag_min:
             mag_min = float(sp[5])
-        line = myFile.readline()
-    myFile.close()
     m10 = m10.astype({'T_IR': float, 'T_Sens': float, 'Mag': float, 'Azi': float})
     mag_range = mag_max - mag_min
 
