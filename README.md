@@ -21,18 +21,19 @@ Situado en el fichero, para ejecutar el script:
 
 ```python
 >>> import subprocess
->>> subprocess.run('python3 light_pollution.py {data} {threshold} {-s source: sqm/tas} {OPTIONAL opening {angle_lower angle_upper}} {OPTIONAL distance}', shell=True)
+>>> subprocess.run('python3 light_pollution.py {arguments (see Help)}', shell=True)
 ```
 
 ### Desde Terminal
 
 ```
-python3 light_pollution.py {data} {threshold} {-s source: sqm/tas} {OPTIONAL opening {angle_lower angle_upper}} {OPTIONAL distance}
+python3 light_pollution.py {arguments (see Help)}
 ```
 
 ### Help
 ```
-usage: light_pollution.py [-h] [-o OPENING OPENING] [-d DISTANCE] -s SOURCE
+usage: light_pollution.py [-h] [-o OPENING OPENING] [-d DISTANCE]
+                          [-n CLOUDINESS_ANGLE] -s SOURCE
                           data threshold
 positional arguments:
   data                  file containing measurement data
@@ -45,6 +46,11 @@ optional arguments:
                         whitespace [0-360]
   -d DISTANCE, --distance DISTANCE
                         radius in km within to search, default 200
+  -n CLOUDINESS_ANGLE, --cloudiness_angle CLOUDINESS_ANGLE
+                        Only supported for tas. Angle opening w.r.t. each
+                        original angle from tas to be considered as same, in
+                        order to calculate the cloudiness to each place.
+                        [0-12]
 required arguments:
   -s SOURCE, --source SOURCE
                         data source type: sqm/tas
