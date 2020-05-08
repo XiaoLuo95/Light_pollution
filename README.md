@@ -13,9 +13,19 @@ Para el correcto funcionamiento del script, hacen falta tener instalados los paq
 * collections
 * Geopy.distance
 
+
+
 ### Diagrama ilustrativo:
 
 <image src="https://github.com/XiaoLuo95/Light_pollution/blob/master/images/threshold.png" width="775" height="500">
+
+Los ángulos de búsqueda se calculan con:
+
+* [-t] threshold percentil (0.0-1.0)
+* [-T] threshold en magnitud real
+* [-o] introduciendo manualmente los ángulos
+
+**¡Ojo! Son mutuamente incompatibles**
 
 
 
@@ -38,32 +48,38 @@ python3 light_pollution.py {arguments (see Help)}
 
 ### Help
 ```
-usage: light_pollution.py [-h] [-t THRESHOLD] [-o OPENING OPENING]
-                          [-d DISTANCE] [-n CLOUDINESS_ANGLE] -s SOURCE
-                          data
-positional arguments:
-  data                  file containing measurement data
+usage: light_pollution.py [-h] [-t THRESHOLD_PERCENT] [-T THRESHOLD_MAG]
+                          [-o OPENING OPENING] [-d DISTANCE]
+                          [-c CLOUDINESS_ANGLE] -f FILE -s SOURCE
 optional arguments:
   -h, --help            show this help message and exit
-  -t THRESHOLD, --threshold THRESHOLD
-                        percentage of magnitude from minimum under
-                        consideration [0.00-1.00]
+  -t THRESHOLD_PERCENT, --threshold_percent THRESHOLD_PERCENT
+                        percentage of magnitude from minimum to consider.
+                        Default 0.3. Incompatible with {-T, -o}. [0.00-1.00]
+  -T THRESHOLD_MAG, --threshold_mag THRESHOLD_MAG
+                        maximum magnitude under consideration. Incompatible
+                        with {-t, -o}.
   -o OPENING OPENING, --opening OPENING OPENING
                         angle opening's lower and upper bound, separated by
-                        whitespace. [0-359.99] [0-359.99]
+                        whitespace. Incompatible with {-t, -T}. [0-359.99]
+                        [0-359.99]
   -d DISTANCE, --distance DISTANCE
-                        radius in km within to search, default 200
-  -n CLOUDINESS_ANGLE, --cloudiness_angle CLOUDINESS_ANGLE
+                        radius in km within to search, default 200.
+  -c CLOUDINESS_ANGLE, --cloudiness_angle CLOUDINESS_ANGLE
                         Only supported for tas. Angle opening w.r.t. each
                         original angle from tas to be considered as same, in
                         order to calculate the cloudiness to each place.
-                        [0-12]
+                        Default 1º. [0-12]
 required arguments:
+  -f FILE, --file FILE  file containing measurement data
   -s SOURCE, --source SOURCE
                         data source type: sqm/tas
 ```
 
+
+
 #### Como fuentes de contaminación lumínica se tienen en cuenta:
+
 * municipios
 * minas
 * fábricas

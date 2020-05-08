@@ -11,13 +11,13 @@ import geopy.distance as dist
 # command line arguments parser
 parser = argparse.ArgumentParser()
 parser.add_argument("-t", "--threshold_percent", type=float, action="store",
-                    help="percentage of magnitude from minimum under consideration. Default 0.3. Incompatible with {-T, -o}. [0.00-1.00]")
+                    help="percentage of magnitude from minimum to consider. Default 0.3. Incompatible with {-T, -o}. [0.00-1.00]")
 parser.add_argument("-T", "--threshold_mag", type=float, action="store",
                     help="maximum magnitude under consideration. Incompatible with {-t, -o}.")
 parser.add_argument("-o", "--opening", type=float, nargs=2, action="store",
                     help="angle opening's lower and upper bound, separated by whitespace. Incompatible with {-t, -T}. [0-359.99] [0-359.99]")
 parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200.")
-parser.add_argument("-n", "--cloudiness_angle", type=float, action="store",
+parser.add_argument("-c", "--cloudiness_angle", type=float, action="store",
                     help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. Default 1º. [0-12]")
 required = parser.add_argument_group('required arguments')
 required.add_argument("-f", "--file", type=str, help="file containing measurement data", required=True)
@@ -318,24 +318,29 @@ def read_file_sqm():
             else:
                 break
 
-    # Continue searching
-    # Set start and end angle to search
+    # Continue searching from the main maximum toward right, until main minimum
+    # Set start and end indexes
     start = int(((angle_max[0] + 30) % 360) / 30)
     end = int((angle_min[0] % 360) / 30)
     if start == end:
         return
     elif start > end:
         end = end + 12
+    # control angle pairs with position in list
     position = 1
     valley = False
     for index in range(start, end):
+        # if in "valley"
         if m20[index % 12] <= th:
+            # if first entry, new angle pairs
             if len(angle_min) < (position + 1):
                 valley = True
                 angle_min.append(float((index % 12) * 30))
                 angle_max.append(float((index % 12) * 30))
+            # if still in valley
             else:
                 angle_max[position] = float((index % 12) * 30)
+        # if exit the valley
         elif (m20[index % 12] > th) and (valley is True):
             position = position + 1
             valley = False
@@ -390,16 +395,17 @@ def read_file_tas():
         angle_min.append(args.opening[0])
         angle_max.append(args.opening[1])
     else:
-        # Angles at left and right position of the minimum value
+        # position of the minimum and its angle
         center_index = m10['Mag'].argmin()
         angle_center = m10.loc[[center_index]]['Azi'].item()
+        # magnitudes and angles of adjacents from minimum
         mag_left = m10.loc[[(center_index - 1) % len(m10)]]['Mag'].item()
         mag_right = m10.loc[[(center_index + 1) % len(m10)]]['Mag'].item()
         angle_left = m10.loc[[(center_index - 1) % len(m10)]]['Azi'].item()
         angle_right = m10.loc[[(center_index + 1) % len(m10)]]['Azi'].item()
 
         # Set default minimum angle opening
-        # If both values at left and right are equal, the opening will be 60º, otherwise 30º
+        # If both values at left and right are equal, the opening will be 22º, otherwise 11º
         if mag_left < mag_right:
             angle_min.append(angle_left)
             angle_max.append(angle_center)
@@ -432,25 +438,32 @@ def read_file_tas():
             else:
                 break
 
-    # Continue searching if magnitude threshold was set
-    if threshold_mag is not None:
-        # Set start and end angle to search
-        start = (max_index + 1) % len(m10)
-        end = min_index
-        if start == end:
-            return
-        elif start > end:
-            end = end + len(m10)
-        position = 1
-        for index in range(start, end):
-            if m10[[index % len(m10)]]['Mag'].item() <= th:
-                if len(angle_min) < position + 1:
-                    angle_min.append(m10[[index % len(m10)]]['Azi'].item())
-                    angle_max.append(m10[[index % len(m10)]]['Azi'].item())
-                else:
-                    angle_max[position] = m10[[index % len(m10)]]['Azi'].item()
+    # Continue searching from the main maximum toward right, until main minimum
+    # Set start and end indexes
+    start = (max_index + 1) % len(m10)
+    end = min_index
+    if start == end:
+        return
+    elif start > end:
+        end = end + len(m10)
+    # control of angle pairs with position of angle in the list
+    position = 1
+    valley = False
+    for index in range(start, end):
+        # if enter the "valley"
+        if m10.loc[[index % len(m10)]]['Mag'].item() <= th:
+            # if first entry, new pair of angles
+            if len(angle_min) < (position + 1):
+                valley = True
+                angle_min.append(m10.loc[[index % len(m10)]]['Azi'].item())
+                angle_max.append(m10.loc[[index % len(m10)]]['Azi'].item())
+            # if still in valley
             else:
-                position = position + 1
+                angle_max[position] = m10.loc[[index % len(m10)]]['Azi'].item()
+        # if exit the "valley"
+        elif (m10.loc[[index % len(m10)]]['Mag'].item() > th) and (valley is True):
+            position = position + 1
+            valley = False
 
 
 # Process all conditions, including distance and angle opening
