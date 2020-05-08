@@ -10,43 +10,50 @@ import geopy.distance as dist
 
 # command line arguments parser
 parser = argparse.ArgumentParser()
-parser.add_argument("data", help = "file containing measurement data")
-parser.add_argument("-t", "--threshold", type=float, action="store", help = "percentage of magnitude from minimum under consideration [0.00-1.00]")
-parser.add_argument("-o", "--opening", type=float, nargs=2, action="store", help="angle opening's lower and upper bound, separated by whitespace. [0-359.99] [0-359.99]")
-parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200")
-parser.add_argument("-n", "--cloudiness_angle", type=float, action="store", help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. Default 1º. [0-12]")
+parser.add_argument("-t", "--threshold_percent", type=float, action="store",
+                    help="percentage of magnitude from minimum under consideration. Default 0.3. Incompatible with {-T, -o}. [0.00-1.00]")
+parser.add_argument("-T", "--threshold_mag", type=float, action="store",
+                    help="maximum magnitude under consideration. Incompatible with {-t, -o}.")
+parser.add_argument("-o", "--opening", type=float, nargs=2, action="store",
+                    help="angle opening's lower and upper bound, separated by whitespace. Incompatible with {-t, -T}. [0-359.99] [0-359.99]")
+parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200.")
+parser.add_argument("-n", "--cloudiness_angle", type=float, action="store",
+                    help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. Default 1º. [0-12]")
 required = parser.add_argument_group('required arguments')
-required.add_argument('-s', '--source', type=str, help = "data source type: sqm/tas", required=True)
+required.add_argument("-f", "--file", type=str, help="file containing measurement data", required=True)
+required.add_argument('-s', '--source', type=str, help="data source type: sqm/tas", required=True)
 args = parser.parse_args()
-
-# global distance, default 200
-distance = 200
-
-# global m10 dataframe
-m10 = pd.DataFrame(columns=['Mag', 'Azi', 'Cloudiness'])
-
-# global dataframe for full list of light pollution sources
-df = pd.DataFrame()
 
 # global latitud and longitud
 lat = None
 lon = None
 
+# global dataframe for full list of light pollution sources
+df = pd.DataFrame()
+
+# global distance, default 200
+distance = 200.00
+
+# global m10 dataframe (tas)
+m10 = pd.DataFrame(columns=['Mag', 'Azi', 'Cloudiness'])
+
 # global maximum and minimum angle in search
-angle_min = None
-angle_max = None
+angle_min = []
+angle_max = []
 
 # global adjacent angles from original angles in tas
 adj = 0.5
 
-# global threshold, default 30%
-threshold = 0.3
+# global percentile threshold, default 30%
+threshold_percent = 0.3
+threshold_mag = None
 
 
 # Query full list of light pollution sources, including quarry, factory, greenhouse and shopping malls within Spain
 def query_function():
     places = []
 
+    # query municipalities from Wikidata
     wikidata_url = 'https://query.wikidata.org/sparql'
     wikidata_query = '''
     SELECT DISTINCT ?Municipio ?Provincia ?poblacion ?longitud ?latitud WHERE 
@@ -67,16 +74,19 @@ def query_function():
     '''
     response_municipality = requests.get(wikidata_url, params={'format': 'json', 'query': wikidata_query})
     data_municipality = response_municipality.json()
+
+    # municipalities' processing
     for item in data_municipality['results']['bindings']:
         # check if the place is within the angle range
-            places.append(OrderedDict({
-                'Nombre': item['Municipio']['value'],
-                'Tipo': 'Municipio',
-                'Provincia': item['Provincia']['value'],
-                'Poblacion': round(float(item['poblacion']['value']), 0),
-                'lon': item['longitud']['value'],
-                'lat': item['latitud']['value']}))
+        places.append(OrderedDict({
+            'Nombre': item['Municipio']['value'],
+            'Tipo': 'Municipio',
+            'Provincia': item['Provincia']['value'],
+            'Poblacion': round(float(item['poblacion']['value']), 0),
+            'lon': item['longitud']['value'],
+            'lat': item['latitud']['value']}))
 
+    # query quarries from OSM
     overpass_url = "http://overpass-api.de/api/interpreter"
     overpass_query_quarry = """
         [out:json];
@@ -91,6 +101,7 @@ def query_function():
     response_quarry = requests.get(overpass_url, params={'data': overpass_query_quarry})
     data_quarry = response_quarry.json()
 
+    # quarries' processing
     for element in data_quarry['elements']:
         if 'name' in element['tags']:
             if element['type'] == 'node':
@@ -110,6 +121,7 @@ def query_function():
                     'lon': element['center']['lon'],
                     'lat': element['center']['lat']}))
 
+    # querry factories
     overpass_query_factory = """
         [out:json];
         area["ISO3166-1"="ES"][admin_level=2];
@@ -123,6 +135,7 @@ def query_function():
     response_factory = requests.get(overpass_url, params={'data': overpass_query_factory})
     data_factory = response_factory.json()
 
+    # factories processing
     for element in data_factory['elements']:
         if 'name' in element['tags']:
             if element['type'] == 'node':
@@ -142,7 +155,9 @@ def query_function():
                     'lon': element['center']['lon'],
                     'lat': element['center']['lat']}))
 
-    '''overpass_query_greenhouse = """
+    '''
+    # querry greenhouses
+    overpass_query_greenhouse = """
         [out:json];
         area["ISO3166-1"="ES"][admin_level=2];
         (
@@ -155,6 +170,7 @@ def query_function():
     response_greenhouse = requests.get(overpass_url, params={'data': overpass_query_greenhouse})
     data_greenhouse = response_greenhouse.json()
 
+    # greenhouses' processing
     for element in data_greenhouse['elements']:
         if 'name' in element['tags']:
             if element['type'] == 'node':
@@ -175,6 +191,7 @@ def query_function():
                     'lat': element['center']['lat']}))
     '''
 
+    # querry shopping malls
     overpass_query_shop = """
         [out:json];
         area["ISO3166-1"="ES"][admin_level=2];
@@ -188,6 +205,7 @@ def query_function():
     response_shop = requests.get(overpass_url, params={'data': overpass_query_shop})
     data_shop = response_shop.json()
 
+    # shopping malls' processing
     for element in data_shop['elements']:
         if 'name' in element['tags']:
             if element['type'] == 'node':
@@ -207,34 +225,37 @@ def query_function():
                     'lon': element['center']['lon'],
                     'lat': element['center']['lat']}))
 
+    # store full list at global df
     global df
     df = pd.DataFrame(places)
     df.reset_index()
     df = df.astype({'lon': float, 'lat': float})
     df = df.round({'lon': 4, 'lat': 4})
+
+    # save a copy to csv
     df.to_csv("light_pollution_sources.csv")
 
 
-# sqm file data reading
+# sqm file reader
 def read_file_sqm():
     # Encoding: Western Europe
-    myFile = open(args.data, "r", encoding='iso8859_15')
-    contents = myFile.read()
-    myFile.close()
+    file = open(args.file, "r", encoding='iso8859_15')
+    contents = file.read()
+    file.close()
 
-    # Load latitude and longitude
+    # Regex: get latitude and longitude
     global lat, lon
     lat = float(str(re.findall(r'# LATITUD: (.*)', contents)[0]).replace('\t', ""))
     lon = float(str(re.findall(r'# LONGITUD: (.*)', contents)[0]).replace('\t', ""))
 
     # Load and process the lowest cenit readings
-    # Regex: get contents of m20
+    # Regex: get magnitudes of m20
     m20 = str(re.findall(r'm20 = \[(.*)\]', contents)[0]).split(", ")
     for item in m20:
         item.replace(",", ".")
     m20 = np.array(m20, dtype=np.float32)
 
-    # Get the difference between maximum and minimum values recorded as range
+    # Get the difference between maximum and minimum
     # Regex: Get all contents between "[" and "]"
     magnitudes = re.findall(r'\[(.*)\]', contents)
     total = []
@@ -245,76 +266,92 @@ def read_file_sqm():
     total_range = (total.max() - total.min()).round(2)
 
     # Calculate the threshold
-    global threshold
-    if args.threshold is not None:
-        threshold = float(args.threshold)
-    th = m20.min() + threshold * total_range
+    global threshold_percent, threshold_mag
+    if threshold_mag is not None:
+        th = threshold_mag
+    else:
+        th = m20.min() + threshold_percent * total_range
 
-    global angle_max, angle_min
-    if float(args.threshold) == 1:
-        angle_min = 0
-        angle_max = 359.99
+    # if percentile threshold is set as 1, full angle range
+    global angle_min, angle_max
+    if args.threshold_percent == 1:
+        angle_min.append(0)
+        angle_max.append(359.99)
         return
-    # If optional opening is set with values, just set the global, otherwise proceed to calculate them
+
+    # If optional opening was set, just set the global, otherwise proceed to calculate them
     if args.opening is not None:
-        angle_min = args.opening[0]
-        angle_max = args.opening[1]
+        angle_min.append(args.opening[0])
+        angle_max.append(args.opening[1])
     else:
         # Angles at left and right position of the minimum value
-        angle_left = m20[int(np.where(m20 == m20.min())[0] - 1) % 12]
-        angle_right = m20[int(np.where(m20 == m20.min())[0] + 1) % 12]
+        center_index = int(np.where(m20 == m20.min())[0])
+        angle_left = float(((center_index - 1) % 12) * 30)
+        angle_right = float(((center_index + 1) % 12) * 30)
 
         # Set default minimum angle opening
         # If both values at left and right are equal, the opening will be 60º, otherwise 30º
-        if angle_left < angle_right:
-            angle_min = angle_left
-            angle_max = m20.min()
-        elif angle_right < angle_left:
-            angle_min = m20.min()
-            angle_max = angle_right
+        if m20[int(angle_left / 30)] < m20[int(angle_right / 30)]:
+            angle_min.append(angle_left)
+            angle_max.append(float(center_index * 30))
+        elif m20[int(angle_right / 30)] < m20[int(angle_left / 30)]:
+            angle_min.append(float(center_index * 30))
+            angle_max.append(angle_right)
         else:
-            angle_min = angle_left
-            angle_max = angle_right
+            angle_min.append(angle_left)
+            angle_max.append(angle_right)
 
-        # If value at right of min is within threshold and less than the angle_right, update
-        # break loop if value surpass threshold
+        # If value at right of min is within percentile threshold and less than the angle_right, update
+        # break loop if value surpass percentile threshold
         idx = int(np.where(m20 == m20.min())[0])
-        for aux in range(int(idx + 1), int(idx + 12)):
+        for aux in range(int(idx + 1), int(idx + 13)):
             if m20[aux % 12] <= th:
-                if m20[aux % 12] < angle_right:
-                    angle_right = m20[aux % 12]
+                angle_max[0] = float((aux % 12) * 30)
             else:
                 break
 
-        # If value at left of min is within threshold and less than the angle_left, update
-        # break loop if value surpass threshold
+        # If value at left of min is within percentile threshold and less than the angle_left, update
+        # break loop if value surpass percentile threshold
         for aux in range(idx - 1, idx - 12, -1):
             if m20[aux % 12] <= th:
-                if m20[aux % 12] > angle_left:
-                    angle_left = m20[aux % 12]
+                angle_min[0] = float((aux % 12) * 30)
             else:
                 break
 
-        # Convert angle_left and angle_right to real angles:
-        angle_min = int(np.where(m20 == angle_left)[0]) * 30
-        angle_max = int(np.where(m20 == angle_right)[0]) * 30
+    # Continue searching if magnitude threshold was set
+    if threshold_mag is not None:
+        # Set start and end angle to search
+        start = ((angle_max[0] + 30) % 360) / 30
+        end = (angle_min[0] % 360) / 30
+        if start == end:
+            return
+        elif start > end:
+            end = end + 12
+        position = 1
+        for index in range(start, end):
+            if m20[index % 12] <= th:
+                if len(angle_min) < position + 1:
+                    angle_min.append(float((index % 12) * 30))
+                    angle_max.append(float((index % 12) * 30))
+                else:
+                    angle_max[position] = float((index % 12) * 30)
+            else:
+                position = position + 1
 
 
-# tas file data reading
+# tas file reader
 def read_file_tas():
-    myFile = open(args.data, "r", encoding='iso8859_15')
-
-    # twice readline to skip first heading line
-    lines = myFile.readlines()[1:]
-    myFile.close()
+    file = open(args.file, "r", encoding='iso8859_15')
+    lines = file.readlines()[1:]
+    file.close()
     latlon = lines[0].split()
 
     # get latitude and longitude from first data line
     global lat, lon
     lat_a = latlon[9].split(":")
     lon_a = latlon[10].split(":")
-    lat = float(lat_a[0]) + float(lat_a[1])/60 + float(lat_a[2])/3600
-    lon = float(lon_a[0]) + float(lon_a[1])/60 + float(lat_a[2])/3600
+    lat = float(lat_a[0]) + float(lat_a[1]) / 60 + float(lat_a[2]) / 3600
+    lon = float(lon_a[0]) + float(lon_a[1]) / 60 + float(lat_a[2]) / 3600
 
     # get useful information: T_IR, T_Sens, Mag, Azi of m10, and max & min value in Mag
     global m10
@@ -334,20 +371,21 @@ def read_file_tas():
     mag_range = mag_max - mag_min
 
     # Calculate threshold
-    global threshold
-    if args.threshold is not None:
-        threshold = float(args.threshold)
-    th = mag_min + threshold * mag_range
+    global threshold_percent, threshold_mag
+    if threshold_mag is not None:
+        th = threshold_mag
+    else:
+        th = mag_min + threshold_percent * mag_range
 
     global angle_max, angle_min
-    if float(args.threshold) == 1:
-        angle_min = 0
-        angle_max = 359.99
+    if args.threshold_percent == 1:
+        angle_min.append(0)
+        angle_max.append(359.99)
         return
     # If optional opening is set with values, just set the global, otherwise proceed to calculate them
     if args.opening is not None:
-        angle_min = args.opening[0]
-        angle_max = args.opening[1]
+        angle_min.append(args.opening[0])
+        angle_max.append(args.opening[1])
     else:
         # Angles at left and right position of the minimum value
         angle_left = m10.loc[[(m10['Mag'].argmin() - 1) % len(m10)]]['Mag'].item()
@@ -356,14 +394,14 @@ def read_file_tas():
         # Set default minimum angle opening
         # If both values at left and right are equal, the opening will be 60º, otherwise 30º
         if angle_left < angle_right:
-            angle_min = angle_left
-            angle_max = m10['Mag'].min()
+            angle_min.append(angle_left)
+            angle_max.append(m10['Mag'].min())
         elif angle_right < angle_left:
-            angle_min = m10['Mag'].min()
-            angle_max = angle_right
+            angle_min.append(m10['Mag'].min())
+            angle_max.append(angle_right)
         else:
-            angle_min = angle_left
-            angle_max = angle_right
+            angle_min.append(angle_left)
+            angle_max.append(angle_right)
 
         # If value at right of min is within threshold and less than the angle_right, update
         # break loop if value surpass threshold
@@ -389,39 +427,42 @@ def read_file_tas():
         angle_max = m10.loc[m10['Mag'] == angle_right]['Azi'].item()
 
 
-# Filter all conditions, including distance and angle opening
-def filter():
+# Process all conditions, including distance and angle opening
+def process():
     global df
     global m10
     global latitude, longitude, distance, angle_max, angle_min
     global adj
 
+    max_a = []
+    min_a = []
     # convert upper bound (0-360) into (-180, 180)
-    if angle_max > 180:
-        max_a = angle_max - 360
-    else:
-        max_a = angle_max
+    for idx in range(0, len(angle_max)):
+        if angle_max[idx] != angle_min[idx]:
+            if angle_max[idx] > 180:
+                max_a.append(angle_max[idx] - 360)
+            else:
+                max_a.append(angle_max[idx])
 
     # convert lower bound (0-360) into (-180, 180)
-    if angle_min > 180:
-        min_a = angle_min - 360
-    else:
-        min_a = angle_min
+    for idx in range(0, len(angle_min)):
+        if angle_min[idx] != angle_max[idx]:
+            if angle_min[idx] > 180:
+                min_a.append(angle_min[idx] - 360)
+            else:
+                min_a.append(angle_min[idx])
 
     # get sublist of original angles from tas within the global angle opening for tas with -n
-    if angle_max > angle_min:
-        m10 = m10[(m10['Azi'] >= angle_min) & (m10['Azi'] <= angle_max)].reset_index(drop=True)
-    else:
-        m10 = m10[(m10['Azi'] >= angle_max) | (m10['Azi'] <= angle_min)].reset_index(drop=True)
-    list = []
+    sublist = []
     for index, row in df.iterrows():
         # if the place is within the radius
         if float(dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km) <= distance:
             # if the place is within the angle range
             angle = bearing(lon, lat, float(row['lon']), float(row['lat']))
             cloudiness = "-"
-            if max_a < min_a:
-                if angle >= min_a or angle <= max_a:
+            for pos in range(0, len(min_a)):
+                if ((max_a[pos] < min_a[pos]) and (angle >= min_a[pos] or angle <= max_a[pos])) or (
+                        (max_a[pos] > min_a[pos]) and (min_a[pos] <= angle <= max_a[pos])):
                     if angle < 0:
                         angle = angle + 360
                     for idx, r in m10.iterrows():
@@ -434,30 +475,7 @@ def filter():
                         else:
                             if angle >= inf or angle <= sup:
                                 cloudiness = r['Cloudiness'].item()
-                    list.append(OrderedDict({
-                        'Nombre': row['Nombre'],
-                        'Tipo': row['Tipo'],
-                        'Provincia': row['Provincia'],
-                        'Poblacion': row['Poblacion'],
-                        'Distancia': dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km,
-                        'Dirección': angle,
-                        'Nubosidad': cloudiness
-                    }))
-            else:
-                if min_a <= angle <= max_a:
-                    if angle < 0:
-                        angle = angle + 360
-                    for idx, r in m10.iterrows():
-                        inf = float(r['Azi'].item() - adj) % 360
-                        sup = float(r['Azi'].item() + adj) % 360
-                        # transition from 360º to 0º
-                        if inf < sup:
-                            if check(angle, inf, sup):
-                                cloudiness = r['Cloudiness'].item()
-                        else:
-                            if angle >= inf or angle <= sup:
-                                cloudiness = r['Cloudiness'].item()
-                    list.append(OrderedDict({
+                    sublist.append(OrderedDict({
                         'Nombre': row['Nombre'],
                         'Tipo': row['Tipo'],
                         'Provincia': row['Provincia'],
@@ -467,7 +485,7 @@ def filter():
                         'Nubosidad': cloudiness
                     }))
 
-    result = pd.DataFrame(list)
+    result = pd.DataFrame(sublist)
     if not result.empty:
         result = result.astype({'Distancia': float, 'Dirección': float})
         result = result.round({'Distancia': 2, 'Dirección': 2})
@@ -502,10 +520,10 @@ def check(original, inf, sup):
     return False
 
 
-# Automatic execution for sqm data
+# Automatic processing for sqm data
 def auto_sqm():
     read_file_sqm()
-    data = filter()
+    data = process()
 
     if not data.empty:
         data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección"]]
@@ -515,10 +533,10 @@ def auto_sqm():
         print('No matching records found')
 
 
-# Automatic execution for tas data
+# Automatic processing for tas data
 def auto_tas():
     read_file_tas()
-    data = filter()
+    data = process()
 
     if not data.empty:
         data = data[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "Nubosidad"]]
@@ -530,33 +548,59 @@ def auto_tas():
 
 if __name__ == '__main__':
     '''
+    # query all light pollution sources in Spain (Wikidata, OSM)
+    # municipality, quarry, factory, greenhouse, shopping mall
     print("Initializing...")
     print("The process will take about 75 seconds.")
 
     start = time.time()
     query_function()
     end = time.time()
+    print("Time spent: " + str(round((end - start), 2)) + "s")
     '''
+
+    # check cloudiness angle
     if args.cloudiness_angle is not None:
         if args.source.lower() != 'tas':
             parser.error('Sorry, the cloudiness angle opening is only supported for tas')
-        elif not check(float(args.cloudiness_angle), 0, 12):
-            parser.error('Please, the angle opening must be less or equal than 11 due to the spacing of original angles, otherwise would cause overlap')
+        elif not check(args.cloudiness_angle, 0, 12):
+            parser.error(
+                'Please, the angle opening must be less or equal than 12 due to the spacing of original angles, otherwise would cause overlap')
         else:
-            adj = float(args.cloudiness_angle) / 2
+            adj = args.cloudiness_angle / 2
 
+    # check distance
     if args.distance is not None:
         distance = args.distance
 
-    if not 0 <= float(args.threshold) <= 1:
-        parser.error('Threshold out bound: only accept [0.00-1.00]')
+    # check incompatibility between percentile threshold, magnitude threshold and angle opening
+    if args.threshold_percent is not None and args.threshold_mag is not None and args.opening is not None:
+        parser.error('Sorry, percentile threshold, magnitude threshold and angle opening are mutually not compatible')
+    elif args.threshold_percent is not None and (args.threshold_mag is not None or args.opening is not None):
+        parser.error('Sorry, percentile threshold is not compatible with magnitude threshold and/or angle opening')
+    elif args.threshold_mag is not None and (args.threshold_percent is not None or args.opening is not None):
+        parser.error('Sorry, magnitude threshold is not compatible with percentile threshold and/or angle opening')
 
+    # check percentile threshold
+    if args.threshold_percent is not None:
+        if not 0 <= args.threshold_percent <= 1:
+            parser.error('Percentile threshold error: out of bound [0.00-1.00]')
+        else:
+            threshold_percent = args.threshold_percent
+
+    # check magnitude threshold
+    if args.threshold_mag is not None:
+        if not 0 < args.threshold_mag:
+            parser.error('Magnitude threshold error: negative value')
+        else:
+            threshold_mag = args.threshold_mag
+
+    # Load all light pollution sources in Spain
     df = pd.read_csv("light_pollution_sources.csv")
     df = df.astype({'lon': float, 'lat': float})
     df = df.round({'lon': 4, 'lat': 4})
-    pd.set_option('display.max_rows', None, 'display.max_columns', None)
-    '''print("Time spent: " + str(round((end - start), 2)) + "s")'''
 
+    # check source type
     if args.source.lower() == 'sqm':
         auto_sqm()
     elif args.source.lower() == 'tas':
