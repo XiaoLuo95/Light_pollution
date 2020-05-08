@@ -318,25 +318,27 @@ def read_file_sqm():
             else:
                 break
 
-    # Continue searching if magnitude threshold was set
-    if threshold_mag is not None:
-        # Set start and end angle to search
-        start = ((angle_max[0] + 30) % 360) / 30
-        end = (angle_min[0] % 360) / 30
-        if start == end:
-            return
-        elif start > end:
-            end = end + 12
-        position = 1
-        for index in range(start, end):
-            if m20[index % 12] <= th:
-                if len(angle_min) < position + 1:
-                    angle_min.append(float((index % 12) * 30))
-                    angle_max.append(float((index % 12) * 30))
-                else:
-                    angle_max[position] = float((index % 12) * 30)
+    # Continue searching
+    # Set start and end angle to search
+    start = int(((angle_max[0] + 30) % 360) / 30)
+    end = int((angle_min[0] % 360) / 30)
+    if start == end:
+        return
+    elif start > end:
+        end = end + 12
+    position = 1
+    valley = False
+    for index in range(start, end):
+        if m20[index % 12] <= th:
+            if len(angle_min) < (position + 1):
+                valley = True
+                angle_min.append(float((index % 12) * 30))
+                angle_max.append(float((index % 12) * 30))
             else:
-                position = position + 1
+                angle_max[position] = float((index % 12) * 30)
+        elif (m20[index % 12] > th) and (valley is True):
+            position = position + 1
+            valley = False
 
 
 # tas file reader
@@ -382,49 +384,73 @@ def read_file_tas():
         angle_min.append(0)
         angle_max.append(359.99)
         return
-    # If optional opening is set with values, just set the global, otherwise proceed to calculate them
+
+    # If optional opening was set, just set the global, otherwise proceed to calculate them
     if args.opening is not None:
         angle_min.append(args.opening[0])
         angle_max.append(args.opening[1])
     else:
         # Angles at left and right position of the minimum value
-        angle_left = m10.loc[[(m10['Mag'].argmin() - 1) % len(m10)]]['Mag'].item()
-        angle_right = m10.loc[[(m10['Mag'].argmin() + 1) % len(m10)]]['Mag'].item()
+        center_index = m10['Mag'].argmin()
+        angle_center = m10.loc[[center_index]]['Azi'].item()
+        mag_left = m10.loc[[(center_index - 1) % len(m10)]]['Mag'].item()
+        mag_right = m10.loc[[(center_index + 1) % len(m10)]]['Mag'].item()
+        angle_left = m10.loc[[(center_index - 1) % len(m10)]]['Azi'].item()
+        angle_right = m10.loc[[(center_index + 1) % len(m10)]]['Azi'].item()
 
         # Set default minimum angle opening
         # If both values at left and right are equal, the opening will be 60º, otherwise 30º
-        if angle_left < angle_right:
+        if mag_left < mag_right:
             angle_min.append(angle_left)
-            angle_max.append(m10['Mag'].min())
-        elif angle_right < angle_left:
-            angle_min.append(m10['Mag'].min())
+            angle_max.append(angle_center)
+        elif mag_right < mag_left:
+            angle_min.append(angle_center)
             angle_max.append(angle_right)
         else:
             angle_min.append(angle_left)
             angle_max.append(angle_right)
 
+        max_index = center_index
+        min_index = center_index
         # If value at right of min is within threshold and less than the angle_right, update
         # break loop if value surpass threshold
-        idx = m10['Mag'].argmin()
-        for aux in range(idx + 1, idx + len(m10)):
-            value = m10.loc[[aux % len(m10)]]['Mag'].item()
-            if value <= th:
-                angle_right = value
+        for aux in range(center_index + 1, center_index + len(m10)):
+            val_max = m10.loc[[aux % len(m10)]]['Mag'].item()
+            if val_max <= th:
+                angle_max[0] = m10.loc[[aux % len(m10)]]['Azi'].item()
+                max_index = aux % len(m10)
             else:
                 break
 
         # If value at left of min is within threshold and less than the angle_left, update
         # break loop if value surpass threshold
-        for aux in range(idx - 1, idx - len(m10), -1):
-            value = m10.loc[[aux % len(m10)]]['Mag'].item()
-            if value <= th:
-                angle_left = value
+        for aux in range(center_index - 1, center_index - len(m10), -1):
+            val_min = m10.loc[[aux % len(m10)]]['Mag'].item()
+            if val_min <= th:
+                angle_min[0] = m10.loc[[aux % len(m10)]]['Azi'].item()
+                min_index = aux % len(m10)
             else:
                 break
 
-        # Store angle opening's lower and upper bounds
-        angle_min = m10.loc[m10['Mag'] == angle_left]['Azi'].item()
-        angle_max = m10.loc[m10['Mag'] == angle_right]['Azi'].item()
+    # Continue searching if magnitude threshold was set
+    if threshold_mag is not None:
+        # Set start and end angle to search
+        start = (max_index + 1) % len(m10)
+        end = min_index
+        if start == end:
+            return
+        elif start > end:
+            end = end + len(m10)
+        position = 1
+        for index in range(start, end):
+            if m10[[index % len(m10)]]['Mag'].item() <= th:
+                if len(angle_min) < position + 1:
+                    angle_min.append(m10[[index % len(m10)]]['Azi'].item())
+                    angle_max.append(m10[[index % len(m10)]]['Azi'].item())
+                else:
+                    angle_max[position] = m10[[index % len(m10)]]['Azi'].item()
+            else:
+                position = position + 1
 
 
 # Process all conditions, including distance and angle opening
