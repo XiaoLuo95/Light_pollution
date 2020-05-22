@@ -1,6 +1,6 @@
-# README
+#  README
 
-Para el correcto funcionamiento del script, hacen falta tener instalados los paquetes siguientes:
+Basado en python3, para el correcto funcionamiento del script, hacen falta tener instalados los paquetes siguientes:
 
 * re
 * sys
@@ -13,7 +13,7 @@ Para el correcto funcionamiento del script, hacen falta tener instalados los paq
 * collections
 * Geopy.distance
 
-
+<br>
 
 ### Diagrama ilustrativo:
 
@@ -27,7 +27,7 @@ Los ángulos de búsqueda se calculan con:
 
 **¡Ojo! Son mutuamente incompatibles**
 
-
+<br>
 
 Situado en el fichero, para ejecutar el script:
 
@@ -48,9 +48,9 @@ python3 main.py {arguments (see Help)}
 
 ### Help
 ```
-usage: light_pollution.py [-h] [-t THRESHOLD_PERCENT] [-T THRESHOLD_MAG]
-                          [-o OPENING OPENING] [-d DISTANCE]
-                          [-c CLOUDINESS_ANGLE] -f FILE -s SOURCE
+usage: main.py [-h] [-t THRESHOLD_PERCENT] [-T THRESHOLD_MAG]
+               [-o OPENING OPENING] [-d DISTANCE] [-c CLOUDINESS_ANGLE]
+               [-u UPDATE] -f FILE -s SOURCE
 optional arguments:
   -h, --help            show this help message and exit
   -t THRESHOLD_PERCENT, --threshold_percent THRESHOLD_PERCENT
@@ -70,13 +70,17 @@ optional arguments:
                         original angle from tas to be considered as same, in
                         order to calculate the cloudiness to each place.
                         Default 1º. [0-12]
+  -u UPDATE, --update UPDATE
+                        default False. If set as True, the script will proceed
+                        to update the list of light pollution sources in
+                        Spain.
 required arguments:
   -f FILE, --file FILE  file containing measurement data
   -s SOURCE, --source SOURCE
                         data source type: sqm/tas
 ```
 
-
+<br>
 
 #### Como fuentes de contaminación lumínica se tienen en cuenta:
 
