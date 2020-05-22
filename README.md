@@ -37,13 +37,13 @@ Situado en el fichero, para ejecutar el script:
 
 ```python
 >>> import subprocess
->>> subprocess.run('python3 light_pollution.py {arguments (see Help)}', shell=True)
+>>> subprocess.run('python3 main.py {arguments (see Help)}', shell=True)
 ```
 
 ### Desde Terminal
 
 ```
-python3 light_pollution.py {arguments (see Help)}
+python3 main.py {arguments (see Help)}
 ```
 
 ### Help
