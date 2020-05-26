@@ -8,6 +8,7 @@ from sqm_angles import sqm_angles
 from tas_angles import tas_angles
 from filter_algorithm import algorithm
 from filter_algorithm import check
+from mapper import mapper
 
 # command line arguments parser
 parser = argparse.ArgumentParser()
@@ -17,9 +18,10 @@ parser.add_argument("-T", "--threshold_mag", type=float, action="store",
                     help="maximum magnitude under consideration. Incompatible with {-t, -o}.")
 parser.add_argument("-o", "--opening", type=float, nargs=2, action="store",
                     help="angle opening's lower and upper bound, separated by whitespace. Incompatible with {-t, -T}. [0-359.99] [0-359.99]")
-parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 200.")
+parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 120.")
 parser.add_argument("-c", "--cloudiness_angle", type=float, action="store",
                     help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. Default 1º. [0-12]")
+parser.add_argument("-S", "--single" , type=bool, action="store", help="Default False. Angle opening for single valley of lowest value. Compatible with percentile and magnitude thresholds")
 parser.add_argument("-u", "--update", type=bool, action="store",
                     help="default False. If set as True, the script will proceed to update the list of light pollution sources in Spain.")
 required = parser.add_argument_group('required arguments')
@@ -38,8 +40,8 @@ df = pd.DataFrame()
 sqm = pd.DataFrame()
 tas = pd.DataFrame()
 
-# global distance, default 200km
-distance = 200.00
+# global distance, default 120km
+distance = 120.00
 
 # global m10 dataframe (tas)
 m10 = pd.DataFrame(columns=['Mag', 'Azi', 'Cloudiness'])
@@ -55,16 +57,22 @@ adjacent = 0.5
 threshold_percent = 0.3
 threshold_mag = None
 
+# global single statement
+single = False
+
 
 # Automatic processing for sqm data
 def auto_sqm():
     global sqm
     global lat, lon, angle_min, angle_max
     global threshold_percent, threshold_mag
+    global single
 
     lat, lon, sqm = read_sqm(args.file)
-    angle_min, angle_max = sqm_angles(sqm, threshold_percent, threshold_mag, args.opening)
+    angle_min, angle_max = sqm_angles(sqm, threshold_percent, threshold_mag, args.opening, single)
+    print(angle_min, angle_max)
     result = algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent)
+    mapper(result, lon, lat, "sqm")
 
     if not result.empty:
         result.to_csv('result.csv')
@@ -78,11 +86,13 @@ def auto_tas():
     global tas
     global lat, lon, angle_min, angle_max, distance
     global threshold_percent, threshold_mag, adjacent
+    global single
     global m10
 
     lat, lon, tas = read_tas(args.file)
-    angle_min, angle_max, m10 = tas_angles(tas, threshold_percent, threshold_mag, args.opening, m10)
+    angle_min, angle_max, m10 = tas_angles(tas, threshold_percent, threshold_mag, args.opening, m10, single)
     result = algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent, m10)
+    mapper(result, lon, lat, "tas")
 
     if not result.empty:
         result.to_csv("result.csv")
@@ -114,6 +124,12 @@ if __name__ == '__main__':
             else:
                 # Single side cloudiness adjacent angle to consider
                 adjacent = args.cloudiness_angle / 2
+
+        if args.single is not None:
+            if args.opening is not None:
+                parser.error('Sorry, single angle opening option not supported for manual angle openings.')
+            else:
+                single = args.single
 
         # check if custom distance was set, default 200km
         if args.distance is not None:

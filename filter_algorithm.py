@@ -55,7 +55,9 @@ def algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent, m10=None):
                         'Poblacion': row['Poblacion'],
                         'Distancia': dist.geodesic((lat, lon), (float(row['lat']), float(row['lon']))).km,
                         'Dirección': angle,
-                        'Nubosidad': cloudiness
+                        'Nubosidad': cloudiness,
+                        'lon': row['lon'],
+                        'lat': row['lat']
                     }))
 
     result = pd.DataFrame(sublist)
@@ -65,9 +67,9 @@ def algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent, m10=None):
         result = result.sort_values(by='Distancia')
         result = result.reset_index()
         if m10 is not None:
-            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "Nubosidad"]]
+            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "Nubosidad", "lon", "lat"]]
         else:
-            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección"]]
+            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "lon", "lat"]]
 
     return result
 

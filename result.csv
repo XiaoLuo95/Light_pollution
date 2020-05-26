@@ -1,658 +1,569 @@
-,Nombre,Tipo,Provincia,Poblacion,Distancia,Dirección,Nubosidad
-0,"Cuerlas, Las",Municipio,provincia de Zaragoza,41.0,5.74,211.93,28.6
-1,Used,Municipio,provincia de Zaragoza,269.0,7.11,325.72,33.88
-2,Torralba de los Frailes,Municipio,provincia de Zaragoza,79.0,12.96,286.74,-
-3,Cubel,Municipio,provincia de Zaragoza,155.0,14.62,315.85,34.36
-4,Embid,Municipio,provincia de Guadalajara,33.0,16.95,258.61,31.3
-5,"Yunta, La",Municipio,provincia de Guadalajara,89.0,17.4,235.3,29.38
-6,Campillo de Dueñas,Municipio,provincia de Guadalajara,78.0,19.44,227.44,-
-7,Tortuera,Municipio,provincia de Guadalajara,194.0,24.09,262.06,-
-8,Monterde,Municipio,provincia de Zaragoza,157.0,26.6,315.71,34.36
-9,Hombrados,Municipio,provincia de Guadalajara,33.0,26.7,212.84,28.6
-10,"Pobo de Dueñas, El",Municipio,provincia de Guadalajara,109.0,27.72,204.5,-
-11,Fuentelsaz,Municipio,provincia de Guadalajara,94.0,27.73,286.78,-
-12,Castellar de la Muela,Municipio,provincia de Guadalajara,22.0,29.14,225.32,28.0
-13,Morenilla,Municipio,provincia de Guadalajara,38.0,29.15,214.12,28.6
-14,Rueda de la Sierra,Municipio,provincia de Guadalajara,38.0,30.17,251.81,-
-15,Milmarcos,Municipio,provincia de Guadalajara,73.0,31.83,287.26,-
-16,Nuévalos,Municipio,provincia de Zaragoza,310.0,32.78,315.34,34.36
-17,Torrubia,Municipio,provincia de Guadalajara,19.0,32.84,262.79,-
-18,Prados Redondos,Municipio,provincia de Guadalajara,73.0,33.86,224.18,28.0
-19,Tordellego,Municipio,provincia de Guadalajara,48.0,34.01,202.85,26.5
-20,Anquela del Pedregal,Municipio,provincia de Guadalajara,24.0,34.32,213.06,28.6
-21,Tartanedo,Municipio,provincia de Guadalajara,140.0,34.41,268.44,32.56
-22,Pardos,Municipio,provincia de Guadalajara,43.0,35.1,260.19,-
-23,Castilnuevo,Municipio,provincia de Guadalajara,8.0,35.63,234.21,29.38
-24,Molina de Aragón,Municipio,provincia de Guadalajara,3275.0,36.23,240.78,-
-25,Torrecuadrada de Molina,Municipio,provincia de Guadalajara,18.0,37.46,221.27,-
-26,Torremochuela,Municipio,provincia de Guadalajara,10.0,38.22,226.33,28.0
-27,Rillo de Gallo,Municipio,provincia de Guadalajara,43.0,38.68,247.06,30.76
-28,Carenas,Municipio,provincia de Zaragoza,213.0,38.71,322.16,-
-29,Herrería,Municipio,provincia de Guadalajara,30.0,39.61,251.37,-
-30,Algar de Mesa,Municipio,provincia de Guadalajara,55.0,40.15,291.63,34.24
-31,Piqueras,Municipio,provincia de Guadalajara,55.0,41.58,204.84,-
-32,Godojos,Municipio,provincia de Zaragoza,54.0,41.67,315.21,34.36
-33,Villel de Mesa,Municipio,provincia de Guadalajara,182.0,42.35,289.09,-
-34,Establés,Municipio,provincia de Guadalajara,37.0,42.86,271.05,32.56
-35,Corduente,Municipio,provincia de Guadalajara,349.0,43.05,245.69,30.76
-36,Mochales,Municipio,provincia de Guadalajara,46.0,43.39,283.96,-
-37,Traíd,Municipio,provincia de Guadalajara,23.0,44.77,213.9,28.6
-38,Bubierca,Municipio,provincia de Zaragoza,66.0,44.83,320.62,-
-39,Tierzo,Municipio,provincia de Guadalajara,49.0,45.08,231.28,-
-40,Valhermoso,Municipio,provincia de Guadalajara,23.0,45.36,237.43,29.38
-41,Alhama de Aragón,Municipio,provincia de Zaragoza,1020.0,45.68,315.7,34.36
-42,Alcoroches,Municipio,provincia de Guadalajara,126.0,46.02,205.12,-
-43,Torremocha del Pinar,Municipio,provincia de Guadalajara,40.0,46.36,254.48,-
-44,Pinilla de Molina,Municipio,provincia de Guadalajara,10.0,47.39,220.76,-
-45,Terzaga,Municipio,provincia de Guadalajara,23.0,47.57,223.9,28.0
-46,Fuembellida,Municipio,provincia de Guadalajara,10.0,49.13,236.21,29.38
-47,Baños de Tajo,Municipio,provincia de Guadalajara,19.0,49.74,230.76,-
-48,Selas,Municipio,provincia de Guadalajara,46.0,49.82,263.46,-
-49,Megina,Municipio,provincia de Guadalajara,32.0,50.25,216.66,-
-50,Taravilla,Municipio,provincia de Guadalajara,38.0,51.29,228.54,-
-51,Chequilla,Municipio,provincia de Guadalajara,18.0,51.32,211.01,28.6
-52,Checa,Municipio,provincia de Guadalajara,282.0,51.84,206.74,-
-53,Anquela del Ducado,Municipio,provincia de Guadalajara,50.0,51.92,266.31,-
-54,Mazarete,Municipio,provincia de Guadalajara,38.0,54.33,269.93,32.56
-55,Cobeta,Municipio,provincia de Guadalajara,114.0,55.0,254.14,-
-56,Peralejos de las Truchas,Municipio,provincia de Guadalajara,143.0,56.52,216.26,-
-57,Embid de Ariza,Municipio,provincia de Zaragoza,37.0,56.84,317.6,-
-58,Maranchón,Municipio,provincia de Guadalajara,229.0,58.27,275.2,-
-59,Olmeda de Cobeta,Municipio,provincia de Guadalajara,66.0,58.43,254.42,-
-60,Poveda de la Sierra,Municipio,provincia de Guadalajara,114.0,58.92,227.42,-
-61,Ciruelos del Pinar,Municipio,provincia de Guadalajara,29.0,59.66,270.8,32.56
-62,Peñalén,Municipio,provincia de Guadalajara,73.0,59.94,231.49,-
-63,Cihuela,Municipio,provincia de Soria,51.0,60.5,317.99,-
-64,Ablanque,Municipio,provincia de Guadalajara,59.0,61.39,259.22,31.3
-65,Zaorejas,Municipio,provincia de Guadalajara,116.0,63.99,245.28,30.76
-66,Luzón,Municipio,provincia de Guadalajara,68.0,64.17,272.6,-
-67,Cueva del Hierro,Municipio,Provincia de Cuenca,29.0,64.24,223.43,28.0
-68,Valsalobre,Municipio,Provincia de Cuenca,23.0,65.03,228.85,-
-69,Deza,Municipio,provincia de Soria,214.0,66.35,320.55,-
-70,Masegosa,Municipio,Provincia de Cuenca,64.0,66.6,220.57,-
-71,Riba de Saelices,Municipio,provincia de Guadalajara,105.0,66.63,261.49,-
-72,Beteta,Municipio,Provincia de Cuenca,262.0,67.32,224.0,28.0
-73,Lagunaseca,Municipio,Provincia de Cuenca,77.0,67.58,219.12,-
-74,Arcos de Jalón,Municipio,provincia de Soria,1469.0,67.78,290.5,34.24
-75,Huertahernando,Municipio,provincia de Guadalajara,53.0,68.02,253.21,-
-76,Saelices de la Sal,Municipio,provincia de Guadalajara,43.0,68.82,261.39,-
-77,Santa María del Val,Municipio,Provincia de Cuenca,67.0,71.1,218.9,-
-78,Carrascosa,Municipio,Provincia de Cuenca,70.0,71.25,230.42,-
-79,Villanueva de Alcorón,Municipio,provincia de Guadalajara,149.0,71.89,240.19,-
-80,Anguita,Municipio,provincia de Guadalajara,156.0,71.98,272.28,-
-81,Iniéstola,Municipio,provincia de Guadalajara,22.0,72.01,269.54,32.56
-82,Vega del Codorno,Municipio,Provincia de Cuenca,129.0,72.46,209.02,-
-83,Armallones,Municipio,provincia de Guadalajara,59.0,72.76,246.27,30.76
-84,Esplegares,Municipio,provincia de Guadalajara,38.0,73.86,257.62,31.3
-85,Sotodosos,Municipio,provincia de Guadalajara,33.0,74.57,263.37,-
-86,Quiñonería,Municipio,provincia de Soria,9.0,74.8,322.73,-
-87,Hortezuela de Océn,Municipio,provincia de Guadalajara,42.0,76.2,266.01,-
-88,"Pozuelo, El",Municipio,Provincia de Cuenca,49.0,77.2,236.72,29.38
-89,Luzaga,Municipio,provincia de Guadalajara,69.0,78.39,267.95,-
-90,Sacecorbo,Municipio,provincia de Guadalajara,91.0,78.45,256.26,31.3
-91,Cañizares,Municipio,Provincia de Cuenca,439.0,78.57,226.87,28.0
-92,Poyatos,Municipio,Provincia de Cuenca,56.0,78.78,215.16,-
-93,Ocentejo,Municipio,provincia de Guadalajara,21.0,78.84,251.2,-
-94,Medinaceli,Municipio,provincia de Soria,713.0,79.7,283.96,-
-95,Alcolea del Pinar,Municipio,provincia de Guadalajara,320.0,80.18,272.99,-
-96,Fuertescusa,Municipio,Provincia de Cuenca,63.0,81.04,223.77,28.0
-97,Valtablado del Río,Municipio,provincia de Guadalajara,7.0,81.38,247.1,30.76
-98,"Recuenco, El",Municipio,provincia de Guadalajara,58.0,81.78,238.51,-
-99,Almazul,Municipio,provincia de Soria,67.0,82.6,320.38,-
-100,Abánades,Municipio,provincia de Guadalajara,48.0,82.62,261.83,-
-101,Arbeteta,Municipio,provincia de Guadalajara,22.0,83.54,243.95,-
-102,Torrubia de Soria,Municipio,provincia de Soria,65.0,84.75,325.47,33.88
-103,Estriégana,Municipio,provincia de Guadalajara,14.0,85.09,274.53,-
-104,Canredondo,Municipio,provincia de Guadalajara,67.0,85.24,255.87,-
-105,Saúca,Municipio,provincia de Guadalajara,52.0,85.41,272.52,-
-106,Alcantud,Municipio,Provincia de Cuenca,51.0,85.64,234.04,29.38
-107,Fresneda de la Sierra,Municipio,Provincia de Cuenca,48.0,86.23,218.11,-
-108,Vindel,Municipio,Provincia de Cuenca,11.0,86.57,237.89,29.38
-109,Portillo de Soria,Municipio,provincia de Soria,14.0,86.69,324.36,33.88
-110,Cañamares,Municipio,Provincia de Cuenca,466.0,86.84,225.12,28.0
-111,Miño de Medinaceli,Municipio,provincia de Soria,100.0,86.91,284.16,-
-112,Torrecuadradilla,Municipio,provincia de Guadalajara,24.0,87.38,259.33,31.3
-113,Castillejo-Sierra,Municipio,Provincia de Cuenca,28.0,87.61,217.34,-
-114,Villaseca de Arciel,Municipio,provincia de Soria,28.0,87.73,322.15,-
-115,Arcos de la Sierra,Municipio,Provincia de Cuenca,83.0,88.8,214.91,28.6
-116,"Majadas, Las",Municipio,Provincia de Cuenca,241.0,89.41,208.86,-
-117,"Frontera, La",Municipio,Provincia de Cuenca,155.0,89.61,221.97,-
-118,Peralveche,Municipio,provincia de Guadalajara,45.0,90.15,241.37,-
-119,Tejado,Municipio,provincia de Soria,108.0,90.63,316.22,34.36
-120,Gómara,Municipio,provincia de Soria,310.0,91.08,319.44,-
-121,Priego,Municipio,Provincia de Cuenca,896.0,91.44,227.82,-
-122,Buberos,Municipio,provincia de Soria,31.0,91.51,321.73,-
-123,Arandilla del Arroyo,Municipio,Provincia de Cuenca,7.0,91.65,233.55,-
-124,Castilforte,Municipio,provincia de Guadalajara,55.0,91.85,237.68,29.38
-125,Portilla,Municipio,Provincia de Cuenca,59.0,92.84,211.34,28.6
-126,Torremocha del Campo,Municipio,provincia de Guadalajara,166.0,92.95,268.71,32.56
-127,Almenar de Soria,Municipio,provincia de Soria,228.0,94.79,323.03,-
-128,Sigüenza,Municipio,provincia de Guadalajara,4309.0,94.95,274.81,-
-129,Uña,Municipio,Provincia de Cuenca,82.0,95.04,204.5,-
-130,Uña,Municipio,Provincia de Cuenca,82.0,95.14,204.56,-
-131,Aliud,Municipio,provincia de Soria,20.0,95.2,319.77,-
-132,"Sotillo, El",Municipio,provincia de Guadalajara,42.0,95.22,262.2,-
-133,Albendea,Municipio,Provincia de Cuenca,121.0,95.4,233.32,-
-134,Villaconejos de Trabaque,Municipio,Provincia de Cuenca,344.0,95.48,225.59,28.0
-135,Albalate de las Nogueras,Municipio,Provincia de Cuenca,253.0,95.75,222.6,-
-136,Valdeolivas,Municipio,Provincia de Cuenca,202.0,96.34,235.1,29.38
-137,Cifuentes,Municipio,provincia de Guadalajara,1645.0,96.43,255.84,-
-138,Trillo,Municipio,provincia de Guadalajara,1319.0,96.83,250.12,-
-139,Algora,Municipio,provincia de Guadalajara,70.0,97.04,267.8,-
-140,Salmerón,Municipio,provincia de Guadalajara,157.0,97.08,238.65,-
-141,Sienes,Municipio,provincia de Guadalajara,50.0,98.16,283.37,-
-142,Villalba de la Sierra,Municipio,Provincia de Cuenca,456.0,98.22,209.85,-
-143,Cabrejas del Campo,Municipio,provincia de Soria,53.0,98.34,320.31,-
-144,Zarzuela,Municipio,Provincia de Cuenca,170.0,98.46,212.47,28.6
-145,"Inviernas, Las",Municipio,provincia de Guadalajara,59.0,98.51,261.82,-
-146,San Pedro Palmiches,Municipio,Provincia de Cuenca,57.0,98.73,230.01,-
-147,Aldealafuente,Municipio,provincia de Soria,92.0,100.6,317.9,-
-148,Valdelcubo,Municipio,provincia de Guadalajara,45.0,100.62,284.74,-
-149,Salmeroncillos,Municipio,Provincia de Cuenca,102.0,101.26,236.89,29.38
-150,Baraona,Municipio,provincia de Soria,135.0,101.35,289.1,-
-151,Alpanseque,Municipio,provincia de Soria,62.0,101.44,287.11,-
-152,Masegoso de Tajuña,Municipio,provincia de Guadalajara,52.0,101.58,259.11,31.3
-153,Torralba,Municipio,Provincia de Cuenca,112.0,101.66,220.17,-
-154,Escamilla,Municipio,provincia de Guadalajara,63.0,101.75,240.65,-
-155,Villar del Infantado,Municipio,Provincia de Cuenca,43.0,101.75,233.52,-
-156,Candilichera,Municipio,provincia de Soria,113.0,102.02,320.1,-
-157,Mirabueno,Municipio,provincia de Guadalajara,80.0,102.19,266.68,-
-158,Alaminos,Municipio,provincia de Guadalajara,60.0,103.19,261.74,-
-159,Solanillos del Extremo,Municipio,provincia de Guadalajara,91.0,103.71,254.66,-
-160,"Olmeda de Jadraque, La",Municipio,provincia de Guadalajara,17.0,103.97,278.05,-
-161,Mandayona,Municipio,provincia de Guadalajara,294.0,104.06,267.59,-
-162,Valderrebollo,Municipio,provincia de Guadalajara,23.0,104.67,258.54,31.3
-163,Millana,Municipio,provincia de Guadalajara,110.0,104.76,238.62,-
-164,Buenache de la Sierra,Municipio,Provincia de Cuenca,97.0,104.82,203.27,26.5
-165,Cogollor,Municipio,provincia de Guadalajara,25.0,105.0,260.99,-
-166,Sotorribas,Municipio,Provincia de Cuenca,732.0,105.31,211.58,28.6
-167,Henche,Municipio,provincia de Guadalajara,104.0,105.51,252.71,-
-168,Viana de Jadraque,Municipio,provincia de Guadalajara,46.0,105.57,271.83,32.56
-169,Arrancacepas,Municipio,Provincia de Cuenca,25.0,105.59,222.8,-
-170,Mantiel,Municipio,provincia de Guadalajara,34.0,105.62,247.14,30.76
-171,Paredes de Sigüenza,Municipio,provincia de Guadalajara,19.0,105.88,285.03,-
-172,Alique,Municipio,provincia de Guadalajara,14.0,105.89,244.43,-
-173,Baides,Municipio,provincia de Guadalajara,56.0,106.23,270.63,32.56
-174,Bascuñana de San Pedro,Municipio,Provincia de Cuenca,18.0,106.55,214.72,28.6
-175,Almadrones,Municipio,provincia de Guadalajara,57.0,106.58,264.34,-
-176,Barriopedro,Municipio,provincia de Guadalajara,15.0,106.93,257.61,31.3
-177,Mariana,Municipio,Provincia de Cuenca,304.0,107.21,210.04,-
-178,Tordelrábano,Municipio,provincia de Guadalajara,26.0,107.24,283.34,-
-179,Castejón de Henares,Municipio,provincia de Guadalajara,65.0,107.28,266.56,-
-180,Villar de Domingo García,Municipio,Provincia de Cuenca,220.0,107.62,218.02,-
-181,Castillo-Albaráñez,Municipio,Provincia de Cuenca,22.0,107.93,223.75,28.0
-182,Huérmeces del Cerro,Municipio,provincia de Guadalajara,42.0,107.95,273.42,-
-183,Pareja,Municipio,provincia de Guadalajara,393.0,107.98,242.92,-
-184,Villaseca de Henares,Municipio,provincia de Guadalajara,27.0,108.22,267.89,-
-185,Alconaba,Municipio,provincia de Soria,176.0,108.27,318.03,-
-186,Canalejas del Arroyo,Municipio,Provincia de Cuenca,186.0,108.8,229.86,-
-187,Chillarón del Rey,Municipio,provincia de Guadalajara,88.0,109.0,245.93,30.76
-188,Alcolea de las Peñas,Municipio,provincia de Guadalajara,13.0,109.15,282.64,32.44
-189,Olmedilla de Eliz,Municipio,Provincia de Cuenca,15.0,109.19,224.74,28.0
-190,Santiuste,Municipio,provincia de Guadalajara,14.0,109.21,275.23,-
-191,Buciegas,Municipio,Provincia de Cuenca,36.0,109.22,227.52,-
-192,Arancón,Municipio,provincia de Soria,88.0,109.39,324.4,33.88
-193,Aldehuela de Periáñez,Municipio,provincia de Soria,41.0,109.81,323.21,-
-194,Alcocer,Municipio,provincia de Guadalajara,313.0,109.86,237.71,29.38
-195,Rello,Municipio,provincia de Soria,14.0,110.02,289.9,-
-196,Rello,Municipio,provincia de Soria,14.0,110.06,289.99,-
-197,Durón,Municipio,provincia de Guadalajara,106.0,110.44,248.05,30.76
-198,Argecilla,Municipio,provincia de Guadalajara,64.0,110.65,263.48,-
-199,Riofrío del Llano,Municipio,provincia de Guadalajara,55.0,110.89,278.26,-
-200,Castejón,Municipio,Provincia de Cuenca,144.0,111.34,231.95,-
-201,Olmeda de la Cuesta,Municipio,Provincia de Cuenca,20.0,111.95,226.87,28.0
-202,Cincovillas,Municipio,provincia de Guadalajara,22.0,111.98,282.03,32.44
-203,Matillas,Municipio,provincia de Guadalajara,105.0,112.06,267.52,-
-204,Rebollosa de Jadraque,Municipio,provincia de Guadalajara,11.0,112.09,275.39,-
-205,Budia,Municipio,provincia de Guadalajara,196.0,112.14,248.82,30.76
-206,Cendejas de la Torre,Municipio,provincia de Guadalajara,24.0,112.5,269.13,32.56
-207,Angón,Municipio,provincia de Guadalajara,10.0,112.89,274.11,-
-208,Ledanca,Municipio,provincia de Guadalajara,98.0,112.91,262.86,-
-209,Negredo,Municipio,provincia de Guadalajara,17.0,113.19,271.77,32.56
-210,"Olivar, El",Municipio,provincia de Guadalajara,71.0,113.43,247.48,30.76
-211,Palomera,Municipio,Provincia de Cuenca,171.0,113.45,203.75,26.5
-212,Alcohujate,Municipio,Provincia de Cuenca,28.0,113.76,235.34,29.38
-213,Barcones,Municipio,provincia de Soria,22.0,113.98,286.81,-
-214,Cendejas de Enmedio,Municipio,provincia de Guadalajara,72.0,114.29,269.33,32.56
-215,Narros,Municipio,provincia de Soria,50.0,114.35,325.54,33.88
-216,"Riba de Escalote, La",Municipio,provincia de Soria,9.0,114.44,290.25,34.24
-217,Alocén,Municipio,provincia de Guadalajara,172.0,114.58,245.84,30.76
-218,Bujalaro,Municipio,provincia de Guadalajara,47.0,115.4,266.82,-
-219,Gascueña,Municipio,Provincia de Cuenca,153.0,115.54,227.56,-
-220,Renieblas,Municipio,provincia de Soria,104.0,115.71,322.13,-
-221,Atienza,Municipio,provincia de Guadalajara,405.0,116.02,281.29,32.44
-222,Cuenca,Municipio,Provincia de Cuenca,54690.0,116.08,207.09,-
-223,Cañaveruelas,Municipio,Provincia de Cuenca,132.0,116.19,235.07,29.38
-224,Velilla de la Sierra,Municipio,provincia de Soria,24.0,116.27,320.71,-
-225,"Bodera, La",Municipio,provincia de Guadalajara,22.0,116.27,277.75,-
-226,Soria,Municipio,provincia de Soria,39398.0,116.39,317.18,-
-227,Chillarón de Cuenca,Municipio,Provincia de Cuenca,617.0,116.42,211.14,28.6
-228,Torremocha de Jadraque,Municipio,provincia de Guadalajara,21.0,116.5,271.39,32.56
-229,Almajano,Municipio,provincia de Soria,187.0,116.64,324.16,33.88
-230,Jirueque,Municipio,provincia de Guadalajara,59.0,116.86,268.4,32.56
-231,San Andrés del Rey,Municipio,provincia de Guadalajara,29.0,117.29,250.24,-
-232,Gajanejos,Municipio,provincia de Guadalajara,47.0,117.4,261.71,-
-233,Brihuega,Municipio,provincia de Guadalajara,2410.0,117.41,257.12,31.3
-234,Cirujales del Río,Municipio,provincia de Soria,22.0,117.5,325.07,33.88
-235,Pálmaces de Jadraque,Municipio,provincia de Guadalajara,41.0,117.65,273.33,-
-236,Frabica de Maderas Ayuntamiento de Cuenca,Fábricas,,,117.66,202.33,26.5
-237,Tinajas,Municipio,Provincia de Cuenca,201.0,117.67,230.49,-
-238,Villas de la Ventosa,Municipio,Provincia de Cuenca,211.0,117.92,221.45,-
-239,Sacedón,Municipio,provincia de Guadalajara,1533.0,118.06,240.95,-
-240,Arenillas,Municipio,provincia de Soria,21.0,118.11,289.37,-
-241,Aldealseñor,Municipio,provincia de Soria,31.0,118.12,325.78,33.88
-242,Villanueva de Argecilla,Municipio,provincia de Guadalajara,31.0,118.35,265.04,-
-243,Berninches,Municipio,provincia de Guadalajara,49.0,118.63,246.57,30.76
-244,"Villares de Soria, Los",Municipio,provincia de Soria,88.0,118.75,324.03,33.88
-245,Jadraque,Municipio,provincia de Guadalajara,1413.0,119.02,266.35,-
-246,Yélamos de Arriba,Municipio,provincia de Guadalajara,78.0,119.06,250.62,-
-247,Garray,Municipio,provincia de Soria,732.0,119.24,319.48,-
-248,Golmayo,Municipio,provincia de Soria,2626.0,119.29,315.73,34.36
-249,Medranda,Municipio,provincia de Guadalajara,66.0,119.73,269.43,32.56
-250,Romanillos de Atienza,Municipio,provincia de Guadalajara,36.0,119.83,285.14,-
-251,Buitrago,Municipio,provincia de Soria,65.0,119.93,321.85,-
-252,Fuentenava de Jábaga,Municipio,Provincia de Cuenca,513.0,120.04,212.13,28.6
-253,Villalba del Rey,Municipio,Provincia de Cuenca,516.0,120.1,232.72,-
-254,Pinilla de Jadraque,Municipio,provincia de Guadalajara,50.0,120.17,271.43,32.56
-255,Utande,Municipio,provincia de Guadalajara,31.0,120.25,262.29,-
-256,Yélamos de Abajo,Municipio,provincia de Guadalajara,71.0,120.42,250.34,-
-257,Villanueva de Guadamejud,Municipio,Provincia de Cuenca,13.0,120.47,224.36,28.0
-258,La Miñosa,Municipio,provincia de Guadalajara,28.0,120.7,279.87,32.44
-259,Auñón,Municipio,provincia de Guadalajara,142.0,120.7,243.75,-
-260,Miralrío,Municipio,provincia de Guadalajara,51.0,120.94,264.47,-
-261,Fuentecantos,Municipio,provincia de Soria,61.0,121.17,321.28,-
-262,Robledo de Corpes,Municipio,provincia de Guadalajara,52.0,121.36,276.52,-
-263,Bañuelos,Municipio,provincia de Guadalajara,14.0,121.85,285.3,-
-264,Fuentelsaz de Soria,Municipio,provincia de Soria,66.0,121.89,322.23,-
-265,Ausejo de la Sierra,Municipio,provincia de Soria,89.0,122.36,324.39,33.88
-266,Casas de San Galindo,Municipio,provincia de Guadalajara,16.0,122.38,263.66,-
-267,"Peraleja, La",Municipio,Provincia de Cuenca,97.0,122.46,226.17,28.0
-268,Alhóndiga,Municipio,provincia de Guadalajara,157.0,122.48,244.75,-
-269,Villar y Velasco,Municipio,Provincia de Cuenca,77.0,122.6,218.77,-
-270,Portalrubio de Guadamejud,Municipio,Provincia de Cuenca,22.0,122.93,228.91,-
-271,Muduex,Municipio,provincia de Guadalajara,100.0,123.2,261.49,-
-272,Membrillera,Municipio,provincia de Guadalajara,98.0,123.47,267.68,-
-273,Arcas,Municipio,Provincia de Cuenca,1716.0,123.52,204.44,-
-274,"Toba, La",Municipio,provincia de Guadalajara,96.0,123.55,270.53,32.56
-275,Congostrina,Municipio,provincia de Guadalajara,17.0,123.79,272.29,-
-276,Irueste,Municipio,provincia de Guadalajara,68.0,123.92,249.9,-
-277,Villar de Olalla,Municipio,Provincia de Cuenca,1270.0,124.25,207.94,-
-278,Peñalver,Municipio,provincia de Guadalajara,144.0,125.07,248.45,30.76
-279,Miedes de Atienza,Municipio,provincia de Guadalajara,59.0,125.24,284.06,-
-280,Hiendelaencina,Municipio,provincia de Guadalajara,115.0,125.5,274.63,-
-281,Valdearenas,Municipio,provincia de Guadalajara,76.0,126.29,260.72,-
-282,Buendía,Municipio,Provincia de Cuenca,400.0,126.68,236.41,29.38
-283,Prádena de Atienza,Municipio,provincia de Guadalajara,49.0,126.77,279.1,32.44
-284,Villarejo de la Peñuela,Municipio,Provincia de Cuenca,20.0,126.88,216.95,-
-285,San Andrés del Congosto,Municipio,provincia de Guadalajara,76.0,127.23,270.37,32.56
-286,Trijueque,Municipio,provincia de Guadalajara,1201.0,127.3,259.1,31.3
-287,Gascueña de Bornova,Municipio,provincia de Guadalajara,28.0,127.43,277.52,-
-288,Fuentelencina,Municipio,provincia de Guadalajara,325.0,127.44,245.3,30.76
-289,Villares de Jadraque,Municipio,provincia de Guadalajara,45.0,127.51,275.49,-
-290,Mina La Unión (abandonada),Minas,,,127.72,278.64,-
-291,Hijes,Municipio,provincia de Guadalajara,19.0,127.73,283.05,-
-292,Retortillo de Soria,Municipio,provincia de Soria,149.0,127.82,286.05,-
-293,Ujados,Municipio,provincia de Guadalajara,28.0,127.95,282.14,32.44
-294,Caspueñas,Municipio,provincia de Guadalajara,81.0,128.27,254.84,-
-295,Valdeavellano,Municipio,provincia de Guadalajara,114.0,128.28,253.44,-
-296,Arévalo de la Sierra,Municipio,provincia de Soria,78.0,128.35,325.16,33.88
-297,Valfermoso de Tajuña,Municipio,provincia de Guadalajara,60.0,128.71,251.15,-
-298,"Valdecolmenas, Los",Municipio,Provincia de Cuenca,72.0,128.75,220.54,-
-299,Zarzuela de Jadraque,Municipio,provincia de Guadalajara,44.0,128.79,273.78,-
-300,Valdeconcha,Municipio,provincia de Guadalajara,40.0,130.22,242.54,-
-301,Valdegrudas,Municipio,provincia de Guadalajara,56.0,130.46,256.22,31.3
-302,Atanzón,Municipio,provincia de Guadalajara,100.0,130.55,253.83,-
-303,Copernal,Municipio,provincia de Guadalajara,28.0,130.76,263.89,-
-304,Hita,Municipio,provincia de Guadalajara,294.0,130.91,261.76,-
-305,Torija,Municipio,provincia de Guadalajara,1448.0,131.18,257.73,31.3
-306,Espinosa de Henares,Municipio,provincia de Guadalajara,628.0,131.55,265.76,-
-307,Albendiego,Municipio,provincia de Guadalajara,49.0,131.57,281.44,32.44
-308,Almarza,Municipio,provincia de Soria,591.0,131.69,323.11,-
-309,Bustares,Municipio,provincia de Guadalajara,79.0,131.78,276.99,-
-310,Tendilla,Municipio,provincia de Guadalajara,307.0,132.27,247.73,30.76
-311,Somolinos,Municipio,provincia de Guadalajara,30.0,132.44,282.25,32.44
-312,Cogolludo,Municipio,provincia de Guadalajara,540.0,132.63,267.87,-
-313,Sayatón,Municipio,provincia de Guadalajara,78.0,132.8,238.77,-
-314,"Navas de Jadraque, Las",Municipio,provincia de Guadalajara,27.0,132.81,275.4,-
-315,Abia de la Obispalía,Municipio,Provincia de Cuenca,65.0,132.85,214.63,28.6
-316,Valdetórtola,Municipio,Provincia de Cuenca,133.0,132.94,205.52,-
-317,Moratilla de los Meleros,Municipio,provincia de Guadalajara,103.0,133.0,245.61,30.76
-318,Monasterio,Municipio,provincia de Guadalajara,14.0,133.19,269.69,32.56
-319,Cañizar,Municipio,provincia de Guadalajara,54.0,133.34,259.3,31.3
-320,Taragudo,Municipio,provincia de Guadalajara,49.0,133.56,261.85,-
-321,Fuencemillán,Municipio,provincia de Guadalajara,86.0,133.8,266.75,-
-322,Romanones,Municipio,provincia de Guadalajara,99.0,133.8,249.36,-
-323,Torre del Burgo,Municipio,provincia de Guadalajara,592.0,134.04,260.5,-
-324,Aldeanueva de Guadalajara,Municipio,provincia de Guadalajara,86.0,134.04,255.06,-
-325,Pineda de Gigüela,Municipio,Provincia de Cuenca,60.0,134.15,220.79,-
-326,Arbancón,Municipio,provincia de Guadalajara,150.0,134.73,268.75,32.56
-327,Fuentelviejo,Municipio,provincia de Guadalajara,46.0,134.99,247.27,30.76
-328,Semillas,Municipio,provincia de Guadalajara,36.0,135.11,273.19,-
-329,Alarilla,Municipio,provincia de Guadalajara,163.0,135.2,263.21,-
-330,Montarrón,Municipio,provincia de Guadalajara,23.0,135.33,266.13,-
-331,"Ordial, El",Municipio,provincia de Guadalajara,29.0,135.39,276.49,-
-332,Almonacid de Zorita,Municipio,provincia de Guadalajara,685.0,135.46,236.77,29.38
-333,Centenera,Municipio,provincia de Guadalajara,117.0,135.57,253.81,-
-334,Ciruelas,Municipio,provincia de Guadalajara,122.0,135.59,258.69,31.3
-335,Pastrana,Municipio,provincia de Guadalajara,850.0,135.67,241.73,-
-336,Heras de Ayuso,Municipio,provincia de Guadalajara,270.0,135.67,260.47,-
-337,Condemios de Abajo,Municipio,provincia de Guadalajara,14.0,135.91,280.73,32.44
-338,Hueva,Municipio,provincia de Guadalajara,143.0,136.21,244.22,-
-339,Albalate de Zorita,Municipio,provincia de Guadalajara,943.0,136.27,235.87,29.38
-340,"Valle de Altomira, El",Municipio,Provincia de Cuenca,211.0,136.35,230.98,-
-341,Arroyo de las Fraguas,Municipio,provincia de Guadalajara,22.0,136.39,275.26,-
-342,Lupiana,Municipio,provincia de Guadalajara,257.0,136.92,251.9,-
-343,Condemios de Arriba,Municipio,provincia de Guadalajara,123.0,137.38,280.51,32.44
-344,Fresneda de Altarejos,Municipio,Provincia de Cuenca,40.0,137.53,209.75,-
-345,Huete,Municipio,Provincia de Cuenca,1765.0,137.62,226.6,28.0
-346,"Royo, El",Municipio,provincia de Soria,265.0,137.96,317.25,-
-347,Zorita de los Canes,Municipio,provincia de Guadalajara,78.0,138.0,237.7,29.38
-348,Armuña de Tajuña,Municipio,provincia de Guadalajara,246.0,138.36,248.19,30.76
-349,Caracena,Municipio,provincia de Soria,17.0,138.91,288.26,-
-350,Renera,Municipio,provincia de Guadalajara,90.0,138.96,246.3,30.76
-351,"Parra de las Vegas, La",Municipio,Provincia de Cuenca,33.0,139.0,205.09,-
-352,"Póveda de Soria, La",Municipio,provincia de Soria,123.0,139.22,324.02,33.88
-353,Huerta de la Obispalía,Municipio,Provincia de Cuenca,114.0,139.24,216.21,-
-354,Horche,Municipio,provincia de Guadalajara,2535.0,139.5,250.1,-
-355,Humanes,Municipio,provincia de Guadalajara,1496.0,139.69,262.46,-
-356,Tórtola de Henares,Municipio,provincia de Guadalajara,1044.0,139.77,256.83,31.3
-357,"Huerce, La",Municipio,provincia de Guadalajara,51.0,140.12,277.41,-
-358,Campisábalos,Municipio,provincia de Guadalajara,57.0,140.14,282.65,32.44
-359,Carrascosa de Abajo,Municipio,provincia de Soria,21.0,140.2,290.01,34.24
-360,Altarejos,Municipio,Provincia de Cuenca,190.0,140.58,210.7,-
-361,Fresno de Caracena,Municipio,provincia de Soria,21.0,141.34,291.26,34.24
-362,Mohernando,Municipio,provincia de Guadalajara,173.0,141.65,261.52,-
-363,Mota de Altarejos,Municipio,Provincia de Cuenca,34.0,141.69,208.65,-
-364,Escopete,Municipio,provincia de Guadalajara,57.0,142.0,243.08,-
-365,Yunquera de Henares,Municipio,provincia de Guadalajara,4044.0,142.07,259.27,31.3
-366,Galve de Sorbe,Municipio,provincia de Guadalajara,100.0,142.26,280.49,32.44
-367,Torrejoncillo del Rey,Municipio,Provincia de Cuenca,341.0,142.3,219.24,-
-368,Yebra,Municipio,provincia de Guadalajara,444.0,142.31,240.08,-
-369,Hontoba,Municipio,provincia de Guadalajara,318.0,142.66,245.19,30.76
-370,Fontanar,Municipio,provincia de Guadalajara,2370.0,143.56,258.15,31.3
-371,Aranzueque,Municipio,provincia de Guadalajara,380.0,143.66,247.21,30.76
-372,Puebla de Beleña,Municipio,provincia de Guadalajara,40.0,144.21,265.51,-
-373,Yebes,Municipio,provincia de Guadalajara,3791.0,144.47,249.34,-
-374,"Mierla, La",Municipio,provincia de Guadalajara,41.0,145.21,267.67,-
-375,Valverde de los Arroyos,Municipio,provincia de Guadalajara,94.0,145.23,276.11,-
-376,Guadalajara,Municipio,provincia de Guadalajara,85871.0,145.41,254.07,-
-377,Robledillo de Mohernando,Municipio,provincia de Guadalajara,115.0,145.85,264.04,-
-378,Albaladejo del Cuende,Municipio,Provincia de Cuenca,245.0,145.97,204.7,-
-379,Tamajón,Municipio,provincia de Guadalajara,126.0,146.01,270.47,32.56
-380,Escariche,Municipio,provincia de Guadalajara,185.0,146.03,243.56,-
-381,Valdarachas,Municipio,provincia de Guadalajara,40.0,146.4,248.84,30.76
-382,Almoguera,Municipio,provincia de Guadalajara,1289.0,146.72,238.16,-
-383,Vellisca,Municipio,Provincia de Cuenca,102.0,146.8,228.94,-
-384,San Lorenzo de la Parrilla,Municipio,Provincia de Cuenca,1042.0,146.81,209.4,-
-385,Chiloeches,Municipio,provincia de Guadalajara,3579.0,147.03,251.56,-
-386,Montejo de Tiermes,Municipio,provincia de Soria,155.0,147.08,286.61,-
-387,Marchamalo,Municipio,provincia de Guadalajara,7474.0,147.2,255.89,-
-388,Saceda-Trasierra,Municipio,Provincia de Cuenca,41.0,147.52,230.61,-
-389,Pozo de Almoguera,Municipio,provincia de Guadalajara,105.0,147.54,240.63,-
-390,Cantalojas,Municipio,provincia de Guadalajara,151.0,147.79,280.61,32.44
-391,Málaga del Fresno,Municipio,provincia de Guadalajara,180.0,147.91,261.33,-
-392,Malaguilla,Municipio,provincia de Guadalajara,152.0,148.14,262.75,-
-393,Retiendas,Municipio,provincia de Guadalajara,48.0,148.31,269.17,32.56
-394,Villarejo-Periesteban,Municipio,Provincia de Cuenca,380.0,148.32,212.25,28.6
-395,Loranca de Tajuña,Municipio,provincia de Guadalajara,1249.0,148.58,245.71,30.76
-396,Loranca de Tajuña,Municipio,provincia de Guadalajara,1249.0,148.66,245.88,30.76
-397,Albares,Municipio,provincia de Guadalajara,513.0,148.74,238.76,-
-398,Belmontejo,Municipio,Provincia de Cuenca,160.0,148.85,208.46,-
-399,Illana,Municipio,provincia de Guadalajara,686.0,148.88,232.75,-
-400,Campos del Paraíso,Municipio,Provincia de Cuenca,737.0,148.96,222.87,-
-401,Palomares del Campo,Municipio,Provincia de Cuenca,602.0,149.07,218.41,-
-402,Puertas Morena JJ,Fábricas,,,149.96,202.5,26.5
-403,Matarrubia,Municipio,provincia de Guadalajara,70.0,150.44,264.84,-
-404,Cabanillas del Campo,Municipio,provincia de Guadalajara,10442.0,150.81,254.92,-
-405,Majaelrayo,Municipio,provincia de Guadalajara,51.0,150.83,275.2,-
-406,Mazuecos,Municipio,provincia de Guadalajara,268.0,150.85,237.41,29.38
-407,Puebla de Valles,Municipio,provincia de Guadalajara,58.0,150.93,267.38,-
-408,Liceras,Municipio,provincia de Soria,49.0,150.99,286.68,-
-409,Villaverde y Pasaconsol,Municipio,Provincia de Cuenca,332.0,151.01,205.16,-
-410,Fuentenovilla,Municipio,provincia de Guadalajara,517.0,151.24,242.51,-
-411,Alcázar del Rey,Municipio,Provincia de Cuenca,152.0,151.59,226.73,28.0
-412,Campillo de Ranas,Municipio,provincia de Guadalajara,171.0,151.68,274.06,-
-413,Pozo de Guadalajara,Municipio,provincia de Guadalajara,1303.0,151.8,248.64,30.76
-414,Zafra de Záncara,Municipio,Provincia de Cuenca,122.0,151.92,215.92,-
-415,Pioz,Municipio,provincia de Guadalajara,4052.0,152.67,247.35,30.76
-416,Valdesotos,Municipio,provincia de Guadalajara,26.0,152.83,268.67,32.56
-417,Fuentelahiguera de Albatages,Municipio,provincia de Guadalajara,136.0,153.02,261.51,-
-418,Alovera,Municipio,provincia de Guadalajara,12735.0,153.19,253.36,-
-419,Leganiel,Municipio,Provincia de Cuenca,190.0,153.33,232.87,-
-420,Lumbreras,Municipio,La Rioja,154.0,153.47,323.34,-
-421,Barajas de Melo,Municipio,Provincia de Cuenca,932.0,153.86,230.93,-
-422,Villares del Saz,Municipio,Provincia de Cuenca,443.0,154.05,213.27,28.6
-423,Paredes,Municipio,Provincia de Cuenca,66.0,154.09,227.83,-
-424,Driebes,Municipio,provincia de Guadalajara,366.0,154.18,237.35,29.38
-425,Mondéjar,Municipio,provincia de Guadalajara,2645.0,154.53,241.2,-
-426,Valverde de Júcar,Municipio,Provincia de Cuenca,1082.0,154.7,202.97,26.5
-427,Tortuero,Municipio,provincia de Guadalajara,18.0,154.95,267.89,-
-428,Quer,Municipio,provincia de Guadalajara,814.0,155.14,254.07,-
-429,Olivares de Júcar,Municipio,Provincia de Cuenca,325.0,155.37,207.51,-
-430,Cervera del Llano,Municipio,Provincia de Cuenca,221.0,155.77,209.71,-
-431,Azuqueca de Henares,Municipio,provincia de Guadalajara,35009.0,155.92,252.31,-
-432,Viñuelas,Municipio,provincia de Guadalajara,148.0,155.98,262.04,-
-433,Villaseca de Uceda,Municipio,provincia de Guadalajara,39.0,156.06,263.16,-
-434,Planta de Biodiesel,Fábricas,,,156.75,231.93,-
-435,Villoslada de Cameros,Municipio,La Rioja,324.0,156.77,322.38,-
-436,Rozalén del Monte,Municipio,Provincia de Cuenca,67.0,156.9,224.54,28.0
-437,Valdeaveruelo,Municipio,provincia de Guadalajara,1072.0,157.35,255.6,-
-438,Casa de Uceda,Municipio,provincia de Guadalajara,89.0,157.38,264.14,-
-439,Huelves,Municipio,Provincia de Cuenca,57.0,157.6,227.79,-
-440,Galápagos,Municipio,provincia de Guadalajara,2403.0,157.63,258.02,31.3
-441,Villanueva de la Torre,Municipio,provincia de Guadalajara,6573.0,158.0,253.39,-
-442,Valdepeñas de la Sierra,Municipio,provincia de Guadalajara,152.0,158.14,266.77,-
-443,Montalbo,Municipio,Provincia de Cuenca,643.0,158.48,218.48,-
-444,Torrejón del Rey,Municipio,provincia de Guadalajara,5434.0,158.76,256.06,31.3
-445,Gallinero de Cameros,Municipio,La Rioja,22.0,159.17,325.12,33.88
-446,Cantera (abandonada),Minas,,,159.28,275.77,-
-447,Valdenuño Fernández,Municipio,provincia de Guadalajara,257.0,159.46,260.93,-
-448,Villanueva de Cameros,Municipio,La Rioja,74.0,160.34,324.24,33.88
-449,"Cubillo de Uceda, El",Municipio,provincia de Guadalajara,121.0,160.56,263.51,-
-450,Pradillo,Municipio,La Rioja,75.0,160.68,324.69,33.88
-451,"Hinojosa, La",Municipio,Provincia de Cuenca,188.0,160.96,208.61,-
-452,Fuentecambrón,Municipio,provincia de Soria,34.0,161.99,290.8,34.24
-453,Saelices,Municipio,Provincia de Cuenca,483.0,162.65,222.58,-
-454,Villar de Cañas,Municipio,Provincia de Cuenca,374.0,162.71,213.56,28.6
-455,Ayllón,Municipio,provincia de Segovia,1196.0,162.93,287.15,-
-456,"Almarcha, La",Municipio,Provincia de Cuenca,365.0,163.68,206.92,-
-457,Ortigosa de Cameros,Municipio,La Rioja,229.0,163.8,323.15,-
-458,Viniegra de Arriba,Municipio,La Rioja,42.0,163.87,318.28,-
-459,Montalbanejo,Municipio,Provincia de Cuenca,103.0,163.87,210.95,-
-460,Torrubia del Castillo,Municipio,Provincia de Cuenca,38.0,164.01,204.61,-
-461,Tribaldos,Municipio,Provincia de Cuenca,107.0,164.02,226.1,28.0
-462,"Cardoso de la Sierra, El",Municipio,provincia de Guadalajara,60.0,164.26,274.11,-
-463,Miño de San Esteban,Municipio,provincia de Soria,46.0,164.49,291.75,34.24
-464,"Hito, El",Municipio,Provincia de Cuenca,141.0,164.58,218.87,-
-465,"Casar, El",Municipio,provincia de Guadalajara,12062.0,164.71,258.91,31.3
-466,Riofrío de Riaza,Municipio,provincia de Segovia,45.0,164.89,280.13,32.44
-467,"Rasillo de Cameros, El",Municipio,La Rioja,144.0,165.09,323.75,-
-468,Uceda,Municipio,provincia de Guadalajara,2616.0,165.15,264.4,-
-469,Centro Comercial La Nevera,Centro Comercial,,,165.31,258.94,31.3
-470,Nieva de Cameros,Municipio,La Rioja,90.0,165.64,325.01,33.88
-471,Ribota,Municipio,provincia de Segovia,48.0,165.66,284.73,-
-472,Villarrubio,Municipio,Provincia de Cuenca,194.0,165.84,225.26,28.0
-473,Castillo de Garcimuñoz,Municipio,Provincia de Cuenca,134.0,166.32,206.47,-
-474,Alcalá de Henares,Municipio,provincia de Madrid,195649.0,166.71,250.21,-
-475,Venecia,Centro Comercial,,,166.76,250.05,-
-476,Riaza,Municipio,provincia de Segovia,2098.0,166.9,281.41,32.44
-477,Almendros,Municipio,Provincia de Cuenca,247.0,167.29,224.39,28.0
-478,Brieva de Cameros,Municipio,La Rioja,44.0,167.49,320.89,-
-479,Languilla,Municipio,provincia de Segovia,84.0,167.78,287.89,-
-480,Honrubia,Municipio,Provincia de Cuenca,1566.0,167.78,203.18,26.5
-481,Belinchón,Municipio,Provincia de Cuenca,334.0,167.8,231.28,-
-482,Villarejo de Fuentes,Municipio,Provincia de Cuenca,429.0,168.13,216.92,-
-483,Tarancón,Municipio,Provincia de Cuenca,15271.0,168.21,229.33,-
-484,Centro comercial Peñas Albas,Centro Comercial,,,168.23,249.08,-
-485,Corral de Ayllón,Municipio,provincia de Segovia,77.0,168.31,285.87,-
-486,Alconchel de la Estrella,Municipio,Provincia de Cuenca,88.0,168.66,212.53,28.6
-487,Almonacid del Marquesado,Municipio,Provincia de Cuenca,425.0,168.78,219.38,-
-488,Meanizados de Poliespan S.L.,Fábricas,,,168.93,251.79,-
-489,Villalgordo del Marquesado,Municipio,Provincia de Cuenca,80.0,169.32,210.2,-
-490,Ventrosa,Municipio,La Rioja,56.0,169.85,319.5,-
-491,Fresno de Cantespino,Municipio,provincia de Segovia,265.0,171.33,284.43,-
-492,Viniegra de Abajo,Municipio,La Rioja,77.0,171.5,318.61,-
-493,Aldealengua de Santa María,Municipio,provincia de Segovia,63.0,171.5,287.98,-
-494,Riaguas de San Bartolomé,Municipio,provincia de Segovia,28.0,172.27,286.55,-
-495,Pinarejo,Municipio,Provincia de Cuenca,212.0,172.41,206.86,-
-496,Alconada de Maderuelo,Municipio,provincia de Segovia,25.0,172.66,287.41,-
-497,Cerezo de Arriba,Municipio,provincia de Segovia,136.0,173.63,279.33,32.44
-498,Torrubia del Campo,Municipio,Provincia de Cuenca,257.0,173.7,225.36,28.0
-499,"SIEGWERK SPAIN, S.A.U.",Fábricas,,,173.93,247.57,30.76
-500,Villar de la Encina,Municipio,Provincia de Cuenca,154.0,174.25,209.69,-
-501,Anguiano,Municipio,La Rioja,497.0,174.28,323.8,-
-502,Puebla de Almenara,Municipio,Provincia de Cuenca,384.0,174.43,219.56,-
-503,Fuente de Pedro Naharro,Municipio,Provincia de Cuenca,1205.0,174.5,227.02,-
-504,Santo Tomé del Puerto,Municipio,provincia de Segovia,252.0,174.67,277.68,-
-505,Acom Sistemas S.L.,Fábricas,,,174.72,252.5,-
-506,SCI (Servicios de Control e Inspección) S.A.,Fábricas,,,174.8,252.47,-
-507,"Acebrón, El",Municipio,Provincia de Cuenca,234.0,174.8,225.87,28.0
-508,Mansilla de la Sierra,Municipio,La Rioja,56.0,174.83,317.51,-
-509,Osram,Fábricas,,,175.22,250.3,-
-510,Witek,Fábricas,,,175.25,252.1,-
-511,Sequera de Fresno,Municipio,provincia de Segovia,35.0,175.25,284.03,-
-512,Villavelayo,Municipio,La Rioja,50.0,175.3,316.17,34.36
-513,Gicalla Hormigoneras,Fábricas,,,175.36,250.29,-
-514,Zarza de Tajo,Municipio,Provincia de Cuenca,239.0,175.38,231.82,-
-515,"Cañavate, El",Municipio,Provincia de Cuenca,146.0,175.4,202.71,26.5
-516,Pedroso,Municipio,La Rioja,74.0,175.58,325.63,33.88
-517,"INTERVAN, SA",Fábricas,,,175.6,250.18,-
-518,Fuentelespino de Haro,Municipio,Provincia de Cuenca,274.0,175.71,214.23,28.6
-519,Hierros Torrejón SA,Fábricas,,,175.74,250.16,-
-520,Perfiven Aluminio,Fábricas,,,175.75,250.17,-
-521,Las Veredillas,Centro Comercial,,,175.81,250.58,-
-522,Maesa (Manufacturas y Accesorios Eléctricos S.A.),Fábricas,,,176.03,250.33,-
-523,Maesa,Fábricas,,,176.14,250.33,-
-524,Cerezo de Abajo,Municipio,provincia de Segovia,112.0,176.22,278.48,-
-525,SOS-Cuétara,Fábricas,,,176.24,238.98,-
-526,Comercial e Industrial EuroIbérica,Fábricas,,,176.32,250.32,-
-527,John Crane Ibérica S.A.,Fábricas,,,176.38,250.26,-
-528,Maderuelo,Municipio,provincia de Segovia,168.0,176.64,288.44,-
-529,Campo de San Pedro,Municipio,provincia de Segovia,238.0,176.87,286.24,-
-530,Randstad,Fábricas,,,176.94,250.46,-
-531,Castillejo de Robledo,Municipio,provincia de Soria,103.0,177.19,291.07,34.24
-532,Wella,Fábricas,,,177.62,250.52,-
-533,Castillejo de Mesleón,Municipio,provincia de Segovia,136.0,177.98,280.69,32.44
-534,Bercimuel,Municipio,provincia de Segovia,24.0,178.01,285.02,-
-535,Santa María del Campo Rus,Municipio,Provincia de Cuenca,571.0,178.22,205.99,-
-536,Indra Sistemas S.A.,Fábricas,,,178.32,250.73,-
-537,Canales de la Sierra,Municipio,La Rioja,91.0,178.45,315.69,34.36
-538,AlquiMadrid,Fábricas,,,178.55,255.85,-
-539,Cilleruelo de San Mamés,Municipio,provincia de Segovia,33.0,178.62,286.19,-
-540,Carrascosa de Haro,Municipio,Provincia de Cuenca,106.0,178.91,209.47,-
-541,Tresjuncos,Municipio,Provincia de Cuenca,293.0,178.99,216.43,-
-542,Bobadilla,Municipio,La Rioja,100.0,179.08,325.1,33.88
-543,Matute,Municipio,La Rioja,98.0,179.15,323.95,-
-544,Pajarejos,Municipio,provincia de Segovia,25.0,179.44,284.59,-
-545,Pozorrubio de Santiago,Municipio,Provincia de Cuenca,323.0,179.61,223.15,28.0
-546,Tobía,Municipio,La Rioja,50.0,180.11,323.51,-
-547,Horcajo de Santiago,Municipio,Provincia de Cuenca,3493.0,180.22,224.69,28.0
-548,Sotillo,Municipio,provincia de Segovia,27.0,180.52,279.76,32.44
-549,Grajera,Municipio,provincia de Segovia,238.0,180.85,283.85,-
-550,Casla,Municipio,provincia de Segovia,165.0,180.97,276.45,-
-551,Duruelo,Municipio,provincia de Segovia,180.0,181.17,278.93,-
-552,Cedillo de la Torre,Municipio,provincia de Segovia,89.0,181.52,285.69,-
-553,Hontanaya,Municipio,Provincia de Cuenca,253.0,181.79,218.5,-
-554,Villaverde de Rioja,Municipio,La Rioja,56.0,181.98,324.01,33.88
-555,Santa Cruz de la Zarza,Municipio,provincia de Toledo,4129.0,182.26,231.72,-
-556,Boceguillas,Municipio,provincia de Segovia,723.0,182.28,282.49,32.44
-557,Osa de la Vega,Municipio,Provincia de Cuenca,479.0,182.7,215.66,-
-558,Prádena,Municipio,provincia de Segovia,523.0,183.41,275.44,-
-559,Moral de Hornuez,Municipio,provincia de Segovia,49.0,183.62,286.94,-
-560,Fresno de la Fuente,Municipio,provincia de Segovia,67.0,183.89,284.34,-
-561,Santa Marta del Cerro,Municipio,provincia de Segovia,35.0,183.96,278.2,-
-562,Ventosilla y Tejadilla,Municipio,provincia de Segovia,19.0,184.29,276.92,-
-563,Estollo,Municipio,La Rioja,85.0,184.61,323.45,-
-564,Villaescusa de Haro,Municipio,Provincia de Cuenca,470.0,184.65,212.56,28.6
-565,Barbolla,Municipio,provincia de Segovia,158.0,184.71,281.93,32.44
-566,Rada de Haro,Municipio,Provincia de Cuenca,44.0,184.98,210.86,-
-567,Centro Comercial La Vid,Centro Comercial,,,185.06,247.65,30.76
-568,San Millán de la Cogolla,Municipio,La Rioja,230.0,185.21,323.21,-
-569,Encinas,Municipio,provincia de Segovia,44.0,185.36,283.64,-
-570,Berceo,Municipio,La Rioja,157.0,185.48,323.61,-
-571,Villamayor de Santiago,Municipio,Provincia de Cuenca,2481.0,185.6,220.66,-
-572,Aldeonte,Municipio,provincia de Segovia,55.0,185.67,282.75,32.44
-573,Badarán,Municipio,La Rioja,482.0,185.86,325.1,33.88
-574,"Alberca de Záncara, La",Municipio,Provincia de Cuenca,1590.0,186.23,207.18,-
-575,Arcones,Municipio,provincia de Segovia,166.0,186.27,274.68,-
-576,Santa Cruz de la Salceda,Municipio,provincia de Burgos,145.0,186.28,291.4,34.24
-577,Valdevacas de Montejo,Municipio,provincia de Segovia,30.0,186.94,288.67,-
-578,Pazuengos,Municipio,La Rioja,30.0,187.52,321.73,-
-579,Cordovín,Municipio,La Rioja,156.0,187.79,325.32,33.88
-580,Ford,Fábricas,,,187.84,254.23,-
-581,Castroserna de Abajo,Municipio,provincia de Segovia,40.0,187.98,277.67,-
-582,Lambda Antenas,Fábricas,,,188.16,254.37,-
-583,Quesos Peña Rubia,Fábricas,,,188.17,262.77,-
-584,Navares de Ayuso,Municipio,provincia de Segovia,53.0,188.5,283.34,-
-585,Villaverde de Montejo,Municipio,provincia de Segovia,27.0,188.52,288.58,-
-586,Cabezamesada,Municipio,provincia de Toledo,346.0,188.58,225.99,28.0
-587,Matabuena,Municipio,provincia de Segovia,157.0,188.92,273.87,-
-588,Condado de Castilnovo,Municipio,provincia de Segovia,90.0,188.94,278.69,-
-589,Fisac Aviación,Fábricas,,,188.96,253.55,-
-590,Villar de Torre,Municipio,La Rioja,158.0,189.04,324.0,-
-591,Montejo de la Vega de la Serrezuela,Municipio,provincia de Segovia,146.0,189.16,289.42,-
-592,Belmonte,Municipio,Provincia de Cuenca,1903.0,189.62,212.55,28.6
-593,Fuentelcésped,Municipio,provincia de Burgos,238.0,189.75,290.89,34.24
-594,Cañas,Municipio,La Rioja,102.0,189.97,324.81,33.88
-595,Navares de Enmedio,Municipio,provincia de Segovia,94.0,190.06,283.53,-
-596,Canillas de Río Tuerto,Municipio,La Rioja,40.0,190.27,325.06,33.88
-597,Villarejo,Municipio,La Rioja,27.0,190.32,323.61,-
-598,Sepúlveda,Municipio,provincia de Segovia,1003.0,190.52,280.64,32.44
-599,Alesanco,Municipio,La Rioja,505.0,190.58,325.84,33.88
-600,Carabias,Municipio,provincia de Segovia,57.0,190.67,286.06,-
-601,Torrecilla sobre Alesanco,Municipio,La Rioja,32.0,190.87,325.37,33.88
-602,Valleruela de Sepúlveda,Municipio,provincia de Segovia,51.0,190.92,276.93,-
-603,Orejana,Municipio,provincia de Segovia,58.0,191.14,276.1,-
-604,Gallegos,Municipio,provincia de Segovia,104.0,191.24,273.12,-
-605,"Hinojosos, Los",Municipio,Provincia de Cuenca,771.0,191.27,216.01,-
-606,Monreal del Llano,Municipio,Provincia de Cuenca,56.0,191.33,213.96,28.6
-607,Honrubia de la Cuesta,Municipio,provincia de Segovia,58.0,192.07,287.84,-
-608,Manzanares de Rioja,Municipio,La Rioja,69.0,192.75,323.93,-
-609,"Matilla, La",Municipio,provincia de Segovia,84.0,192.81,276.98,-
-610,Ezcaray,Municipio,La Rioja,2024.0,192.89,320.24,-
-611,Aldealengua de Pedraza,Municipio,provincia de Segovia,72.0,192.91,272.78,-
-612,Navares de las Cuevas,Municipio,provincia de Segovia,23.0,193.1,284.45,-
-613,Aldealcorvo,Municipio,provincia de Segovia,22.0,193.2,278.73,-
-614,Pedraza,Municipio,provincia de Segovia,344.0,193.63,274.95,-
-615,Valleruela de Pedraza,Municipio,provincia de Segovia,71.0,193.64,276.57,-
-616,Urueñas,Municipio,provincia de Segovia,106.0,193.76,282.44,32.44
-617,Villarrubia de Santiago,Municipio,provincia de Toledo,2536.0,193.79,234.75,29.38
-618,Milagros,Municipio,provincia de Burgos,439.0,193.8,289.92,-
-619,Pardilla,Municipio,provincia de Burgos,117.0,193.81,289.06,-
-620,San Clemente,Municipio,Provincia de Cuenca,6988.0,193.96,203.92,26.5
-621,Ojacastro,Municipio,La Rioja,182.0,194.11,320.82,-
-622,Cirueña,Municipio,La Rioja,153.0,194.13,324.21,33.88
-623,Santurdejo,Municipio,La Rioja,106.0,194.19,322.42,-
-624,Zorraquín,Municipio,La Rioja,93.0,194.22,319.75,-
-625,Navafría,Municipio,provincia de Segovia,281.0,194.27,272.45,-
-626,San Pedro de Gaíllos,Municipio,provincia de Segovia,285.0,194.41,278.12,-
-627,Jardín de Serrano,Centro Comercial,,,194.58,251.38,-
-628,Fuentespina,Municipio,provincia de Burgos,757.0,194.79,291.79,34.24
-629,Horchatería La Fábrica de Siempre SL,Fábricas,,,194.92,252.61,-
-630,Galería Comercial,Centro Comercial,,,194.98,252.28,-
-631,Villanueva de Alcardete,Municipio,provincia de Toledo,3250.0,195.04,221.16,-
-632,Valgañón,Municipio,La Rioja,126.0,195.07,319.06,-
-633,Galería Comercial-Pasaje Mutualidad,Centro Comercial,,,195.67,251.5,-
-634,Villatobas,Municipio,provincia de Toledo,2403.0,196.21,231.89,-
-635,Fuentenebro,Municipio,provincia de Burgos,119.0,196.47,287.96,-
-636,Santurde de Rioja,Municipio,La Rioja,286.0,196.48,322.17,-
-637,Aldeanueva de la Serrezuela,Municipio,provincia de Segovia,44.0,196.78,285.75,-
-638,Castroserracín,Municipio,provincia de Segovia,42.0,196.84,283.52,-
-639,Corral de Almaguer,Municipio,provincia de Toledo,5352.0,196.9,225.91,28.0
-640,Hervías,Municipio,La Rioja,121.0,196.99,325.09,33.88
-641,Campillo de Aranda,Municipio,provincia de Burgos,182.0,197.5,290.75,34.24
-642,Arahuetes,Municipio,provincia de Segovia,30.0,197.51,275.12,-
-643,Schreiber Food España,Fábricas,,,197.87,235.18,29.38
-644,Nireo Corporacion,Fábricas,,,197.89,235.23,29.38
-645,Acciona Infraestructuras,Fábricas,,,197.96,235.03,29.38
-646,Aldehorno,Municipio,provincia de Segovia,53.0,198.05,287.41,-
-647,Rebollo,Municipio,provincia de Segovia,81.0,198.07,276.89,-
-648,Torregalindo,Municipio,provincia de Burgos,125.0,198.32,289.72,-
-649,Torre Val de San Pedro,Municipio,provincia de Segovia,184.0,198.4,273.05,-
-650,"Pedernoso, El",Municipio,Provincia de Cuenca,1124.0,198.58,212.13,28.6
-651,Fresneda de la Sierra Tirón,Municipio,provincia de Burgos,95.0,198.66,317.81,-
-652,Noblejas,Municipio,provincia de Toledo,3585.0,199.05,235.62,29.38
-653,Valle de Tabladillo,Municipio,provincia de Segovia,86.0,199.23,282.38,32.44
-654,Centro Comercial Madrid-París,Centro Comercial,,,199.51,267.6,-
-655,Santo Domingo de la Calzada,Municipio,La Rioja,6238.0,199.67,323.73,-
-656,Santiuste de Pedraza,Municipio,provincia de Segovia,92.0,199.74,273.57,-
+,Nombre,Tipo,Provincia,Poblacion,Distancia,Dirección,Nubosidad,lon,lat
+0,"Cuerlas, Las",Municipio,provincia de Zaragoza,41.0,5.74,211.93,28.6,-1.5495,40.9595
+1,Torralba de los Frailes,Municipio,provincia de Zaragoza,79.0,12.96,286.74,-,-1.661,41.0367
+2,Embid,Municipio,provincia de Guadalajara,33.0,16.95,258.61,31.3,-1.7108,40.9731
+3,"Yunta, La",Municipio,provincia de Guadalajara,89.0,17.4,235.3,29.38,-1.6834,40.9142
+4,Campillo de Dueñas,Municipio,provincia de Guadalajara,78.0,19.44,227.44,-,-1.6836,40.885
+5,Tortuera,Municipio,provincia de Guadalajara,194.0,24.09,262.06,-,-1.7969,40.9731
+6,Hombrados,Municipio,provincia de Guadalajara,33.0,26.7,212.84,28.6,-1.6854,40.8014
+7,"Pobo de Dueñas, El",Municipio,provincia de Guadalajara,109.0,27.72,204.5,-,-1.65,40.7762
+8,Fuentelsaz,Municipio,provincia de Guadalajara,94.0,27.73,286.78,-,-1.8294,41.0747
+9,Castellar de la Muela,Municipio,provincia de Guadalajara,22.0,29.14,225.32,28.0,-1.7594,40.8189
+10,Morenilla,Municipio,provincia de Guadalajara,38.0,29.15,214.12,28.6,-1.7076,40.7861
+11,Rueda de la Sierra,Municipio,provincia de Guadalajara,38.0,30.17,251.81,-,-1.8537,40.9183
+12,Milmarcos,Municipio,provincia de Guadalajara,73.0,31.83,287.26,-,-1.8753,41.0875
+13,Torrubia,Municipio,provincia de Guadalajara,19.0,32.84,262.79,-,-1.9004,40.9657
+14,Prados Redondos,Municipio,provincia de Guadalajara,73.0,33.86,224.18,28.0,-1.7935,40.7847
+15,Tordellego,Municipio,provincia de Guadalajara,48.0,34.01,202.85,26.5,-1.6702,40.7211
+16,Anquela del Pedregal,Municipio,provincia de Guadalajara,24.0,34.32,213.06,28.6,-1.7356,40.7444
+17,Tartanedo,Municipio,provincia de Guadalajara,140.0,34.41,268.44,32.56,-1.9222,40.9942
+18,Pardos,Municipio,provincia de Guadalajara,43.0,35.1,260.19,-,-1.9242,40.9489
+19,Castilnuevo,Municipio,provincia de Guadalajara,8.0,35.63,234.21,29.38,-1.8564,40.8156
+20,Molina de Aragón,Municipio,provincia de Guadalajara,3275.0,36.23,240.78,-,-1.8886,40.8439
+21,Torrecuadrada de Molina,Municipio,provincia de Guadalajara,18.0,37.46,221.27,-,-1.8066,40.7498
+22,Torremochuela,Municipio,provincia de Guadalajara,10.0,38.22,226.33,28.0,-1.8414,40.7657
+23,Rillo de Gallo,Municipio,provincia de Guadalajara,43.0,38.68,247.06,30.76,-1.9361,40.8672
+24,Herrería,Municipio,provincia de Guadalajara,30.0,39.61,251.37,-,-1.9589,40.8889
+25,Algar de Mesa,Municipio,provincia de Guadalajara,55.0,40.15,291.63,34.24,-1.9581,41.1353
+26,Piqueras,Municipio,provincia de Guadalajara,55.0,41.58,204.84,-,-1.7206,40.6636
+27,Villel de Mesa,Municipio,provincia de Guadalajara,182.0,42.35,289.09,-,-1.9901,41.1266
+28,Establés,Municipio,provincia de Guadalajara,37.0,42.86,271.05,32.56,-2.0228,41.0092
+29,Corduente,Municipio,provincia de Guadalajara,349.0,43.05,245.69,30.76,-1.9789,40.8433
+30,Mochales,Municipio,provincia de Guadalajara,46.0,43.39,283.96,-,-2.0147,41.0961
+31,Traíd,Municipio,provincia de Guadalajara,23.0,44.77,213.9,28.6,-1.8095,40.6687
+32,Tierzo,Municipio,provincia de Guadalajara,49.0,45.08,231.28,-,-1.9305,40.7492
+33,Valhermoso,Municipio,provincia de Guadalajara,23.0,45.36,237.43,29.38,-1.9667,40.7831
+34,Alcoroches,Municipio,provincia de Guadalajara,126.0,46.02,205.12,-,-1.745,40.6281
+35,Torremocha del Pinar,Municipio,provincia de Guadalajara,40.0,46.36,254.48,-,-2.0436,40.8908
+36,Pinilla de Molina,Municipio,provincia de Guadalajara,10.0,47.39,220.76,-,-1.8802,40.68
+37,Terzaga,Municipio,provincia de Guadalajara,23.0,47.57,223.9,28.0,-1.9044,40.6945
+38,Fuembellida,Municipio,provincia de Guadalajara,10.0,49.13,236.21,29.38,-1.9975,40.7569
+39,Baños de Tajo,Municipio,provincia de Guadalajara,19.0,49.74,230.76,-,-1.97,40.7197
+40,Selas,Municipio,provincia de Guadalajara,46.0,49.82,263.46,-,-2.1013,40.9509
+41,Megina,Municipio,provincia de Guadalajara,32.0,50.25,216.66,-,-1.8689,40.6403
+42,Taravilla,Municipio,provincia de Guadalajara,38.0,51.29,228.54,-,-1.9689,40.6973
+43,Chequilla,Municipio,provincia de Guadalajara,18.0,51.32,211.01,28.6,-1.8267,40.6072
+44,Checa,Municipio,provincia de Guadalajara,282.0,51.84,206.74,-,-1.7897,40.5864
+45,Anquela del Ducado,Municipio,provincia de Guadalajara,50.0,51.92,266.31,-,-2.1289,40.9717
+46,Mazarete,Municipio,provincia de Guadalajara,38.0,54.33,269.93,32.56,-2.1591,41.0009
+47,Cobeta,Municipio,provincia de Guadalajara,114.0,55.0,254.14,-,-2.1411,40.8667
+48,Peralejos de las Truchas,Municipio,provincia de Guadalajara,143.0,56.52,216.26,-,-1.9092,40.5928
+49,Maranchón,Municipio,provincia de Guadalajara,229.0,58.27,275.2,-,-2.2036,41.0486
+50,Olmeda de Cobeta,Municipio,provincia de Guadalajara,66.0,58.43,254.42,-,-2.1811,40.8606
+51,Poveda de la Sierra,Municipio,provincia de Guadalajara,114.0,58.92,227.42,-,-2.0272,40.6439
+52,Ciruelos del Pinar,Municipio,provincia de Guadalajara,29.0,59.66,270.8,32.56,-2.2225,41.0086
+53,Peñalén,Municipio,provincia de Guadalajara,73.0,59.94,231.49,-,-2.0689,40.6667
+54,Ablanque,Municipio,provincia de Guadalajara,59.0,61.39,259.22,31.3,-2.2292,40.8981
+55,Zaorejas,Municipio,provincia de Guadalajara,116.0,63.99,245.28,30.76,-2.2022,40.7611
+56,Luzón,Municipio,provincia de Guadalajara,68.0,64.17,272.6,-,-2.2756,41.0269
+57,Cueva del Hierro,Municipio,Provincia de Cuenca,29.0,64.24,223.43,28.0,-2.0361,40.5828
+58,Valsalobre,Municipio,Provincia de Cuenca,23.0,65.03,228.85,-,-2.093,40.6174
+59,Masegosa,Municipio,Provincia de Cuenca,64.0,66.6,220.57,-,-2.0258,40.5473
+60,Riba de Saelices,Municipio,provincia de Guadalajara,105.0,66.63,261.49,-,-2.2956,40.9122
+61,Beteta,Municipio,Provincia de Cuenca,262.0,67.32,224.0,28.0,-2.0667,40.5667
+62,Lagunaseca,Municipio,Provincia de Cuenca,77.0,67.58,219.12,-,-2.0178,40.5308
+63,Arcos de Jalón,Municipio,provincia de Soria,1469.0,67.78,290.5,34.24,-2.2708,41.2139
+64,Huertahernando,Municipio,provincia de Guadalajara,53.0,68.02,253.21,-,-2.2856,40.8244
+65,Saelices de la Sal,Municipio,provincia de Guadalajara,43.0,68.82,261.39,-,-2.3211,40.9081
+66,Santa María del Val,Municipio,Provincia de Cuenca,67.0,71.1,218.9,-,-2.0413,40.5046
+67,Carrascosa,Municipio,Provincia de Cuenca,70.0,71.25,230.42,-,-2.1631,40.5936
+68,Villanueva de Alcorón,Municipio,provincia de Guadalajara,149.0,71.89,240.19,-,-2.2519,40.68
+69,Anguita,Municipio,provincia de Guadalajara,156.0,71.98,272.28,-,-2.3686,41.0258
+70,Iniéstola,Municipio,provincia de Guadalajara,22.0,72.01,269.54,32.56,-2.3692,40.995
+71,Vega del Codorno,Municipio,Provincia de Cuenca,129.0,72.46,209.02,-,-1.9289,40.4325
+72,Armallones,Municipio,provincia de Guadalajara,59.0,72.76,246.27,30.76,-2.3025,40.7378
+73,Esplegares,Municipio,provincia de Guadalajara,38.0,73.86,257.62,31.3,-2.3692,40.8581
+74,Sotodosos,Municipio,provincia de Guadalajara,33.0,74.57,263.37,-,-2.3928,40.9227
+75,Hortezuela de Océn,Municipio,provincia de Guadalajara,42.0,76.2,266.01,-,-2.4162,40.9522
+76,"Pozuelo, El",Municipio,Provincia de Cuenca,49.0,77.2,236.72,29.38,-2.2769,40.6203
+77,Luzaga,Municipio,provincia de Guadalajara,69.0,78.39,267.95,-,-2.4442,40.9744
+78,Sacecorbo,Municipio,provincia de Guadalajara,91.0,78.45,256.26,31.3,-2.4171,40.8326
+79,Cañizares,Municipio,Provincia de Cuenca,439.0,78.57,226.87,28.0,-2.1913,40.5186
+80,Poyatos,Municipio,Provincia de Cuenca,56.0,78.78,215.16,-,-2.0493,40.4228
+81,Ocentejo,Municipio,provincia de Guadalajara,21.0,78.84,251.2,-,-2.3978,40.7719
+82,Medinaceli,Municipio,provincia de Soria,713.0,79.7,283.96,-,-2.4353,41.1722
+83,Alcolea del Pinar,Municipio,provincia de Guadalajara,320.0,80.18,272.99,-,-2.4656,41.0369
+84,Fuertescusa,Municipio,Provincia de Cuenca,63.0,81.04,223.77,28.0,-2.1758,40.4754
+85,Valtablado del Río,Municipio,provincia de Guadalajara,7.0,81.38,247.1,30.76,-2.4011,40.7156
+86,"Recuenco, El",Municipio,provincia de Guadalajara,58.0,81.78,238.51,-,-2.3383,40.6167
+87,Abánades,Municipio,provincia de Guadalajara,48.0,82.62,261.83,-,-2.4839,40.8939
+88,Arbeteta,Municipio,provincia de Guadalajara,22.0,83.54,243.95,-,-2.4017,40.6706
+89,Estriégana,Municipio,provincia de Guadalajara,14.0,85.09,274.53,-,-2.5225,41.0592
+90,Canredondo,Municipio,provincia de Guadalajara,67.0,85.24,255.87,-,-2.4933,40.8125
+91,Saúca,Municipio,provincia de Guadalajara,52.0,85.41,272.52,-,-2.5281,41.0325
+92,Alcantud,Municipio,Provincia de Cuenca,51.0,85.64,234.04,29.38,-2.3328,40.5486
+93,Fresneda de la Sierra,Municipio,Provincia de Cuenca,48.0,86.23,218.11,-,-2.1416,40.3915
+94,Vindel,Municipio,Provincia de Cuenca,11.0,86.57,237.89,29.38,-2.3804,40.5868
+95,Cañamares,Municipio,Provincia de Cuenca,466.0,86.84,225.12,28.0,-2.2401,40.4502
+96,Miño de Medinaceli,Municipio,provincia de Soria,100.0,86.91,284.16,-,-2.5181,41.1897
+97,Torrecuadradilla,Municipio,provincia de Guadalajara,24.0,87.38,259.33,31.3,-2.5319,40.8536
+98,Castillejo-Sierra,Municipio,Provincia de Cuenca,28.0,87.61,217.34,-,-2.1406,40.3752
+99,Arcos de la Sierra,Municipio,Provincia de Cuenca,83.0,88.8,214.91,28.6,-2.1131,40.3468
+100,"Majadas, Las",Municipio,Provincia de Cuenca,241.0,89.41,208.86,-,-2.0224,40.2976
+101,"Frontera, La",Municipio,Provincia de Cuenca,155.0,89.61,221.97,-,-2.2208,40.4022
+102,Peralveche,Municipio,provincia de Guadalajara,45.0,90.15,241.37,-,-2.4492,40.6117
+103,Priego,Municipio,Provincia de Cuenca,896.0,91.44,227.82,-,-2.3135,40.4488
+104,Arandilla del Arroyo,Municipio,Provincia de Cuenca,7.0,91.65,233.55,-,-2.3844,40.5109
+105,Castilforte,Municipio,provincia de Guadalajara,55.0,91.85,237.68,29.38,-2.4308,40.5586
+106,Portilla,Municipio,Provincia de Cuenca,59.0,92.84,211.34,28.6,-2.0828,40.2886
+107,Torremocha del Campo,Municipio,provincia de Guadalajara,166.0,92.95,268.71,32.56,-2.6175,40.9792
+108,Sigüenza,Municipio,provincia de Guadalajara,4309.0,94.95,274.81,-,-2.6392,41.0692
+109,Uña,Municipio,Provincia de Cuenca,82.0,95.04,204.5,-,-1.9779,40.2241
+110,Uña,Municipio,Provincia de Cuenca,82.0,95.14,204.56,-,-1.9794,40.2236
+111,"Sotillo, El",Municipio,provincia de Guadalajara,42.0,95.22,262.2,-,-2.6328,40.8819
+112,Albendea,Municipio,Provincia de Cuenca,121.0,95.4,233.32,-,-2.4171,40.4879
+113,Villaconejos de Trabaque,Municipio,Provincia de Cuenca,344.0,95.48,225.59,28.0,-2.3183,40.4
+114,Albalate de las Nogueras,Municipio,Provincia de Cuenca,253.0,95.75,222.6,-,-2.2781,40.3672
+115,Valdeolivas,Municipio,Provincia de Cuenca,202.0,96.34,235.1,29.38,-2.4467,40.5044
+116,Cifuentes,Municipio,provincia de Guadalajara,1645.0,96.43,255.84,-,-2.6214,40.7864
+117,Trillo,Municipio,provincia de Guadalajara,1319.0,96.83,250.12,-,-2.5914,40.7028
+118,Algora,Municipio,provincia de Guadalajara,70.0,97.04,267.8,-,-2.6653,40.9642
+119,Salmerón,Municipio,provincia de Guadalajara,157.0,97.08,238.65,-,-2.4931,40.5456
+120,Sienes,Municipio,provincia de Guadalajara,50.0,98.16,283.37,-,-2.6522,41.2014
+121,Villalba de la Sierra,Municipio,Provincia de Cuenca,456.0,98.22,209.85,-,-2.0895,40.2354
+122,Zarzuela,Municipio,Provincia de Cuenca,170.0,98.46,212.47,28.6,-2.1364,40.2544
+123,"Inviernas, Las",Municipio,provincia de Guadalajara,59.0,98.51,261.82,-,-2.6702,40.8718
+124,San Pedro Palmiches,Municipio,Provincia de Cuenca,57.0,98.73,230.01,-,-2.4062,40.4298
+125,Valdelcubo,Municipio,provincia de Guadalajara,45.0,100.62,284.74,-,-2.6742,41.2272
+126,Salmeroncillos,Municipio,Provincia de Cuenca,102.0,101.26,236.89,29.38,-2.5152,40.5022
+127,Baraona,Municipio,provincia de Soria,135.0,101.35,289.1,-,-2.6572,41.2953
+128,Alpanseque,Municipio,provincia de Soria,62.0,101.44,287.11,-,-2.6708,41.2653
+129,Masegoso de Tajuña,Municipio,provincia de Guadalajara,52.0,101.58,259.11,31.3,-2.6961,40.8251
+130,Torralba,Municipio,Provincia de Cuenca,112.0,101.66,220.17,-,-2.2864,40.3022
+131,Escamilla,Municipio,provincia de Guadalajara,63.0,101.75,240.65,-,-2.5614,40.5508
+132,Villar del Infantado,Municipio,Provincia de Cuenca,43.0,101.75,233.52,-,-2.4792,40.4558
+133,Mirabueno,Municipio,provincia de Guadalajara,80.0,102.19,266.68,-,-2.725,40.9439
+134,Alaminos,Municipio,provincia de Guadalajara,60.0,103.19,261.74,-,-2.7247,40.8639
+135,Solanillos del Extremo,Municipio,provincia de Guadalajara,91.0,103.71,254.66,-,-2.698,40.751
+136,"Olmeda de Jadraque, La",Municipio,provincia de Guadalajara,17.0,103.97,278.05,-,-2.7394,41.1275
+137,Mandayona,Municipio,provincia de Guadalajara,294.0,104.06,267.59,-,-2.7483,40.9575
+138,Valderrebollo,Municipio,provincia de Guadalajara,23.0,104.67,258.54,31.3,-2.7294,40.8104
+139,Millana,Municipio,provincia de Guadalajara,110.0,104.76,238.62,-,-2.5697,40.5086
+140,Buenache de la Sierra,Municipio,Provincia de Cuenca,97.0,104.82,203.27,26.5,-2.0008,40.1356
+141,Cogollor,Municipio,provincia de Guadalajara,25.0,105.0,260.99,-,-2.7433,40.8492
+142,Sotorribas,Municipio,Provincia de Cuenca,732.0,105.31,211.58,28.6,-2.1628,40.1944
+143,Henche,Municipio,provincia de Guadalajara,104.0,105.51,252.71,-,-2.7061,40.7158
+144,Viana de Jadraque,Municipio,provincia de Guadalajara,46.0,105.57,271.83,32.56,-2.7681,41.0267
+145,Arrancacepas,Municipio,Provincia de Cuenca,25.0,105.59,222.8,-,-2.359,40.3037
+146,Mantiel,Municipio,provincia de Guadalajara,34.0,105.62,247.14,30.76,-2.6644,40.6293
+147,Paredes de Sigüenza,Municipio,provincia de Guadalajara,19.0,105.88,285.03,-,-2.7336,41.2433
+148,Alique,Municipio,provincia de Guadalajara,14.0,105.89,244.43,-,-2.6425,40.5875
+149,Baides,Municipio,provincia de Guadalajara,56.0,106.23,270.63,32.56,-2.7761,41.0069
+150,Bascuñana de San Pedro,Municipio,Provincia de Cuenca,18.0,106.55,214.72,28.6,-2.2281,40.2134
+151,Almadrones,Municipio,provincia de Guadalajara,57.0,106.58,264.34,-,-2.7722,40.9022
+152,Barriopedro,Municipio,provincia de Guadalajara,15.0,106.93,257.61,31.3,-2.7511,40.7908
+153,Mariana,Municipio,Provincia de Cuenca,304.0,107.21,210.04,-,-2.1452,40.1666
+154,Tordelrábano,Municipio,provincia de Guadalajara,26.0,107.24,283.34,-,-2.758,41.2186
+155,Castejón de Henares,Municipio,provincia de Guadalajara,65.0,107.28,266.56,-,-2.785,40.9386
+156,Villar de Domingo García,Municipio,Provincia de Cuenca,220.0,107.62,218.02,-,-2.2942,40.2383
+157,Castillo-Albaráñez,Municipio,Provincia de Cuenca,22.0,107.93,223.75,28.0,-2.393,40.2992
+158,Huérmeces del Cerro,Municipio,provincia de Guadalajara,42.0,107.95,273.42,-,-2.7953,41.0539
+159,Pareja,Municipio,provincia de Guadalajara,393.0,107.98,242.92,-,-2.6494,40.5564
+160,Villaseca de Henares,Municipio,provincia de Guadalajara,27.0,108.22,267.89,-,-2.798,40.9605
+161,Canalejas del Arroyo,Municipio,Provincia de Cuenca,186.0,108.8,229.86,-,-2.4942,40.3689
+162,Chillarón del Rey,Municipio,provincia de Guadalajara,88.0,109.0,245.93,30.76,-2.69,40.5983
+163,Alcolea de las Peñas,Municipio,provincia de Guadalajara,13.0,109.15,282.64,32.44,-2.7836,41.2106
+164,Olmedilla de Eliz,Municipio,Provincia de Cuenca,15.0,109.19,224.74,28.0,-2.4192,40.3027
+165,Santiuste,Municipio,provincia de Guadalajara,14.0,109.21,275.23,-,-2.8078,41.0853
+166,Buciegas,Municipio,Provincia de Cuenca,36.0,109.22,227.52,-,-2.463,40.3366
+167,Alcocer,Municipio,provincia de Guadalajara,313.0,109.86,237.71,29.38,-2.6097,40.4711
+168,Rello,Municipio,provincia de Soria,14.0,110.02,289.9,-,-2.7497,41.3328
+169,Rello,Municipio,provincia de Soria,14.0,110.06,289.99,-,-2.7495,41.3344
+170,Durón,Municipio,provincia de Guadalajara,106.0,110.44,248.05,30.76,-2.7247,40.6264
+171,Argecilla,Municipio,provincia de Guadalajara,64.0,110.65,263.48,-,-2.8178,40.8833
+172,Riofrío del Llano,Municipio,provincia de Guadalajara,55.0,110.89,278.26,-,-2.8206,41.1389
+173,Castejón,Municipio,Provincia de Cuenca,144.0,111.34,231.95,-,-2.5475,40.3822
+174,Olmeda de la Cuesta,Municipio,Provincia de Cuenca,20.0,111.95,226.87,28.0,-2.4763,40.3115
+175,Cincovillas,Municipio,provincia de Guadalajara,22.0,111.98,282.03,32.44,-2.8194,41.2053
+176,Matillas,Municipio,provincia de Guadalajara,105.0,112.06,267.52,-,-2.8431,40.9522
+177,Rebollosa de Jadraque,Municipio,provincia de Guadalajara,11.0,112.09,275.39,-,-2.8416,41.0902
+178,Budia,Municipio,provincia de Guadalajara,196.0,112.14,248.82,30.76,-2.75,40.6331
+179,Cendejas de la Torre,Municipio,provincia de Guadalajara,24.0,112.5,269.13,32.56,-2.85,40.9803
+180,Angón,Municipio,provincia de Guadalajara,10.0,112.89,274.11,-,-2.8531,41.0681
+181,Ledanca,Municipio,provincia de Guadalajara,98.0,112.91,262.86,-,-2.8425,40.8697
+182,Negredo,Municipio,provincia de Guadalajara,17.0,113.19,271.77,32.56,-2.8586,41.0269
+183,"Olivar, El",Municipio,provincia de Guadalajara,71.0,113.43,247.48,30.76,-2.7522,40.6067
+184,Palomera,Municipio,Provincia de Cuenca,171.0,113.45,203.75,26.5,-2.0506,40.0675
+185,Alcohujate,Municipio,Provincia de Cuenca,28.0,113.76,235.34,29.38,-2.6172,40.4169
+186,Barcones,Municipio,provincia de Soria,22.0,113.98,286.81,-,-2.8164,41.2917
+187,Cendejas de Enmedio,Municipio,provincia de Guadalajara,72.0,114.29,269.33,32.56,-2.8714,40.9833
+188,"Riba de Escalote, La",Municipio,provincia de Soria,9.0,114.44,290.25,34.24,-2.7969,41.3517
+189,Alocén,Municipio,provincia de Guadalajara,172.0,114.58,245.84,30.76,-2.7489,40.5758
+190,Bujalaro,Municipio,provincia de Guadalajara,47.0,115.4,266.82,-,-2.8817,40.9378
+191,Gascueña,Municipio,Provincia de Cuenca,153.0,115.54,227.56,-,-2.5181,40.2983
+192,Atienza,Municipio,provincia de Guadalajara,405.0,116.02,281.29,32.44,-2.87,41.1992
+193,Cuenca,Municipio,Provincia de Cuenca,54690.0,116.08,207.09,-,-2.135,40.0717
+194,Cañaveruelas,Municipio,Provincia de Cuenca,132.0,116.19,235.07,29.38,-2.6369,40.4003
+195,"Bodera, La",Municipio,provincia de Guadalajara,22.0,116.27,277.75,-,-2.8856,41.1358
+196,Chillarón de Cuenca,Municipio,Provincia de Cuenca,617.0,116.42,211.14,28.6,-2.2214,40.1047
+197,Torremocha de Jadraque,Municipio,provincia de Guadalajara,21.0,116.5,271.39,32.56,-2.8981,41.0203
+198,Jirueque,Municipio,provincia de Guadalajara,59.0,116.86,268.4,32.56,-2.9011,40.9658
+199,San Andrés del Rey,Municipio,provincia de Guadalajara,29.0,117.29,250.24,-,-2.8189,40.64
+200,Gajanejos,Municipio,provincia de Guadalajara,47.0,117.4,261.71,-,-2.8911,40.8433
+201,Brihuega,Municipio,provincia de Guadalajara,2410.0,117.41,257.12,31.3,-2.8692,40.7606
+202,Pálmaces de Jadraque,Municipio,provincia de Guadalajara,41.0,117.65,273.33,-,-2.9106,41.0561
+203,Frabica de Maderas Ayuntamiento de Cuenca,Fábricas,,,117.66,202.33,26.5,-2.0387,40.0225
+204,Tinajas,Municipio,Provincia de Cuenca,201.0,117.67,230.49,-,-2.5833,40.3258
+205,Villas de la Ventosa,Municipio,Provincia de Cuenca,211.0,117.92,221.45,-,-2.4322,40.205
+206,Sacedón,Municipio,provincia de Guadalajara,1533.0,118.06,240.95,-,-2.7317,40.4822
+207,Arenillas,Municipio,provincia de Soria,21.0,118.11,289.37,-,-2.8453,41.3472
+208,Villanueva de Argecilla,Municipio,provincia de Guadalajara,31.0,118.35,265.04,-,-2.9128,40.9031
+209,Berninches,Municipio,provincia de Guadalajara,49.0,118.63,246.57,30.76,-2.7997,40.5728
+210,Jadraque,Municipio,provincia de Guadalajara,1413.0,119.02,266.35,-,-2.9236,40.9267
+211,Yélamos de Arriba,Municipio,provincia de Guadalajara,78.0,119.06,250.62,-,-2.8417,40.6411
+212,Medranda,Municipio,provincia de Guadalajara,66.0,119.73,269.43,32.56,-2.9361,40.9839
+213,Romanillos de Atienza,Municipio,provincia de Guadalajara,36.0,119.83,285.14,-,-2.8944,41.2758
+214,Fuentenava de Jábaga,Municipio,Provincia de Cuenca,513.0,120.04,212.13,28.6,-2.2639,40.0864
+215,Villalba del Rey,Municipio,Provincia de Cuenca,516.0,120.1,232.72,-,-2.6397,40.3443
+216,Pinilla de Jadraque,Municipio,provincia de Guadalajara,50.0,120.17,271.43,32.56,-2.9417,41.0214
+217,Utande,Municipio,provincia de Guadalajara,31.0,120.25,262.29,-,-2.9267,40.85
+218,Yélamos de Abajo,Municipio,provincia de Guadalajara,71.0,120.42,250.34,-,-2.8544,40.6319
+219,Villanueva de Guadamejud,Municipio,Provincia de Cuenca,13.0,120.47,224.36,28.0,-2.5049,40.2248
+220,Auñón,Municipio,provincia de Guadalajara,142.0,120.7,243.75,-,-2.7917,40.5169
+221,La Miñosa,Municipio,provincia de Guadalajara,28.0,120.7,279.87,32.44,-2.9308,41.1803
+222,Miralrío,Municipio,provincia de Guadalajara,51.0,120.94,264.47,-,-2.9419,40.89
+223,Robledo de Corpes,Municipio,provincia de Guadalajara,52.0,121.36,276.52,-,-2.9492,41.1181
+224,Bañuelos,Municipio,provincia de Guadalajara,14.0,121.85,285.3,-,-2.9167,41.2833
+225,Casas de San Galindo,Municipio,provincia de Guadalajara,16.0,122.38,263.66,-,-2.9564,40.8731
+226,"Peraleja, La",Municipio,Provincia de Cuenca,97.0,122.46,226.17,28.0,-2.5533,40.2364
+227,Alhóndiga,Municipio,provincia de Guadalajara,157.0,122.48,244.75,-,-2.8217,40.5269
+228,Villar y Velasco,Municipio,Provincia de Cuenca,77.0,122.6,218.77,-,-2.4163,40.1402
+229,Portalrubio de Guadamejud,Municipio,Provincia de Cuenca,22.0,122.93,228.91,-,-2.6044,40.2721
+230,Muduex,Municipio,provincia de Guadalajara,100.0,123.2,261.49,-,-2.9581,40.8308
+231,Membrillera,Municipio,provincia de Guadalajara,98.0,123.47,267.68,-,-2.9786,40.9492
+232,Arcas,Municipio,Provincia de Cuenca,1716.0,123.52,204.44,-,-2.1136,39.9897
+233,"Toba, La",Municipio,provincia de Guadalajara,96.0,123.55,270.53,32.56,-2.9819,41.0042
+234,Congostrina,Municipio,provincia de Guadalajara,17.0,123.79,272.29,-,-2.9844,41.0383
+235,Irueste,Municipio,provincia de Guadalajara,68.0,123.92,249.9,-,-2.8892,40.6128
+236,Villar de Olalla,Municipio,Provincia de Cuenca,1270.0,124.25,207.94,-,-2.1972,40.0136
+237,Peñalver,Municipio,provincia de Guadalajara,144.0,125.07,248.45,30.76,-2.8881,40.5828
+238,Miedes de Atienza,Municipio,provincia de Guadalajara,59.0,125.24,284.06,-,-2.9636,41.2672
+239,Hiendelaencina,Municipio,provincia de Guadalajara,115.0,125.5,274.63,-,-3.0022,41.0847
+240,Valdearenas,Municipio,provincia de Guadalajara,76.0,126.29,260.72,-,-2.9908,40.8111
+241,Buendía,Municipio,Provincia de Cuenca,400.0,126.68,236.41,29.38,-2.7573,40.3672
+242,Prádena de Atienza,Municipio,provincia de Guadalajara,49.0,126.77,279.1,32.44,-3.0053,41.1736
+243,Villarejo de la Peñuela,Municipio,Provincia de Cuenca,20.0,126.88,216.95,-,-2.4098,40.0879
+244,San Andrés del Congosto,Municipio,provincia de Guadalajara,76.0,127.23,270.37,32.56,-3.0256,41.0008
+245,Trijueque,Municipio,provincia de Guadalajara,1201.0,127.3,259.1,31.3,-2.9944,40.7778
+246,Gascueña de Bornova,Municipio,provincia de Guadalajara,28.0,127.43,277.52,-,-3.0183,41.1431
+247,Fuentelencina,Municipio,provincia de Guadalajara,325.0,127.44,245.3,30.76,-2.8806,40.5172
+248,Villares de Jadraque,Municipio,provincia de Guadalajara,45.0,127.51,275.49,-,-3.0244,41.1028
+249,Mina La Unión (abandonada),Minas,,,127.72,278.64,-,-3.0181,41.1656
+250,Hijes,Municipio,provincia de Guadalajara,19.0,127.73,283.05,-,-2.9983,41.2525
+251,Retortillo de Soria,Municipio,provincia de Soria,149.0,127.82,286.05,-,-2.9808,41.3111
+252,Ujados,Municipio,provincia de Guadalajara,28.0,127.95,282.14,32.44,-3.0057,41.2351
+253,Caspueñas,Municipio,provincia de Guadalajara,81.0,128.27,254.84,-,-2.9786,40.6931
+254,Valdeavellano,Municipio,provincia de Guadalajara,114.0,128.28,253.44,-,-2.9681,40.6661
+255,Valfermoso de Tajuña,Municipio,provincia de Guadalajara,60.0,128.71,251.15,-,-2.9536,40.6211
+256,"Valdecolmenas, Los",Municipio,Provincia de Cuenca,72.0,128.75,220.54,-,-2.4972,40.1194
+257,Zarzuela de Jadraque,Municipio,provincia de Guadalajara,44.0,128.79,273.78,-,-3.0425,41.0694
+258,Valdeconcha,Municipio,provincia de Guadalajara,40.0,130.22,242.54,-,-2.8767,40.4561
+259,Valdegrudas,Municipio,provincia de Guadalajara,56.0,130.46,256.22,31.3,-3.0133,40.7147
+260,Atanzón,Municipio,provincia de Guadalajara,100.0,130.55,253.83,-,-2.9967,40.6675
+261,Copernal,Municipio,provincia de Guadalajara,28.0,130.76,263.89,-,-3.0558,40.8681
+262,Hita,Municipio,provincia de Guadalajara,294.0,130.91,261.76,-,-3.0494,40.8247
+263,Torija,Municipio,provincia de Guadalajara,1448.0,131.18,257.73,31.3,-3.0314,40.7433
+264,Espinosa de Henares,Municipio,provincia de Guadalajara,628.0,131.55,265.76,-,-3.0706,40.9056
+265,Albendiego,Municipio,provincia de Guadalajara,49.0,131.57,281.44,32.44,-3.0517,41.2272
+266,Bustares,Municipio,provincia de Guadalajara,79.0,131.78,276.99,-,-3.0714,41.1367
+267,Tendilla,Municipio,provincia de Guadalajara,307.0,132.27,247.73,30.76,-2.9592,40.5444
+268,Somolinos,Municipio,provincia de Guadalajara,30.0,132.44,282.25,32.44,-3.0577,41.2451
+269,Cogolludo,Municipio,provincia de Guadalajara,540.0,132.63,267.87,-,-3.0875,40.9483
+270,Sayatón,Municipio,provincia de Guadalajara,78.0,132.8,238.77,-,-2.8519,40.3772
+271,"Navas de Jadraque, Las",Municipio,provincia de Guadalajara,27.0,132.81,275.4,-,-3.0875,41.1048
+272,Abia de la Obispalía,Municipio,Provincia de Cuenca,65.0,132.85,214.63,28.6,-2.4,40.0167
+273,Valdetórtola,Municipio,Provincia de Cuenca,133.0,132.94,205.52,-,-2.1853,39.9217
+274,Moratilla de los Meleros,Municipio,provincia de Guadalajara,103.0,133.0,245.61,30.76,-2.9433,40.5014
+275,Monasterio,Municipio,provincia de Guadalajara,14.0,133.19,269.69,32.56,-3.0961,40.9861
+276,Cañizar,Municipio,provincia de Guadalajara,54.0,133.34,259.3,31.3,-3.0656,40.7708
+277,Taragudo,Municipio,provincia de Guadalajara,49.0,133.56,261.85,-,-3.0808,40.8228
+278,Romanones,Municipio,provincia de Guadalajara,99.0,133.8,249.36,-,-2.9928,40.5706
+279,Fuencemillán,Municipio,provincia de Guadalajara,86.0,133.8,266.75,-,-3.0994,40.9244
+280,Torre del Burgo,Municipio,provincia de Guadalajara,592.0,134.04,260.5,-,-3.08,40.7942
+281,Aldeanueva de Guadalajara,Municipio,provincia de Guadalajara,86.0,134.04,255.06,-,-3.0458,40.6831
+282,Pineda de Gigüela,Municipio,Provincia de Cuenca,60.0,134.15,220.79,-,-2.5431,40.0855
+283,Arbancón,Municipio,provincia de Guadalajara,150.0,134.73,268.75,32.56,-3.1136,40.9658
+284,Fuentelviejo,Municipio,provincia de Guadalajara,46.0,134.99,247.27,30.76,-2.9836,40.5258
+285,Semillas,Municipio,provincia de Guadalajara,36.0,135.11,273.19,-,-3.1183,41.0597
+286,Alarilla,Municipio,provincia de Guadalajara,163.0,135.2,263.21,-,-3.1056,40.8489
+287,Montarrón,Municipio,provincia de Guadalajara,23.0,135.33,266.13,-,-3.1161,40.9103
+288,"Ordial, El",Municipio,provincia de Guadalajara,29.0,135.39,276.49,-,-3.1156,41.1295
+289,Almonacid de Zorita,Municipio,provincia de Guadalajara,685.0,135.46,236.77,29.38,-2.8483,40.3289
+290,Centenera,Municipio,provincia de Guadalajara,117.0,135.57,253.81,-,-3.0533,40.6539
+291,Ciruelas,Municipio,provincia de Guadalajara,122.0,135.59,258.69,31.3,-3.0881,40.7539
+292,Heras de Ayuso,Municipio,provincia de Guadalajara,270.0,135.67,260.47,-,-3.0989,40.7908
+293,Pastrana,Municipio,provincia de Guadalajara,850.0,135.67,241.73,-,-2.9225,40.4178
+294,Condemios de Abajo,Municipio,provincia de Guadalajara,14.0,135.91,280.73,32.44,-3.1061,41.2194
+295,Hueva,Municipio,provincia de Guadalajara,143.0,136.21,244.22,-,-2.9606,40.4625
+296,Albalate de Zorita,Municipio,provincia de Guadalajara,943.0,136.27,235.87,29.38,-2.8419,40.3089
+297,"Valle de Altomira, El",Municipio,Provincia de Cuenca,211.0,136.35,230.98,-,-2.76,40.2253
+298,Arroyo de las Fraguas,Municipio,provincia de Guadalajara,22.0,136.39,275.26,-,-3.1303,41.1042
+299,Lupiana,Municipio,provincia de Guadalajara,257.0,136.92,251.9,-,-3.0519,40.6114
+300,Condemios de Arriba,Municipio,provincia de Guadalajara,123.0,137.38,280.51,32.44,-3.1244,41.2169
+301,Fresneda de Altarejos,Municipio,Provincia de Cuenca,40.0,137.53,209.75,-,-2.3139,39.9262
+302,Huete,Municipio,Provincia de Cuenca,1765.0,137.62,226.6,28.0,-2.6889,40.1475
+303,Zorita de los Canes,Municipio,provincia de Guadalajara,78.0,138.0,237.7,29.38,-2.8875,40.3328
+304,Armuña de Tajuña,Municipio,provincia de Guadalajara,246.0,138.36,248.19,30.76,-3.0303,40.5319
+305,Caracena,Municipio,provincia de Soria,17.0,138.91,288.26,-,-3.0911,41.3831
+306,Renera,Municipio,provincia de Guadalajara,90.0,138.96,246.3,30.76,-3.0153,40.4922
+307,"Parra de las Vegas, La",Municipio,Provincia de Cuenca,33.0,139.0,205.09,-,-2.2044,39.8683
+308,Huerta de la Obispalía,Municipio,Provincia de Cuenca,114.0,139.24,216.21,-,-2.4789,39.9889
+309,Horche,Municipio,provincia de Guadalajara,2535.0,139.5,250.1,-,-3.0631,40.5667
+310,Humanes,Municipio,provincia de Guadalajara,1496.0,139.69,262.46,-,-3.1553,40.8272
+311,Tórtola de Henares,Municipio,provincia de Guadalajara,1044.0,139.77,256.83,31.3,-3.1242,40.7064
+312,"Huerce, La",Municipio,provincia de Guadalajara,51.0,140.12,277.41,-,-3.1689,41.1536
+313,Campisábalos,Municipio,provincia de Guadalajara,57.0,140.14,282.65,32.44,-3.1456,41.2672
+314,Carrascosa de Abajo,Municipio,provincia de Soria,21.0,140.2,290.01,34.24,-3.09,41.4231
+315,Altarejos,Municipio,Provincia de Cuenca,190.0,140.58,210.7,-,-2.3552,39.9128
+316,Fresno de Caracena,Municipio,provincia de Soria,21.0,141.34,291.26,34.24,-3.0906,41.4525
+317,Mohernando,Municipio,provincia de Guadalajara,173.0,141.65,261.52,-,-3.1739,40.8039
+318,Mota de Altarejos,Municipio,Provincia de Cuenca,34.0,141.69,208.65,-,-2.3098,39.8817
+319,Escopete,Municipio,provincia de Guadalajara,57.0,142.0,243.08,-,-3.0064,40.4164
+320,Yunquera de Henares,Municipio,provincia de Guadalajara,4044.0,142.07,259.27,31.3,-3.1667,40.7542
+321,Galve de Sorbe,Municipio,provincia de Guadalajara,100.0,142.26,280.49,32.44,-3.1819,41.2236
+322,Torrejoncillo del Rey,Municipio,Provincia de Cuenca,341.0,142.3,219.24,-,-2.57,40.0075
+323,Yebra,Municipio,provincia de Guadalajara,444.0,142.31,240.08,-,-2.9667,40.3567
+324,Hontoba,Municipio,provincia de Guadalajara,318.0,142.66,245.19,30.76,-3.0411,40.4558
+325,Fontanar,Municipio,provincia de Guadalajara,2370.0,143.56,258.15,31.3,-3.1769,40.7269
+326,Aranzueque,Municipio,provincia de Guadalajara,380.0,143.66,247.21,30.76,-3.0767,40.4933
+327,Puebla de Beleña,Municipio,provincia de Guadalajara,40.0,144.21,265.51,-,-3.2194,40.8894
+328,Yebes,Municipio,provincia de Guadalajara,3791.0,144.47,249.34,-,-3.1097,40.5347
+329,"Mierla, La",Municipio,provincia de Guadalajara,41.0,145.21,267.67,-,-3.2364,40.9375
+330,Valverde de los Arroyos,Municipio,provincia de Guadalajara,94.0,145.23,276.11,-,-3.2333,41.1292
+331,Guadalajara,Municipio,provincia de Guadalajara,85871.0,145.41,254.07,-,-3.1667,40.6333
+332,Robledillo de Mohernando,Municipio,provincia de Guadalajara,115.0,145.85,264.04,-,-3.2339,40.8547
+333,Albaladejo del Cuende,Municipio,Provincia de Cuenca,245.0,145.97,204.7,-,-2.2278,39.8076
+334,Tamajón,Municipio,provincia de Guadalajara,126.0,146.01,270.47,32.56,-3.2489,41.0011
+335,Escariche,Municipio,provincia de Guadalajara,185.0,146.03,243.56,-,-3.055,40.4092
+336,Valdarachas,Municipio,provincia de Guadalajara,40.0,146.4,248.84,30.76,-3.1253,40.5178
+337,Almoguera,Municipio,provincia de Guadalajara,1289.0,146.72,238.16,-,-2.9811,40.2989
+338,Vellisca,Municipio,Provincia de Cuenca,102.0,146.8,228.94,-,-2.8142,40.1294
+339,San Lorenzo de la Parrilla,Municipio,Provincia de Cuenca,1042.0,146.81,209.4,-,-2.3578,39.8494
+340,Chiloeches,Municipio,provincia de Guadalajara,3579.0,147.03,251.56,-,-3.1614,40.5742
+341,Montejo de Tiermes,Municipio,provincia de Soria,155.0,147.08,286.61,-,-3.1986,41.3683
+342,Marchamalo,Municipio,provincia de Guadalajara,7474.0,147.2,255.89,-,-3.2022,40.6689
+343,Saceda-Trasierra,Municipio,Provincia de Cuenca,41.0,147.52,230.61,-,-2.8535,40.1543
+344,Pozo de Almoguera,Municipio,provincia de Guadalajara,105.0,147.54,240.63,-,-3.0281,40.3436
+345,Cantalojas,Municipio,provincia de Guadalajara,151.0,147.79,280.61,32.44,-3.2464,41.2344
+346,Málaga del Fresno,Municipio,provincia de Guadalajara,180.0,147.91,261.33,-,-3.2461,40.7903
+347,Malaguilla,Municipio,provincia de Guadalajara,152.0,148.14,262.75,-,-3.2556,40.8225
+348,Retiendas,Municipio,provincia de Guadalajara,48.0,148.31,269.17,32.56,-3.2753,40.9706
+349,Villarejo-Periesteban,Municipio,Provincia de Cuenca,380.0,148.32,212.25,28.6,-2.441,39.8712
+350,Loranca de Tajuña,Municipio,provincia de Guadalajara,1249.0,148.58,245.71,30.76,-3.1108,40.4437
+351,Loranca de Tajuña,Municipio,provincia de Guadalajara,1249.0,148.66,245.88,30.76,-3.1139,40.4469
+352,Albares,Municipio,provincia de Guadalajara,513.0,148.74,238.76,-,-3.0108,40.3008
+353,Belmontejo,Municipio,Provincia de Cuenca,160.0,148.85,208.46,-,-2.3443,39.8228
+354,Illana,Municipio,provincia de Guadalajara,686.0,148.88,232.75,-,-2.9069,40.1853
+355,Campos del Paraíso,Municipio,Provincia de Cuenca,737.0,148.96,222.87,-,-2.7028,40.0157
+356,Palomares del Campo,Municipio,Provincia de Cuenca,602.0,149.07,218.41,-,-2.5997,39.9478
+357,Puertas Morena JJ,Fábricas,,,149.96,202.5,26.5,-2.1851,39.7543
+358,Matarrubia,Municipio,provincia de Guadalajara,70.0,150.44,264.84,-,-3.2908,40.8683
+359,Cabanillas del Campo,Municipio,provincia de Guadalajara,10442.0,150.81,254.92,-,-3.2353,40.6383
+360,Majaelrayo,Municipio,provincia de Guadalajara,51.0,150.83,275.2,-,-3.3019,41.1122
+361,Mazuecos,Municipio,provincia de Guadalajara,268.0,150.85,237.41,29.38,-3.0092,40.2639
+362,Puebla de Valles,Municipio,provincia de Guadalajara,58.0,150.93,267.38,-,-3.3036,40.9275
+363,Liceras,Municipio,provincia de Soria,49.0,150.99,286.68,-,-3.2431,41.3792
+364,Villaverde y Pasaconsol,Municipio,Provincia de Cuenca,332.0,151.01,205.16,-,-2.265,39.7708
+365,Fuentenovilla,Municipio,provincia de Guadalajara,517.0,151.24,242.51,-,-3.0942,40.3656
+366,Alcázar del Rey,Municipio,Provincia de Cuenca,152.0,151.59,226.73,28.0,-2.8094,40.0622
+367,Campillo de Ranas,Municipio,provincia de Guadalajara,171.0,151.68,274.06,-,-3.3142,41.0856
+368,Pozo de Guadalajara,Municipio,provincia de Guadalajara,1303.0,151.8,248.64,30.76,-3.1819,40.495
+369,Zafra de Záncara,Municipio,Provincia de Cuenca,122.0,151.92,215.92,-,-2.558,39.892
+370,Pioz,Municipio,provincia de Guadalajara,4052.0,152.67,247.35,30.76,-3.1756,40.4636
+371,Valdesotos,Municipio,provincia de Guadalajara,26.0,152.83,268.67,32.56,-3.3283,40.9572
+372,Fuentelahiguera de Albatages,Municipio,provincia de Guadalajara,136.0,153.02,261.51,-,-3.3067,40.7867
+373,Alovera,Municipio,provincia de Guadalajara,12735.0,153.19,253.36,-,-3.2481,40.5967
+374,Leganiel,Municipio,Provincia de Cuenca,190.0,153.33,232.87,-,-2.9503,40.1628
+375,Barajas de Melo,Municipio,Provincia de Cuenca,932.0,153.86,230.93,-,-2.9169,40.1235
+376,Villares del Saz,Municipio,Provincia de Cuenca,443.0,154.05,213.27,28.6,-2.5032,39.8404
+377,Paredes,Municipio,Provincia de Cuenca,66.0,154.09,227.83,-,-2.8544,40.0659
+378,Driebes,Municipio,provincia de Guadalajara,366.0,154.18,237.35,29.38,-3.0408,40.2461
+379,Mondéjar,Municipio,provincia de Guadalajara,2645.0,154.53,241.2,-,-3.1083,40.3239
+380,Valverde de Júcar,Municipio,Provincia de Cuenca,1082.0,154.7,202.97,26.5,-2.2197,39.7192
+381,Tortuero,Municipio,provincia de Guadalajara,18.0,154.95,267.89,-,-3.3522,40.9375
+382,Quer,Municipio,provincia de Guadalajara,814.0,155.14,254.07,-,-3.2767,40.6078
+383,Olivares de Júcar,Municipio,Provincia de Cuenca,325.0,155.37,207.51,-,-2.3534,39.7603
+384,Cervera del Llano,Municipio,Provincia de Cuenca,221.0,155.77,209.71,-,-2.4172,39.7825
+385,Azuqueca de Henares,Municipio,provincia de Guadalajara,35009.0,155.92,252.31,-,-3.2681,40.5647
+386,Viñuelas,Municipio,provincia de Guadalajara,148.0,155.98,262.04,-,-3.344,40.7949
+387,Villaseca de Uceda,Municipio,provincia de Guadalajara,39.0,156.06,263.16,-,-3.3503,40.8219
+388,Planta de Biodiesel,Fábricas,,,156.75,231.93,-,-2.9632,40.1258
+389,Rozalén del Monte,Municipio,Provincia de Cuenca,67.0,156.9,224.54,28.0,-2.8044,39.9908
+390,Valdeaveruelo,Municipio,provincia de Guadalajara,1072.0,157.35,255.6,-,-3.3156,40.6381
+391,Casa de Uceda,Municipio,provincia de Guadalajara,89.0,157.38,264.14,-,-3.37,40.8442
+392,Huelves,Municipio,Provincia de Cuenca,57.0,157.6,227.79,-,-2.8836,40.0436
+393,Galápagos,Municipio,provincia de Guadalajara,2403.0,157.63,258.02,31.3,-3.3381,40.6953
+394,Villanueva de la Torre,Municipio,provincia de Guadalajara,6573.0,158.0,253.39,-,-3.3025,40.5842
+395,Valdepeñas de la Sierra,Municipio,provincia de Guadalajara,152.0,158.14,266.77,-,-3.3875,40.9081
+396,Montalbo,Municipio,Provincia de Cuenca,643.0,158.48,218.48,-,-2.6689,39.8819
+397,Torrejón del Rey,Municipio,provincia de Guadalajara,5434.0,158.76,256.06,31.3,-3.3356,40.6458
+398,Cantera (abandonada),Minas,,,159.28,275.77,-,-3.4009,41.1316
+399,Valdenuño Fernández,Municipio,provincia de Guadalajara,257.0,159.46,260.93,-,-3.3786,40.7628
+400,"Cubillo de Uceda, El",Municipio,provincia de Guadalajara,121.0,160.56,263.51,-,-3.4047,40.825
+401,"Hinojosa, La",Municipio,Provincia de Cuenca,188.0,160.96,208.61,-,-2.4151,39.7283
+402,Fuentecambrón,Municipio,provincia de Soria,34.0,161.99,290.8,34.24,-3.3281,41.5053
+403,Saelices,Municipio,Provincia de Cuenca,483.0,162.65,222.58,-,-2.8033,39.9194
+404,Villar de Cañas,Municipio,Provincia de Cuenca,374.0,162.71,213.56,28.6,-2.5661,39.7789
+405,Ayllón,Municipio,provincia de Segovia,1196.0,162.93,287.15,-,-3.3764,41.4194
+406,"Almarcha, La",Municipio,Provincia de Cuenca,365.0,163.68,206.92,-,-2.3797,39.6867
+407,Montalbanejo,Municipio,Provincia de Cuenca,103.0,163.87,210.95,-,-2.4992,39.7347
+408,Torrubia del Castillo,Municipio,Provincia de Cuenca,38.0,164.01,204.61,-,-2.3117,39.6585
+409,Tribaldos,Municipio,Provincia de Cuenca,107.0,164.02,226.1,28.0,-2.8994,39.9728
+410,"Cardoso de la Sierra, El",Municipio,provincia de Guadalajara,60.0,164.26,274.11,-,-3.4636,41.0925
+411,Miño de San Esteban,Municipio,provincia de Soria,46.0,164.49,291.75,34.24,-3.3453,41.5358
+412,"Hito, El",Municipio,Provincia de Cuenca,141.0,164.58,218.87,-,-2.7228,39.8447
+413,"Casar, El",Municipio,provincia de Guadalajara,12062.0,164.71,258.91,31.3,-3.4264,40.7033
+414,Riofrío de Riaza,Municipio,provincia de Segovia,45.0,164.89,280.13,32.44,-3.4503,41.2472
+415,Uceda,Municipio,provincia de Guadalajara,2616.0,165.15,264.4,-,-3.4625,40.8422
+416,Centro Comercial La Nevera,Centro Comercial,,,165.31,258.94,31.3,-3.4336,40.7029
+417,Ribota,Municipio,provincia de Segovia,48.0,165.66,284.73,-,-3.4289,41.3653
+418,Villarrubio,Municipio,Provincia de Cuenca,194.0,165.84,225.26,28.0,-2.8944,39.9458
+419,Castillo de Garcimuñoz,Municipio,Provincia de Cuenca,134.0,166.32,206.47,-,-2.38,39.6603
+420,Alcalá de Henares,Municipio,provincia de Madrid,195649.0,166.71,250.21,-,-3.3643,40.4818
+421,Venecia,Centro Comercial,,,166.76,250.05,-,-3.3629,40.4779
+422,Riaza,Municipio,provincia de Segovia,2098.0,166.9,281.41,32.44,-3.4667,41.2831
+423,Almendros,Municipio,Provincia de Cuenca,247.0,167.29,224.39,28.0,-2.8849,39.9206
+424,Languilla,Municipio,provincia de Segovia,84.0,167.78,287.89,-,-3.425,41.45
+425,Honrubia,Municipio,Provincia de Cuenca,1566.0,167.78,203.18,26.5,-2.2847,39.6125
+426,Belinchón,Municipio,Provincia de Cuenca,334.0,167.8,231.28,-,-3.05,40.05
+427,Villarejo de Fuentes,Municipio,Provincia de Cuenca,429.0,168.13,216.92,-,-2.6954,39.7884
+428,Tarancón,Municipio,Provincia de Cuenca,15271.0,168.21,229.33,-,-3.0102,40.0086
+429,Centro comercial Peñas Albas,Centro Comercial,,,168.23,249.08,-,-3.3668,40.4492
+430,Corral de Ayllón,Municipio,provincia de Segovia,77.0,168.31,285.87,-,-3.45,41.4
+431,Alconchel de la Estrella,Municipio,Provincia de Cuenca,88.0,168.66,212.53,28.6,-2.5739,39.7192
+432,Almonacid del Marquesado,Municipio,Provincia de Cuenca,425.0,168.78,219.38,-,-2.7669,39.8233
+433,Meanizados de Poliespan S.L.,Fábricas,,,168.93,251.79,-,-3.4077,40.5141
+434,Villalgordo del Marquesado,Municipio,Provincia de Cuenca,80.0,169.32,210.2,-,-2.509,39.6824
+435,Fresno de Cantespino,Municipio,provincia de Segovia,265.0,171.33,284.43,-,-3.4972,41.3694
+436,Aldealengua de Santa María,Municipio,provincia de Segovia,63.0,171.5,287.98,-,-3.4667,41.4619
+437,Riaguas de San Bartolomé,Municipio,provincia de Segovia,28.0,172.27,286.55,-,-3.4897,41.4267
+438,Pinarejo,Municipio,Provincia de Cuenca,212.0,172.41,206.86,-,-2.4233,39.6156
+439,Alconada de Maderuelo,Municipio,provincia de Segovia,25.0,172.66,287.41,-,-3.4858,41.45
+440,Cerezo de Arriba,Municipio,provincia de Segovia,136.0,173.63,279.33,32.44,-3.5575,41.2378
+441,Torrubia del Campo,Municipio,Provincia de Cuenca,257.0,173.7,225.36,28.0,-2.9614,39.8972
+442,"SIEGWERK SPAIN, S.A.U.",Fábricas,,,173.93,247.57,30.76,-3.4081,40.392
+443,Villar de la Encina,Municipio,Provincia de Cuenca,154.0,174.25,209.69,-,-2.5217,39.6369
+444,Puebla de Almenara,Municipio,Provincia de Cuenca,384.0,174.43,219.56,-,-2.8131,39.7867
+445,Fuente de Pedro Naharro,Municipio,Provincia de Cuenca,1205.0,174.5,227.02,-,-3.0094,39.9244
+446,Santo Tomé del Puerto,Municipio,provincia de Segovia,252.0,174.67,277.68,-,-3.5772,41.1942
+447,Acom Sistemas S.L.,Fábricas,,,174.72,252.5,-,-3.4804,40.5151
+448,SCI (Servicios de Control e Inspección) S.A.,Fábricas,,,174.8,252.47,-,-3.4809,40.514
+449,"Acebrón, El",Municipio,Provincia de Cuenca,234.0,174.8,225.87,28.0,-2.9833,39.9
+450,Osram,Fábricas,,,175.22,250.3,-,-3.4591,40.4567
+451,Sequera de Fresno,Municipio,provincia de Segovia,35.0,175.25,284.03,-,-3.5461,41.3667
+452,Witek,Fábricas,,,175.25,252.1,-,-3.4816,40.503
+453,Gicalla Hormigoneras,Fábricas,,,175.36,250.29,-,-3.4606,40.456
+454,Zarza de Tajo,Municipio,Provincia de Cuenca,239.0,175.38,231.82,-,-3.1305,40.0179
+455,"Cañavate, El",Municipio,Provincia de Cuenca,146.0,175.4,202.71,26.5,-2.3036,39.5442
+456,"INTERVAN, SA",Fábricas,,,175.6,250.18,-,-3.4618,40.4524
+457,Fuentelespino de Haro,Municipio,Provincia de Cuenca,274.0,175.71,214.23,28.6,-2.6686,39.6908
+458,Hierros Torrejón SA,Fábricas,,,175.74,250.16,-,-3.4632,40.4516
+459,Perfiven Aluminio,Fábricas,,,175.75,250.17,-,-3.4633,40.4517
+460,Las Veredillas,Centro Comercial,,,175.81,250.58,-,-3.4692,40.462
+461,Maesa (Manufacturas y Accesorios Eléctricos S.A.),Fábricas,,,176.03,250.33,-,-3.4685,40.4549
+462,Maesa,Fábricas,,,176.14,250.33,-,-3.4698,40.4547
+463,Cerezo de Abajo,Municipio,provincia de Segovia,112.0,176.22,278.48,-,-3.5922,41.2178
+464,SOS-Cuétara,Fábricas,,,176.24,238.98,-,-3.2885,40.1741
+465,Comercial e Industrial EuroIbérica,Fábricas,,,176.32,250.32,-,-3.4716,40.4539
+466,John Crane Ibérica S.A.,Fábricas,,,176.38,250.26,-,-3.4714,40.452
+467,Maderuelo,Municipio,provincia de Segovia,168.0,176.64,288.44,-,-3.5208,41.4872
+468,Campo de San Pedro,Municipio,provincia de Segovia,238.0,176.87,286.24,-,-3.5456,41.4294
+469,Randstad,Fábricas,,,176.94,250.46,-,-3.4802,40.4554
+470,Castillejo de Robledo,Municipio,provincia de Soria,103.0,177.19,291.07,34.24,-3.4964,41.5581
+471,Wella,Fábricas,,,177.62,250.52,-,-3.4884,40.4547
+472,Castillejo de Mesleón,Municipio,provincia de Segovia,136.0,177.98,280.69,32.44,-3.6014,41.2806
+473,Bercimuel,Municipio,provincia de Segovia,24.0,178.01,285.02,-,-3.57,41.3989
+474,Santa María del Campo Rus,Municipio,Provincia de Cuenca,571.0,178.22,205.99,-,-2.425,39.5581
+475,Indra Sistemas S.A.,Fábricas,,,178.32,250.73,-,-3.4989,40.4581
+476,AlquiMadrid,Fábricas,,,178.55,255.85,-,-3.5593,40.5935
+477,Cilleruelo de San Mamés,Municipio,provincia de Segovia,33.0,178.62,286.19,-,-3.5664,41.4319
+478,Carrascosa de Haro,Municipio,Provincia de Cuenca,106.0,178.91,209.47,-,-2.5411,39.5973
+479,Tresjuncos,Municipio,Provincia de Cuenca,293.0,178.99,216.43,-,-2.7558,39.7014
+480,Pajarejos,Municipio,provincia de Segovia,25.0,179.44,284.59,-,-3.5903,41.3903
+481,Pozorrubio de Santiago,Municipio,Provincia de Cuenca,323.0,179.61,223.15,28.0,-2.9509,39.8163
+482,Horcajo de Santiago,Municipio,Provincia de Cuenca,3493.0,180.22,224.69,28.0,-2.9971,39.8421
+483,Sotillo,Municipio,provincia de Segovia,27.0,180.52,279.76,32.44,-3.6367,41.2583
+484,Grajera,Municipio,provincia de Segovia,238.0,180.85,283.85,-,-3.6128,41.3728
+485,Casla,Municipio,provincia de Segovia,165.0,180.97,276.45,-,-3.6564,41.1658
+486,Duruelo,Municipio,provincia de Segovia,180.0,181.17,278.93,-,-3.6486,41.2358
+487,Cedillo de la Torre,Municipio,provincia de Segovia,89.0,181.52,285.69,-,-3.6047,41.425
+488,Hontanaya,Municipio,Provincia de Cuenca,253.0,181.79,218.5,-,-2.8361,39.7163
+489,Santa Cruz de la Zarza,Municipio,provincia de Toledo,4129.0,182.26,231.72,-,-3.1908,39.9767
+490,Boceguillas,Municipio,provincia de Segovia,723.0,182.28,282.49,32.44,-3.64,41.3375
+491,Osa de la Vega,Municipio,Provincia de Cuenca,479.0,182.7,215.66,-,-2.7575,39.6614
+492,Prádena,Municipio,provincia de Segovia,523.0,183.41,275.44,-,-3.6883,41.1389
+493,Moral de Hornuez,Municipio,provincia de Segovia,49.0,183.62,286.94,-,-3.6167,41.4644
+494,Fresno de la Fuente,Municipio,provincia de Segovia,67.0,183.89,284.34,-,-3.6442,41.3925
+495,Santa Marta del Cerro,Municipio,provincia de Segovia,35.0,183.96,278.2,-,-3.685,41.2183
+496,Ventosilla y Tejadilla,Municipio,provincia de Segovia,19.0,184.29,276.92,-,-3.6942,41.1819
+497,Villaescusa de Haro,Municipio,Provincia de Cuenca,470.0,184.65,212.56,28.6,-2.6735,39.5975
+498,Barbolla,Municipio,provincia de Segovia,158.0,184.71,281.93,32.44,-3.6725,41.3258
+499,Rada de Haro,Municipio,Provincia de Cuenca,44.0,184.98,210.86,-,-2.6205,39.5693
+500,Centro Comercial La Vid,Centro Comercial,,,185.06,247.65,30.76,-3.5294,40.3539
+501,Encinas,Municipio,provincia de Segovia,44.0,185.36,283.64,-,-3.6672,41.3756
+502,Villamayor de Santiago,Municipio,Provincia de Cuenca,2481.0,185.6,220.66,-,-2.927,39.7287
+503,Aldeonte,Municipio,provincia de Segovia,55.0,185.67,282.75,32.44,-3.6778,41.3508
+504,"Alberca de Záncara, La",Municipio,Provincia de Cuenca,1590.0,186.23,207.18,-,-2.5056,39.5083
+505,Arcones,Municipio,provincia de Segovia,166.0,186.27,274.68,-,-3.7242,41.1186
+506,Santa Cruz de la Salceda,Municipio,provincia de Burgos,145.0,186.28,291.4,34.24,-3.5947,41.5947
+507,Valdevacas de Montejo,Municipio,provincia de Segovia,30.0,186.94,288.67,-,-3.6361,41.5208
+508,Ford,Fábricas,,,187.84,254.23,-,-3.6475,40.5254
+509,Castroserna de Abajo,Municipio,provincia de Segovia,40.0,187.98,277.67,-,-3.735,41.2072
+510,Lambda Antenas,Fábricas,,,188.16,254.37,-,-3.6527,40.5286
+511,Quesos Peña Rubia,Fábricas,,,188.17,262.77,-,-3.7248,40.7697
+512,Navares de Ayuso,Municipio,provincia de Segovia,53.0,188.5,283.34,-,-3.7064,41.3728
+513,Villaverde de Montejo,Municipio,provincia de Segovia,27.0,188.52,288.58,-,-3.6553,41.5225
+514,Cabezamesada,Municipio,provincia de Toledo,346.0,188.58,225.99,28.0,-3.1003,39.8147
+515,Matabuena,Municipio,provincia de Segovia,157.0,188.92,273.87,-,-3.7572,41.0958
+516,Condado de Castilnovo,Municipio,provincia de Segovia,90.0,188.94,278.69,-,-3.7417,41.2381
+517,Fisac Aviación,Fábricas,,,188.96,253.55,-,-3.6522,40.5033
+518,Montejo de la Vega de la Serrezuela,Municipio,provincia de Segovia,146.0,189.16,289.42,-,-3.6525,41.5481
+519,Belmonte,Municipio,Provincia de Cuenca,1903.0,189.62,212.55,28.6,-2.7038,39.5593
+520,Fuentelcésped,Municipio,provincia de Burgos,238.0,189.75,290.89,34.24,-3.6406,41.5911
+521,Navares de Enmedio,Municipio,provincia de Segovia,94.0,190.06,283.53,-,-3.7231,41.3811
+522,Sepúlveda,Municipio,provincia de Segovia,1003.0,190.52,280.64,32.44,-3.7494,41.2974
+523,Carabias,Municipio,provincia de Segovia,57.0,190.67,286.06,-,-3.7072,41.4558
+524,Valleruela de Sepúlveda,Municipio,provincia de Segovia,51.0,190.92,276.93,-,-3.7728,41.1878
+525,Orejana,Municipio,provincia de Segovia,58.0,191.14,276.1,-,-3.7783,41.1633
+526,Gallegos,Municipio,provincia de Segovia,104.0,191.24,273.12,-,-3.7858,41.0744
+527,"Hinojosos, Los",Municipio,Provincia de Cuenca,771.0,191.27,216.01,-,-2.8258,39.6042
+528,Monreal del Llano,Municipio,Provincia de Cuenca,56.0,191.33,213.96,28.6,-2.7603,39.569
+529,Honrubia de la Cuesta,Municipio,provincia de Segovia,58.0,192.07,287.84,-,-3.7044,41.5106
+530,"Matilla, La",Municipio,provincia de Segovia,84.0,192.81,276.98,-,-3.795,41.1911
+531,Aldealengua de Pedraza,Municipio,provincia de Segovia,72.0,192.91,272.78,-,-3.8061,41.0644
+532,Navares de las Cuevas,Municipio,provincia de Segovia,23.0,193.1,284.45,-,-3.7506,41.4142
+533,Aldealcorvo,Municipio,provincia de Segovia,22.0,193.2,278.73,-,-3.7919,41.2439
+534,Pedraza,Municipio,provincia de Segovia,344.0,193.63,274.95,-,-3.8111,41.1303
+535,Valleruela de Pedraza,Municipio,provincia de Segovia,71.0,193.64,276.57,-,-3.8064,41.1794
+536,Urueñas,Municipio,provincia de Segovia,106.0,193.76,282.44,32.44,-3.775,41.3558
+537,Villarrubia de Santiago,Municipio,provincia de Toledo,2536.0,193.79,234.75,29.38,-3.3686,39.9836
+538,Milagros,Municipio,provincia de Burgos,439.0,193.8,289.92,-,-3.6992,41.5753
+539,Pardilla,Municipio,provincia de Burgos,117.0,193.81,289.06,-,-3.71,41.5506
+540,San Clemente,Municipio,Provincia de Cuenca,6988.0,193.96,203.92,26.5,-2.4294,39.4039
+541,Navafría,Municipio,provincia de Segovia,281.0,194.27,272.45,-,-3.8225,41.0547
+542,San Pedro de Gaíllos,Municipio,provincia de Segovia,285.0,194.41,278.12,-,-3.8092,41.2269
+543,Jardín de Serrano,Centro Comercial,,,194.58,251.38,-,-3.6873,40.4252
+544,Fuentespina,Municipio,provincia de Burgos,757.0,194.79,291.79,34.24,-3.6853,41.6319
+545,Horchatería La Fábrica de Siempre SL,Fábricas,,,194.92,252.61,-,-3.7074,40.4597
+546,Galería Comercial,Centro Comercial,,,194.98,252.28,-,-3.7037,40.4498
+547,Villanueva de Alcardete,Municipio,provincia de Toledo,3250.0,195.04,221.16,-,-3.0128,39.6733
+548,Galería Comercial-Pasaje Mutualidad,Centro Comercial,,,195.67,251.5,-,-3.701,40.4252
+549,Villatobas,Municipio,provincia de Toledo,2403.0,196.21,231.89,-,-3.3214,39.9011
+550,Fuentenebro,Municipio,provincia de Burgos,119.0,196.47,287.96,-,-3.7536,41.5253
+551,Aldeanueva de la Serrezuela,Municipio,provincia de Segovia,44.0,196.78,285.75,-,-3.7811,41.4603
+552,Castroserracín,Municipio,provincia de Segovia,42.0,196.84,283.52,-,-3.8025,41.3936
+553,Corral de Almaguer,Municipio,provincia de Toledo,5352.0,196.9,225.91,28.0,-3.1667,39.76
+554,Campillo de Aranda,Municipio,provincia de Burgos,182.0,197.5,290.75,34.24,-3.7303,41.61
+555,Arahuetes,Municipio,provincia de Segovia,30.0,197.51,275.12,-,-3.8567,41.1378
+556,Schreiber Food España,Fábricas,,,197.87,235.18,29.38,-3.4174,39.9728
+557,Nireo Corporacion,Fábricas,,,197.89,235.23,29.38,-3.4187,39.9738
+558,Acciona Infraestructuras,Fábricas,,,197.96,235.03,29.38,-3.4145,39.9683
+559,Aldehorno,Municipio,provincia de Segovia,53.0,198.05,287.41,-,-3.7781,41.5128
+560,Rebollo,Municipio,provincia de Segovia,81.0,198.07,276.89,-,-3.8578,41.1928
+561,Torregalindo,Municipio,provincia de Burgos,125.0,198.32,289.72,-,-3.7533,41.5822
+562,Torre Val de San Pedro,Municipio,provincia de Segovia,184.0,198.4,273.05,-,-3.8711,41.0739
+563,"Pedernoso, El",Municipio,Provincia de Cuenca,1124.0,198.58,212.13,28.6,-2.7444,39.4839
+564,Noblejas,Municipio,provincia de Toledo,3585.0,199.05,235.62,29.38,-3.4389,39.9775
+565,Valle de Tabladillo,Municipio,provincia de Segovia,86.0,199.23,282.38,32.44,-3.8397,41.3631
+566,Centro Comercial Madrid-París,Centro Comercial,,,199.51,267.6,-,-3.8794,40.904
+567,Santiuste de Pedraza,Municipio,provincia de Segovia,92.0,199.74,273.57,-,-3.8864,41.0906

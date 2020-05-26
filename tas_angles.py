@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def tas_angles(tas, threshold_percent, threshold_mag, opening, m10):
+def tas_angles(tas, threshold_percent, threshold_mag, opening, m10, single):
     # get useful information: T_IR, T_Sens, Mag, Azi of m10, and max & min value in Mag
     mag_max = float(tas[0].split()[5])
     mag_min = float(tas[0].split()[5])
@@ -79,31 +79,32 @@ def tas_angles(tas, threshold_percent, threshold_mag, opening, m10):
             else:
                 break
 
-    # Continue searching from the main maximum toward right, until main minimum
-    # Set start and end indexes
-    start = (max_index + 1) % len(m10)
-    end = min_index
-    if start == end:
-        return
-    elif start > end:
-        end = end + len(m10)
-    # control of angle pairs with position of angle in the list
-    position = 1
-    valley = False
-    for index in range(start, end):
-        # if enter the "valley"
-        if m10.loc[[index % len(m10)]]['Mag'].item() <= th:
-            # if first entry, new pair of angles
-            if len(angle_min) < (position + 1):
-                valley = True
-                angle_min.append(m10.loc[[index % len(m10)]]['Azi'].item())
-                angle_max.append(m10.loc[[index % len(m10)]]['Azi'].item())
-            # if still in valley
-            else:
-                angle_max[position] = m10.loc[[index % len(m10)]]['Azi'].item()
-        # if exit the "valley"
-        elif (m10.loc[[index % len(m10)]]['Mag'].item() > th) and (valley is True):
-            position = position + 1
-            valley = False
+    if single is False:
+        # Continue searching from the main maximum toward right, until main minimum
+        # Set start and end indexes
+        start = (max_index + 1) % len(m10)
+        end = min_index
+        if start == end:
+            return
+        elif start > end:
+            end = end + len(m10)
+        # control of angle pairs with position of angle in the list
+        position = 1
+        valley = False
+        for index in range(start, end):
+            # if enter the "valley"
+            if m10.loc[[index % len(m10)]]['Mag'].item() <= th:
+                # if first entry, new pair of angles
+                if len(angle_min) < (position + 1):
+                    valley = True
+                    angle_min.append(m10.loc[[index % len(m10)]]['Azi'].item())
+                    angle_max.append(m10.loc[[index % len(m10)]]['Azi'].item())
+                # if still in valley
+                else:
+                    angle_max[position] = m10.loc[[index % len(m10)]]['Azi'].item()
+            # if exit the "valley"
+            elif (m10.loc[[index % len(m10)]]['Mag'].item() > th) and (valley is True):
+                position = position + 1
+                valley = False
 
     return angle_min, angle_max, m10

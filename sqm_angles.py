@@ -2,7 +2,7 @@ import re
 import numpy as np
 
 
-def sqm_angles(sqm, threshold_percent, threshold_mag, opening):
+def sqm_angles(sqm, threshold_percent, threshold_mag, opening, single):
     # Load and process the lowest cenit readings
     # Regex: get magnitudes of m20
     m20 = str(re.findall(r'm20 = \[(.*)\]', sqm)[0]).split(", ")
@@ -73,31 +73,32 @@ def sqm_angles(sqm, threshold_percent, threshold_mag, opening):
             else:
                 break
 
-    # Continue searching from the main maximum toward right, until main minimum
-    # Set start and end indexes
-    start = int(((angle_max[0] + 30) % 360) / 30)
-    end = int((angle_min[0] % 360) / 30)
-    if start == end:
-        return
-    elif start > end:
-        end = end + 12
-    # control angle pairs with position in list
-    position = 1
-    valley = False
-    for index in range(start, end):
-        # if in "valley"
-        if m20[index % 12] <= th:
-            # if first entry, new angle pairs
-            if len(angle_min) < (position + 1):
-                valley = True
-                angle_min.append(float((index % 12) * 30))
-                angle_max.append(float((index % 12) * 30))
-            # if still in valley
-            else:
-                angle_max[position] = float((index % 12) * 30)
-        # if exit the valley
-        elif (m20[index % 12] > th) and (valley is True):
-            position = position + 1
-            valley = False
+    if single is False:
+        # Continue searching from the main maximum toward right, until main minimum
+        # Set start and end indexes
+        start = int(((angle_max[0] + 30) % 360) / 30)
+        end = int((angle_min[0] % 360) / 30)
+        if start == end:
+            return
+        elif start > end:
+            end = end + 12
+        # control angle pairs with position in list
+        position = 1
+        valley = False
+        for index in range(start, end):
+            # if in "valley"
+            if m20[index % 12] <= th:
+                # if first entry, new angle pairs
+                if len(angle_min) < (position + 1):
+                    valley = True
+                    angle_min.append(float((index % 12) * 30))
+                    angle_max.append(float((index % 12) * 30))
+                # if still in valley
+                else:
+                    angle_max[position] = float((index % 12) * 30)
+            # if exit the valley
+            elif (m20[index % 12] > th) and (valley is True):
+                position = position + 1
+                valley = False
 
     return angle_min, angle_max
