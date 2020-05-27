@@ -10,6 +10,7 @@ Basado en python3, para el correcto funcionamiento del script, hacen falta tener
 
 * re
 * sys
+* PIL
 * math
 * time
 * folium
@@ -48,7 +49,13 @@ La opción "single" sólo soporta para threshold percentil y en magnitud real
 
 ### Modo genérico (auto cluster)
 
+Vista general
+
 <image src="https://github.com/XiaoLuo95/Light_pollution/blob/master/images/map_generical.png" width="600" height="500">
+
+<br>
+
+Vista ampliada con indicador
 
 <image src="https://github.com/XiaoLuo95/Light_pollution/blob/master/images/map_generical_zoomed.png" width="600" height="500">
 
@@ -97,6 +104,7 @@ result: pandas dataframe con columnas siguientes:
 * Dirección
 * lon
 * lat
+* uri
 * [tas] Nubosidad
 
 <br>
@@ -122,40 +130,39 @@ python3 main.py {arguments (see Help)}
 
 ### Help
 ```
-usage: main.py [-h] [-t THRESHOLD_PERCENT] [-T THRESHOLD_MAG]
-               [-o OPENING OPENING] [-d DISTANCE] [-c CLOUDINESS_ANGLE]
-               [-S SINGLE] [-u UPDATE] -f FILE -s SOURCE
+usage: main.py [-h] [-t] [-T] [-o] [-d] [-c] [-S] [-save]
+               [-i] [-u] -f -s
 optional arguments:
   -h, --help            show this help message and exit
-  -t THRESHOLD_PERCENT, --threshold_percent THRESHOLD_PERCENT
+  -t, --threshold_percent
                         percentage of magnitude from minimum to consider.
                         Default 0.3. Incompatible with {-T, -o}. [0.00-1.00]
-  -T THRESHOLD_MAG, --threshold_mag THRESHOLD_MAG
+  -T, --threshold_mag
                         maximum magnitude under consideration. Incompatible
                         with {-t, -o}.
-  -o OPENING OPENING, --opening OPENING OPENING
+  -o, --opening
                         angle opening's lower and upper bound, separated by
                         whitespace. Incompatible with {-t, -T}. [0-359.99]
                         [0-359.99]
-  -d DISTANCE, --distance DISTANCE
-                        radius in km within to search, default 120.
-  -c CLOUDINESS_ANGLE, --cloudiness_angle CLOUDINESS_ANGLE
+  -d, --distance    radius in km within to search, default 120.
+  -c, --cloudiness_angle
                         Only supported for tas. Angle opening w.r.t. each
                         original angle from tas to be considered as same, in
                         order to calculate the cloudiness to each place.
                         Default 1º. [0-12]
-  -S SINGLE, --single SINGLE
-                        Default False. Angle opening for single valley of
+  -S, --single      Default False. Angle opening for single valley of
                         lowest value. Compatible with percentile and magnitude
                         thresholds
-  -u UPDATE, --update UPDATE
-                        default False. If set as True, the script will proceed
+  -save, --save     Output file name. Will apply to both data and map
+                        files. Default "result"
+  -i, --indicator   Light pollution indicator image filename. If set, the
+                        indicator will be included in the map generated.
+  -u, --update      default False. If set as True, the script will proceed
                         to update the list of light pollution sources in
                         Spain.
 required arguments:
-  -f FILE, --file FILE  file containing measurement data
-  -s SOURCE, --source SOURCE
-                        data source type: sqm/tas
+  -f, --file        file containing measurement data
+  -s, --source      data source type: sqm/tas
 ```
 
 <br>
@@ -180,10 +187,12 @@ required arguments:
   python3 main.py -f file -s source -u True
   ```
 
-* Fuente SQM, análisis automático con threshold en 30%, en radio de 200km
+* Fuente SQM, análisis automático con threshold en 30%, en radio de 200km y guardar datos y mapa resultantes en "example"
+
+  **_Se guardará los datos en "example.csv" y mapa en "example_map.html"_**
 
   ```
-  python3 main.py -f file -s sqm -t 0.3 -d 200
+  python3 main.py -f file -s sqm -t 0.3 -d 200 -save example
   ```
 
 * Fuente TAS, análisis automático con threshold real de 19.86, valle único del mínimo, apertura de ángulo de 2.5º para considerar nubosidad con respecto a direcciones originales
@@ -196,6 +205,13 @@ required arguments:
 
   ```
   python3 main.py -f file -s tas -o 330 0
+  ```
+
+
+* Fuente TAS, incluir imagen del indicador en el mapa
+
+  ```
+  python3 main.py -f file -s tas -i indicator.png
   ```
 
   

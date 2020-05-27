@@ -13,7 +13,7 @@ def update():
     # query municipalities from Wikidata
     wikidata_url = 'https://query.wikidata.org/sparql'
     wikidata_query = '''
-    SELECT DISTINCT ?Municipio ?Provincia ?poblacion ?longitud ?latitud WHERE 
+    SELECT DISTINCT ?Municipio ?Provincia ?poblacion ?longitud ?latitud (?municipality as ?uri) WHERE 
     {
         ?municipality wdt:P31 wd:Q2074737.
         ?municipality wdt:P1448 ?Municipio.
@@ -34,14 +34,14 @@ def update():
 
     # municipalities' processing
     for item in data_municipality['results']['bindings']:
-        # check if the place is within the angle range
         places.append(OrderedDict({
             'Nombre': item['Municipio']['value'],
             'Tipo': 'Municipio',
             'Provincia': item['Provincia']['value'],
             'Poblacion': round(float(item['poblacion']['value']), 0),
             'lon': item['longitud']['value'],
-            'lat': item['latitud']['value']}))
+            'lat': item['latitud']['value'],
+            'uri': item['uri']['value']}))
 
     # query quarries from OSM
     overpass_url = "http://overpass-api.de/api/interpreter"
@@ -76,7 +76,8 @@ def update():
                     'Provincia': '',
                     'Poblacion': '',
                     'lon': element['center']['lon'],
-                    'lat': element['center']['lat']}))
+                    'lat': element['center']['lat'],
+                    'uri': '-'}))
 
     # querry factories
     overpass_query_factory = """
@@ -110,7 +111,8 @@ def update():
                     'Provincia': '',
                     'Poblacion': '',
                     'lon': element['center']['lon'],
-                    'lat': element['center']['lat']}))
+                    'lat': element['center']['lat'],
+                    'uri': '-'}))
 
     '''
     # querry greenhouses
@@ -145,7 +147,8 @@ def update():
                     'Provincia': '',
                     'Poblacion': '',
                     'lon': element['center']['lon'],
-                    'lat': element['center']['lat']}))
+                    'lat': element['center']['lat'],
+                    'uri': '-'}))
     '''
 
     # querry shopping malls
@@ -180,7 +183,8 @@ def update():
                     'Provincia': '',
                     'Poblacion': '',
                     'lon': element['center']['lon'],
-                    'lat': element['center']['lat']}))
+                    'lat': element['center']['lat'],
+                    'uri': '-'}))
 
     # store full list at df
     df = pd.DataFrame(places)

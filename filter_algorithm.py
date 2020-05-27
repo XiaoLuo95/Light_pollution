@@ -57,7 +57,8 @@ def algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent, m10=None):
                         'Dirección': angle,
                         'Nubosidad': cloudiness,
                         'lon': row['lon'],
-                        'lat': row['lat']
+                        'lat': row['lat'],
+                        'uri': row['uri']
                     }))
 
     result = pd.DataFrame(sublist)
@@ -67,9 +68,9 @@ def algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent, m10=None):
         result = result.sort_values(by='Distancia')
         result = result.reset_index()
         if m10 is not None:
-            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "Nubosidad", "lon", "lat"]]
+            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "Nubosidad", "lon", "lat", "uri"]]
         else:
-            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "lon", "lat"]]
+            result = result[["Nombre", "Tipo", "Provincia", "Poblacion", "Distancia", "Dirección", "lon", "lat", "uri"]]
 
     return result
 

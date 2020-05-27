@@ -12,21 +12,23 @@ from mapper import mapper
 
 # command line arguments parser
 parser = argparse.ArgumentParser()
-parser.add_argument("-t", "--threshold_percent", type=float, action="store",
+parser.add_argument("-t", "--threshold_percent", metavar='\b', type=float, action="store",
                     help="percentage of magnitude from minimum to consider. Default 0.3. Incompatible with {-T, -o}. [0.00-1.00]")
-parser.add_argument("-T", "--threshold_mag", type=float, action="store",
-                    help="maximum magnitude under consideration. Incompatible with {-t, -o}.")
-parser.add_argument("-o", "--opening", type=float, nargs=2, action="store",
+parser.add_argument("-T", "--threshold_mag", metavar='\b', type=float, action="store",
+                    help="maximum real magnitude under consideration. Incompatible with {-t, -o}.")
+parser.add_argument("-o", "--opening", metavar='\b', type=float, nargs=2, action="store",
                     help="angle opening's lower and upper bound, separated by whitespace. Incompatible with {-t, -T}. [0-359.99] [0-359.99]")
-parser.add_argument("-d", "--distance", type=float, action="store", help="radius in km within to search, default 120.")
-parser.add_argument("-c", "--cloudiness_angle", type=float, action="store",
+parser.add_argument("-d", "--distance", metavar='\b', type=float, action="store", help="radius in km within to search, default 120.")
+parser.add_argument("-c", "--cloudiness_angle", metavar='\b', type=float, action="store",
                     help="Only supported for tas. Angle opening w.r.t. each original angle from tas to be considered as same, in order to calculate the cloudiness to each place. Default 1º. [0-12]")
-parser.add_argument("-S", "--single" , type=bool, action="store", help="Default False. Angle opening for single valley of lowest value. Compatible with percentile and magnitude thresholds")
-parser.add_argument("-u", "--update", type=bool, action="store",
+parser.add_argument("-S", "--single", metavar='\b', type=bool, action="store", help="Default False. Angle opening for single valley of lowest value. Compatible with percentile and magnitude thresholds")
+parser.add_argument("-save", "--save", metavar='\b', type=str, action="store", help="Output file name. Will apply to both data and map files.")
+parser.add_argument("-i", "--indicator", metavar='\b', type=str, action="store", help="Light pollution indicator image filename. If set, the indicator will be included in the map generated.")
+parser.add_argument("-u", "--update", metavar='\b', type=bool, action="store",
                     help="default False. If set as True, the script will proceed to update the list of light pollution sources in Spain.")
 required = parser.add_argument_group('required arguments')
-required.add_argument("-f", "--file", type=str, help="file containing measurement data", required=True)
-required.add_argument('-s', '--source', type=str, help="data source type: sqm/tas", required=True)
+required.add_argument("-f", "--file", metavar='\b', type=str, help="file containing measurement data", required=True)
+required.add_argument('-s', '--source', metavar='\b', type=str, help="data source type: sqm/tas", required=True)
 args = parser.parse_args()
 
 # global latitude and longitude
@@ -60,23 +62,30 @@ threshold_mag = None
 # global single statement
 single = False
 
+# global output filename
+output = "result"
+
+# light pollution indicator image filename
+indicator = None
+
 
 # Automatic processing for sqm data
 def auto_sqm():
     global sqm
     global lat, lon, angle_min, angle_max
     global threshold_percent, threshold_mag
-    global single
+    global single, output
 
     lat, lon, sqm = read_sqm(args.file)
     angle_min, angle_max = sqm_angles(sqm, threshold_percent, threshold_mag, args.opening, single)
     print(angle_min, angle_max)
     result = algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent)
-    mapper(result, lon, lat, "sqm")
+    mapper(result, lon, lat, "sqm", output, indicator)
 
     if not result.empty:
-        result.to_csv('result.csv')
-        print('Result saved in: result.csv')
+        result.to_csv(output + '.csv', index=False)
+        print('Result saved in: ' + output + '.csv')
+
     else:
         print('No matching records found')
 
@@ -86,17 +95,17 @@ def auto_tas():
     global tas
     global lat, lon, angle_min, angle_max, distance
     global threshold_percent, threshold_mag, adjacent
-    global single
+    global single, output
     global m10
 
     lat, lon, tas = read_tas(args.file)
     angle_min, angle_max, m10 = tas_angles(tas, threshold_percent, threshold_mag, args.opening, m10, single)
     result = algorithm(df, lat, lon, distance, angle_min, angle_max, adjacent, m10)
-    mapper(result, lon, lat, "tas")
+    mapper(result, lon, lat, "tas", output, indicator)
 
     if not result.empty:
-        result.to_csv("result.csv")
-        print("Result saved in: result.csv")
+        result.to_csv(output + '.csv', index=False)
+        print("Result saved in: " + output + ".csv")
     else:
         print("No matching records found")
 
@@ -156,6 +165,13 @@ if __name__ == '__main__':
                 parser.error('Magnitude threshold error: negative value')
             else:
                 threshold_mag = args.threshold_mag
+
+        # check output filename
+        if args.save is not None:
+            output = args.save
+
+        if args.indicator is not None:
+            indicator = args.indicator
 
         # Load all light pollution sources in Spain
         df = pd.read_csv("light_pollution_sources.csv")

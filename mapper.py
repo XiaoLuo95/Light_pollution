@@ -1,10 +1,12 @@
 import folium
 from folium.map import *
 from folium.plugins import MarkerCluster
+from folium.plugins import FloatImage
+from PIL import Image
 
 
 # Build interactive map showing places with their details from the result data
-def mapper(data, lon, lat, type):
+def mapper(data, lon, lat, type, output, indicator):
     # Create base map
     m = folium.Map(location=[data['lat'].mean(), data['lon'].mean()])
 
@@ -131,6 +133,15 @@ def mapper(data, lon, lat, type):
     # add the detailed layer to Map
     m.add_child(d)
 
+    # add indicator image to map if was set
+    if indicator is not None:
+        img = Image.open(indicator)
+        img.putalpha(166)
+        size = 250, 250
+        img.thumbnail(size, Image.ANTIALIAS)
+        img.save(output + '_indicator.png')
+        m.add_child(FloatImage(output + '_indicator.png', bottom=3, left=3))
+
     # add layer control functionality
     m.add_child(LayerControl())
 
@@ -138,6 +149,6 @@ def mapper(data, lon, lat, type):
     m.fit_bounds(g.get_bounds())
 
     # save map to "map.html"
-    m.save("map.html")
+    m.save(output + "_map.html")
 
-    print("Map saved in: map.html")
+    print("Map saved in: " + output + "_map.html")

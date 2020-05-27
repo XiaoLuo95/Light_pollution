@@ -19,6 +19,7 @@ def sqm_angles(sqm, threshold_percent, threshold_mag, opening, single):
             total.append(str(x).replace(",", "."))
     total = np.asfarray(total, float)
     total_range = (total.max() - total.min()).round(2)
+    print('magnitude range: (' + str(total.min()) + ',', str(total.max()) + ')')
 
     # Calculate the threshold
     if threshold_mag is not None:

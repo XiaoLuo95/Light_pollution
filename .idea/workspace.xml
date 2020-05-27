@@ -5,11 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filter_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/filter_algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/threshold.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/threshold.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logic.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/logic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/map_generical_zoomed.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/map_generical_zoomed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/light_pollution_sources.csv" beforeDir="false" afterPath="$PROJECT_DIR$/light_pollution_sources.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sqm_angles.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqm_angles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tas_angles.py" beforeDir="false" afterPath="$PROJECT_DIR$/tas_angles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update.py" beforeDir="false" afterPath="$PROJECT_DIR$/update.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +87,10 @@
       <workItem from="1590484555385" duration="4666000" />
       <workItem from="1590493133456" duration="366000" />
       <workItem from="1590493654848" duration="73000" />
+      <workItem from="1590510007525" duration="1403000" />
+      <workItem from="1590564348035" duration="7382000" />
+      <workItem from="1590576114472" duration="569000" />
+      <workItem from="1590577020134" duration="172000" />
     </task>
     <servers />
   </component>
@@ -89,6 +98,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="128" key="#Notifications" timestamp="1590573869242">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="128" key="#Notifications/0.23.1440.877@0.23.1440.877" timestamp="1590573869242" />
     <state x="439" y="217" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590084853901">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

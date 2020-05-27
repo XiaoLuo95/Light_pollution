@@ -17,6 +17,7 @@ def tas_angles(tas, threshold_percent, threshold_mag, opening, m10, single):
     m10 = m10.astype({'Mag': float, 'Azi': float, 'Cloudiness': float})
     m10 = m10.round({'Mag': 2, 'Azi': 2, 'Cloudiness': 2})
     mag_range = mag_max - mag_min
+    print('magnitude range: (' + str(mag_min) + ',', str(mag_max) + ')')
 
     # Calculate threshold
     if threshold_mag is not None:
